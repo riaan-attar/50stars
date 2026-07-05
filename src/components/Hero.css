@@ -6,7 +6,8 @@
   padding: 8rem 0;
   min-height: 60vh;
   z-index: 1;
-  background-color: #f1f2f3; /* to cover layout if needed, though hero is light gray/white */
+  background-color: #f1f2f3;
+  /* to cover layout if needed, though hero is light gray/white */
 }
 
 .hero-container {
@@ -144,8 +145,28 @@
   color: var(--color-text-muted);
 }
 
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-8px);
+  }
+
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
 .footer-scroll {
   letter-spacing: 0.5px;
+  animation: bounce 2s infinite;
 }
 
 @media (max-width: 900px) {
@@ -155,17 +176,21 @@
     height: auto;
     min-height: auto;
   }
+
   .hero-container {
     padding: 0 2rem;
   }
+
   .hero-content {
     flex-direction: column;
     gap: 3rem;
     align-items: flex-start;
   }
+
   .hero-right {
     padding-left: 0;
   }
+
   .hero-footer {
     position: relative;
     margin-top: 4rem;
