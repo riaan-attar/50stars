@@ -125,7 +125,7 @@ const IndustrySection: React.FC = () => {
 
           {/* Active Panel */}
           <div className="industry-panel">
-            <div className="panel-inner">
+            <div className="panel-inner" key={activeTab}>
               
               <div className="panel-image-wrap">
                 <img src={currentIndustry.image} alt={currentIndustry.title} />

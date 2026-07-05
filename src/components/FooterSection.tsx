@@ -77,7 +77,7 @@ const FooterSection: React.FC = () => {
 
         <div className="ft-bottom">
           <div className="ft-copyright">
-            <p>Designed by <a href="https://webestica.com" target="_blank" rel="noreferrer">Webestica</a>, Powered by <a href="https://framer.com" target="_blank" rel="noreferrer">Framer</a></p>
+            <p>Developed by <a href="https://riaanattar.me" target="_blank" rel="noreferrer">Riaan Attar</a> from <a href="https://thebootstack.io" target="_blank" rel="noreferrer">Bootstack</a></p>
           </div>
           
           <div className="ft-socials">
@@ -98,7 +98,7 @@ const FooterSection: React.FC = () => {
 
         {/* Big Logo */}
         <div className="ft-big-logo">
-          <img src="/assets/footer-logo.svg" alt="MANUFACT" />
+          50stars
         </div>
 
       </div>

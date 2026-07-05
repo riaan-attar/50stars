@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   z-index: 5;
+  overflow: hidden;
 }
 
 .ps-bg-shadow {
@@ -45,7 +46,9 @@
 }
 
 .pill-who-we-are {
+  background-color: transparent !important;
   border-color: rgba(255,255,255,0.1) !important;
+  box-shadow: none !important;
 }
 
 .ps-header-content {

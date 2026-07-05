@@ -4,6 +4,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: var(--color-orange);
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
 :root {
   --color-bg: #f4f4f4;
   --color-text-main: #111111;
@@ -118,40 +129,44 @@ body {
 }
 
 .testimonial-section {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 9;
   background-color: var(--color-white);
 }
 
 .footer-section {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 10;
   background-color: var(--color-black);
 }
 
-/* Scroll Reveal Keyframes & Class */
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Scroll Reveal Animations */
+.hero-content,
+.founder-card, .quote-container,
 .about-title, .about-description, .about-card,
-.services-title, .service-row,
+.services-title, .service-row, .services-cta,
 .ps-counter, .ps-subtitle, .ps-diagram-container, .ps-card,
 .is-title, .is-desc, .is-tab-btn, .is-panel,
 .cs-title, .cs-slide,
-.wc-title, .wc-features li, .wc-btn,
+.wc-title, .wc-features li, .wc-btn, .wc-banner,
 .tm-title, .tm-card, .tm-col-2,
 .ft-col, .ft-bottom {
-  animation: reveal ease-out both;
-  animation-timeline: view();
-  animation-range: entry 5% cover 25%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.hero-content.revealed,
+.founder-card.revealed, .quote-container.revealed,
+.about-title.revealed, .about-description.revealed, .about-card.revealed,
+.services-title.revealed, .service-row.revealed, .services-cta.revealed,
+.ps-counter.revealed, .ps-subtitle.revealed, .ps-diagram-container.revealed, .ps-card.revealed,
+.is-title.revealed, .is-desc.revealed, .is-tab-btn.revealed, .is-panel.revealed,
+.cs-title.revealed, .cs-slide.revealed,
+.wc-title.revealed, .wc-features li.revealed, .wc-btn.revealed, .wc-banner.revealed,
+.tm-title.revealed, .tm-card.revealed, .tm-col-2.revealed,
+.ft-col.revealed, .ft-bottom.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }

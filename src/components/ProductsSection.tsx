@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProductsSection.css';
+import AnimatedNumber from './AnimatedNumber';
 
 const productsData = [
   {
@@ -54,7 +55,7 @@ const ProductsSection: React.FC = () => {
 
           <div className="ps-header-content">
             <h2 className="ps-counter">
-              50,000<span className="text-orange">+</span>
+              <AnimatedNumber value={50000} /><span className="text-orange">+</span>
             </h2>
             <p className="ps-subtitle">
               Precision-built products delivered to clients across industries and continents.

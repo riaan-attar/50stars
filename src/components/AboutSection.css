@@ -230,6 +230,14 @@
   margin-bottom: 1.5rem;
 }
 
+.card-logo-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--color-black);
+  margin-bottom: 1.5rem;
+}
+
 .card-counter {
   font-size: 4.5rem;
   font-weight: 700;

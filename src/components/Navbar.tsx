@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
     <header className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          MANUFACT<sup>®</sup>
+          50stars
         </div>
         
         <nav className="navbar-links">

@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutSection.css';
+import AnimatedNumber from './AnimatedNumber';
 
 const AboutSection: React.FC = () => {
   return (
@@ -56,12 +57,12 @@ const AboutSection: React.FC = () => {
           
           {/* Card 1 */}
           <div className="about-card card-light">
-            <img className="card-logo" src="https://framerusercontent.com/images/GhFAf9Nzk8NxLNAoAlvgFnivlg.svg?width=182&height=23" alt="About Logo" />
-            <h2 className="card-counter text-orange">100<span className="text-dark">+</span></h2>
+            <div className="card-logo-text">50stars</div>
+            <h2 className="card-counter text-orange"><AnimatedNumber value={100} /><span className="text-dark">+</span></h2>
             <p className="card-text text-dark">Trusted by businesses across multiple<br/>manufacturing industries worldwide</p>
             <div className="card-review-info">
               <div className="rating">
-                <h2>4.9</h2>
+                <h2><AnimatedNumber value={4.9} decimals={1} /></h2>
                 <p>/5.0</p>
               </div>
               <img className="review-stars" src="https://framerusercontent.com/images/vLIB1zDP4bI0m0N2PXLiIxcw5Y.svg?width=95&height=14" alt="Review Stars" />
@@ -77,7 +78,7 @@ const AboutSection: React.FC = () => {
           <div className="about-card card-orange">
             <div className="card-orange-content">
               <p className="card-pretitle">// 2005-2K26 //</p>
-              <h2 className="card-counter text-dark">20+</h2>
+              <h2 className="card-counter text-dark"><AnimatedNumber value={20} />+</h2>
               <p className="card-text text-light">Delivering consistent manufacturing<br/>excellence since day one.</p>
             </div>
             <img className="card-badge" src="https://framerusercontent.com/images/7deJkILirgC0DVZq9WujKIpwKY.png?width=124&height=164" alt="Badge" />

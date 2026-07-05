@@ -1,5 +1,6 @@
 import React from 'react';
 import './TestimonialSection.css';
+import AnimatedNumber from './AnimatedNumber';
 
 const TestimonialSection: React.FC = () => {
   return (
@@ -60,17 +61,17 @@ const TestimonialSection: React.FC = () => {
               <img src="/assets/testi-img.webp" alt="Factory" className="tm-img-bg" />
               <div className="tm-img-overlay">
                 <p className="tm-img-year">// 2005-2K26 //</p>
-                <img src="/assets/manufact-logo.svg" alt="Manufact Logo" className="tm-img-logo" />
+                <div className="tm-logo-text">50stars</div>
               </div>
             </div>
             
             <div className="tm-stats-card">
               <div className="tm-stat-item">
-                <h3>98%</h3>
+                <h3><AnimatedNumber value={98} />%</h3>
                 <p>On-Time delivery rate</p>
               </div>
               <div className="tm-stat-item">
-                <h3>50+</h3>
+                <h3><AnimatedNumber value={50} />+</h3>
                 <p>Skilled professionals</p>
               </div>
             </div>
