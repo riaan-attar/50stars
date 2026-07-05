@@ -1,8 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TestimonialSection.css';
 import AnimatedNumber from './AnimatedNumber';
 
+const testimonialsData = [
+  {
+    id: 1,
+    name: 'Emily Carter',
+    role: 'Product Designer',
+    avatar: '/assets/testi-avatar-1.png',
+    quote: 'The team’s dedication and innovative approach transformed our ideas into reality. Every stage of the project was handled with care and expertise.'
+  },
+  {
+    id: 2,
+    name: 'David Kim',
+    role: 'Technical Lead',
+    avatar: '/assets/avatar-4.png',
+    quote: 'Superb attention to detail and outstanding project management. They delivered our high-precision parts ahead of schedule.'
+  },
+  {
+    id: 3,
+    name: 'Sophia Chen',
+    role: 'Operations Director',
+    avatar: '/assets/testi-avatar-3.png',
+    quote: 'Exceptional quality assurance. The prototypes were perfect, and the transition to full-scale manufacturing was seamless.'
+  },
+  {
+    id: 4,
+    name: 'Sarah Jenkins',
+    role: 'VP of Engineering',
+    avatar: '/assets/testi-avatar-4.png',
+    quote: 'Their engineering support was invaluable. They optimized our design for manufacturability, saving us significant production costs.'
+  },
+  {
+    id: 5,
+    name: 'James Mitchell',
+    role: 'Procurement Manager',
+    avatar: '/assets/testi-avatar-5.png',
+    quote: 'Reliable, transparent, and highly communicative. We\'ve found a long-term partner for our custom injection molding needs.'
+  }
+];
+
 const TestimonialSection: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const activeTestimonial = testimonialsData[activeIndex];
+
   return (
     <section className="testimonial-section" id="testimonial">
       <div className="tm-container">
@@ -24,21 +66,15 @@ const TestimonialSection: React.FC = () => {
           {/* Column 1: Testimonial Card */}
           <div className="tm-card tm-col-1">
             <div className="tm-avatars-sidebar">
-              <div className="tm-avatar-btn active">
-                <img src="/assets/testi-avatar-1.png" alt="Emily Carter" />
-              </div>
-              <div className="tm-avatar-btn">
-                <img src="/assets/avatar-4.png" alt="Client 2" />
-              </div>
-              <div className="tm-avatar-btn">
-                <img src="/assets/testi-avatar-3.png" alt="Client 3" />
-              </div>
-              <div className="tm-avatar-btn">
-                <img src="/assets/testi-avatar-4.png" alt="Client 4" />
-              </div>
-              <div className="tm-avatar-btn">
-                <img src="/assets/testi-avatar-5.png" alt="Client 5" />
-              </div>
+              {testimonialsData.map((t, idx) => (
+                <div 
+                  key={t.id} 
+                  className={`tm-avatar-btn ${activeIndex === idx ? 'active' : ''}`}
+                  onClick={() => setActiveIndex(idx)}
+                >
+                  <img src={t.avatar} alt={t.name} />
+                </div>
+              ))}
             </div>
             
             <div className="tm-quote-box">
@@ -46,11 +82,11 @@ const TestimonialSection: React.FC = () => {
                 <img src="/assets/rating-stars-orange.svg" alt="5 Stars" />
               </div>
               <p className="tm-quote-text">
-                The team’s dedication and innovative approach transformed our ideas into reality. Every stage of the project was handled with care and expertise.
+                "{activeTestimonial.quote}"
               </p>
               <div className="tm-quote-author">
-                <h4>Emily Carter</h4>
-                <p>Product Designer</p>
+                <h4>{activeTestimonial.name}</h4>
+                <p>{activeTestimonial.role}</p>
               </div>
             </div>
           </div>

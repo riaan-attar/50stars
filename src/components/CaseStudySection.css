@@ -311,7 +311,13 @@
 
 @media (max-width: 768px) {
   .case-study-section {
-    padding: 4rem 0;
+    padding: 2rem 0;
+  }
+  .cs-header {
+    margin-bottom: 2rem;
+  }
+  .cs-slider-window {
+    margin-bottom: 1.5rem;
   }
   .cs-left-block {
     padding: 1.5rem;
@@ -324,7 +330,7 @@
     gap: 1.5rem;
   }
   .cs-bottom-banner {
-    padding: 1.5rem;
+    padding: 1rem;
   }
   .cs-banner-left {
     flex-direction: column;

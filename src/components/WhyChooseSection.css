@@ -181,11 +181,26 @@
   .wc-container {
     padding: 2rem;
   }
+  .wc-banner {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
   .wc-banner-content {
     width: 100%;
-    background: rgba(15,15,15,0.85);
+    position: relative;
+    background: rgba(15,15,15,0.9);
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
   }
   .wc-content-inner {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wc-banner-content {
+    padding: 2rem 1.5rem;
   }
 }

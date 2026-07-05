@@ -303,6 +303,16 @@
   .testimonial-section {
     padding: 4rem 0 6rem 0;
   }
+  .tm-col-1 {
+    flex-direction: column;
+  }
+  .tm-avatars-sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.25rem 0;
+    gap: 0.8rem;
+  }
   .tm-col-1,
   .tm-col-2,
   .tm-support-card {
