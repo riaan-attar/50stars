@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-bg: #f4f4f4;
+  --color-text-main: #111111;
+  --color-text-muted: #6b6b6b;
+  --color-orange: #d34a24;
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-border: #e6e6e6;
+  
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background Grid Lines */
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, transparent calc(25% - 1px), var(--color-border) 25%, transparent calc(25% + 1px)),
+    linear-gradient(to right, transparent calc(50% - 1px), var(--color-border) 50%, transparent calc(50% + 1px)),
+    linear-gradient(to right, transparent calc(75% - 1px), var(--color-border) 75%, transparent calc(75% + 1px));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-white);
+}
+
+/* Stacking transitions for all sections */
+.hero-section {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.video-section {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #151515;
+}
+
+.about-section {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: var(--color-white);
+}
+
+.services-section {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  background-color: transparent;
+}
+
+.products-section {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #151515;
+}
+
+.industry-section {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  background-color: #f1f2f3;
+}
+
+.case-study-section {
+  position: sticky;
+  top: 0;
+  z-index: 7;
+  background-color: var(--color-white);
+}
+
+.why-choose-section {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background-color: var(--color-white);
+}
+
+.testimonial-section {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: var(--color-white);
+}
+
+.footer-section {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-black);
+}
+
+/* Scroll Reveal Keyframes & Class */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-title, .about-description, .about-card,
+.services-title, .service-row,
+.ps-counter, .ps-subtitle, .ps-diagram-container, .ps-card,
+.is-title, .is-desc, .is-tab-btn, .is-panel,
+.cs-title, .cs-slide,
+.wc-title, .wc-features li, .wc-btn,
+.tm-title, .tm-card, .tm-col-2,
+.ft-col, .ft-bottom {
+  animation: reveal ease-out both;
+  animation-timeline: view();
+  animation-range: entry 5% cover 25%;
+}

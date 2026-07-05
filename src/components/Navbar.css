@@ -1,0 +1,94 @@
+.navbar {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--color-black);
+}
+
+.navbar-logo sup {
+  font-size: 0.6em;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-link:hover {
+  color: var(--color-orange);
+}
+
+.nav-link.active {
+  color: var(--color-orange);
+}
+
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-orange);
+}
+
+.btn-quote {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.btn-text {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-icon {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-quote:hover .btn-text {
+  background-color: #c2401d;
+}
