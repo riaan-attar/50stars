@@ -289,3 +289,26 @@
     gap: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 4rem 0;
+  }
+  .sr-image-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+  .service-row {
+    padding: 2rem 0;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+  .sr-content {
+    gap: 1rem;
+    width: 100%;
+  }
+  .services-cta {
+    margin-top: 4rem;
+    padding: 2rem 1.5rem;
+  }
+}

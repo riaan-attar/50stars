@@ -170,3 +170,44 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  /* Scale down container paddings globally */
+  .about-container,
+  .services-container,
+  .ps-container,
+  .industry-container,
+  .cs-container,
+  .tm-container,
+  .ft-container,
+  .navbar-container,
+  .hero-container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* Scale down all big headings */
+  .hero-title {
+    font-size: 2.5rem !important;
+    letter-spacing: -1px !important;
+  }
+  
+  .about-title,
+  .services-title,
+  .industry-title,
+  .cs-title,
+  .tm-title {
+    font-size: 2.2rem !important;
+    letter-spacing: -1px !important;
+    line-height: 1.15 !important;
+  }
+
+  .ps-counter {
+    font-size: 2.8rem !important;
+  }
+
+  /* Fix for nobr whitespaces keeping elements from wrapping on mobile */
+  .nobr {
+    white-space: normal !important;
+  }
+}

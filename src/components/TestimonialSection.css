@@ -298,3 +298,27 @@
     min-height: 400px;
   }
 }
+
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 4rem 0 6rem 0;
+  }
+  .tm-col-1,
+  .tm-col-2,
+  .tm-support-card {
+    min-height: auto;
+  }
+  .tm-card {
+    padding: 1.5rem;
+  }
+  .tm-quote-box {
+    padding: 1.5rem 0 0 0;
+  }
+  .tm-stats-card {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+}

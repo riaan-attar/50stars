@@ -147,3 +147,33 @@
 .footer-scroll {
   letter-spacing: 0.5px;
 }
+
+@media (max-width: 900px) {
+  .hero-section {
+    padding: 6rem 0;
+    position: relative;
+    height: auto;
+    min-height: auto;
+  }
+  .hero-container {
+    padding: 0 2rem;
+  }
+  .hero-content {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+  .hero-right {
+    padding-left: 0;
+  }
+  .hero-footer {
+    position: relative;
+    margin-top: 4rem;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

@@ -308,3 +308,30 @@
     gap: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .case-study-section {
+    padding: 4rem 0;
+  }
+  .cs-left-block {
+    padding: 1.5rem;
+    min-height: auto;
+    gap: 2rem;
+  }
+  .cs-left-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .cs-bottom-banner {
+    padding: 1.5rem;
+  }
+  .cs-banner-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .cs-avatars {
+    margin-left: 12px;
+  }
+}

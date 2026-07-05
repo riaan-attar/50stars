@@ -221,3 +221,9 @@
     align-items: flex-start;
   }
 }
+
+@media (max-width: 500px) {
+  .ft-col-1, .ft-col-2, .ft-col-3, .ft-col-4 {
+    flex: 1 1 100%;
+  }
+}

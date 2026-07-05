@@ -92,3 +92,12 @@
 .btn-quote:hover .btn-text {
   background-color: #c2401d;
 }
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+  .navbar-links {
+    display: none;
+  }
+}
