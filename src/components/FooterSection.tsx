@@ -2,6 +2,12 @@ import React from 'react';
 import './FooterSection.css';
 
 const FooterSection: React.FC = () => {
+  const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new Event('popstate'));
+  };
+
   return (
     <footer className="footer-section">
       
@@ -23,7 +29,7 @@ const FooterSection: React.FC = () => {
             <p className="ft-col-desc">
               Join our newsletter for tips, updates, and project highlights—only the good stuff.
             </p>
-            <form className="ft-form">
+            <form className="ft-form" onSubmit={(e) => e.preventDefault()}>
               <input type="email" placeholder="Enter your email" required className="ft-input" />
               <button type="submit" className="ft-submit">
                 <img src="/assets/icon-arrow-dark.svg" alt="Submit" />
@@ -36,17 +42,13 @@ const FooterSection: React.FC = () => {
             <h3 className="ft-col-title">Links</h3>
             <div className="ft-links-wrap">
               <ul className="ft-link-list">
-                <li><a href="#" className="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="/" onClick={(e) => navigateTo(e, '/')}>Home</a></li>
+                <li><a href="/about" onClick={(e) => navigateTo(e, '/about')}>About</a></li>
+                <li><a href="/services" onClick={(e) => navigateTo(e, '/services')}>Services</a></li>
               </ul>
               <ul className="ft-link-list">
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#404">Error 404</a></li>
+                <li><a href="/products" onClick={(e) => navigateTo(e, '/products')}>Products</a></li>
+                <li><a href="/contact" onClick={(e) => navigateTo(e, '/contact')}>Contact</a></li>
               </ul>
             </div>
           </div>
@@ -55,7 +57,7 @@ const FooterSection: React.FC = () => {
           <div className="ft-col ft-col-3">
             <h3 className="ft-col-title">Contact info</h3>
             <ul className="ft-link-list">
-              <li><a href="#" target="_blank" rel="noopener noreferrer">1238 echo ridge blvd, suite 400, san francisco, CA 94103</a></li>
+              <li><a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">1238 echo ridge blvd, suite 400, san francisco, CA 94103</a></li>
               <li><a href="tel:+14155550167">+1 (415) 555-0167</a></li>
               <li><a href="mailto:support@example.com">support@example.com</a></li>
             </ul>

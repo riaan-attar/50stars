@@ -4,8 +4,8 @@ import './ServicesSection.css';
 const servicesData = [
   {
     id: 1,
-    icon: 'https://framerusercontent.com/images/8A2bCLa6pyOXwAS0i8tAQrdLhTU.svg?width=41&height=41',
-    image: 'https://framerusercontent.com/images/YZXZfUWqk3mC6dHxTkY5u8hc5SA.webp?width=1400&height=800',
+    icon: '/assets/service-icon-1.svg',
+    image: '/assets/service-1.webp',
     title: 'Product assembly',
     features: [
       'Manual & automated assembly',
@@ -16,8 +16,8 @@ const servicesData = [
   },
   {
     id: 2,
-    icon: 'https://framerusercontent.com/images/M3RsKCQRcVWO3EHXmo2ZCQP0MlE.svg?width=40&height=41',
-    image: 'https://framerusercontent.com/images/uyAxZj87pJISHmPmWJFmfS2Xqw.webp?width=1400&height=800',
+    icon: '/assets/service-icon-2.svg',
+    image: '/assets/service-2.webp',
     title: 'Sheet metal fabrication',
     features: [
       'Laser cutting up to 1" thickness',
@@ -28,8 +28,8 @@ const servicesData = [
   },
   {
     id: 3,
-    icon: 'https://framerusercontent.com/images/RHYjItVmJDKaNWe0N2Hs5P3hUs.svg?width=38&height=41',
-    image: 'https://framerusercontent.com/images/sCJnodXX6iVr5PAmaVz3lhv3l0.webp?width=1400&height=800',
+    icon: '/assets/service-icon-3.svg',
+    image: '/assets/service-3.webp',
     title: 'CNC machining services',
     features: [
       '±0.0001" tolerance capability',
@@ -40,8 +40,8 @@ const servicesData = [
   },
   {
     id: 4,
-    icon: 'https://framerusercontent.com/images/qyDGFu1whE5nbKHXtS8LQpIfAu4.svg?width=39&height=41',
-    image: 'https://framerusercontent.com/images/DC7FRNfj79xbtthq0V0ykebbAGU.webp?width=1400&height=800',
+    icon: '/assets/service-icon-4.svg',
+    image: '/assets/service-4.webp',
     title: 'Injection molding',
     features: [
       '50-1000 ton molding machines',
@@ -52,9 +52,9 @@ const servicesData = [
   }
 ];
 
-const checkIcon = 'https://framerusercontent.com/images/nfR4iB5cTWHHV0q6ZNSUKbFw.svg?width=15&height=10';
-const arrowIcon = 'https://framerusercontent.com/images/xYCVyxuBws5xxo0dgYvczUqqSI.svg?width=16&height=12';
-const ctaBg = 'https://framerusercontent.com/images/qbL1L4EXzTjrYawN3GV9Zww8wb4.png?width=1078&height=178';
+const checkIcon = '/assets/icon-check.svg';
+const arrowIcon = '/assets/icon-arrow.svg';
+const ctaBg = '/assets/services-cta-bg.png';
 
 const ServicesSection: React.FC = () => {
   return (

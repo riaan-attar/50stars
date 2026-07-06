@@ -23,12 +23,12 @@ const VideoSection: React.FC = () => {
         <div className="video-overlay"></div>
         <video 
           ref={videoRef}
-          src="https://framerusercontent.com/assets/42XXSmPqon106f0ey08EQkGSyoU.mp4" 
+          src="/assets/home-video.mp4" 
           loop 
           muted 
           autoPlay 
           playsInline 
-          poster="https://framerusercontent.com/images/EvkKKiT34zFcqnJwjmciV1oT2CU.jpg?width=1280&height=720"
+          poster="/assets/home-video-poster.jpg"
           className="background-video"
         ></video>
         <div className="video-bg-shadow"></div>
@@ -38,7 +38,7 @@ const VideoSection: React.FC = () => {
         <div className="founder-card">
           <div className="founder-image-wrapper">
             <img 
-              src="https://framerusercontent.com/images/yZK2vzwKqUH8m15aeLGrA2alok.png?width=4800&height=3616" 
+              src="/assets/home-founder.png" 
               alt="Michael R. Bennett" 
               className="founder-image"
             />
