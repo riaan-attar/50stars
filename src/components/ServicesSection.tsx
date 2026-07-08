@@ -6,48 +6,48 @@ const servicesData = [
     id: 1,
     icon: '/assets/service-icon-1.svg',
     image: '/assets/service-1.webp',
-    title: 'Product assembly',
+    title: 'Structural Steel & Sourcing',
     features: [
-      'Manual & automated assembly',
-      'Functional testing protocols',
-      'Custom packaging design',
-      'Supply chain management'
+      'Global mill sourcing across major regions',
+      'Beams, joists, hollow sections, angles, plate',
+      'Multi-origin cost & lead-time comparison',
+      'Specialty alloys and custom sections'
     ]
   },
   {
     id: 2,
     icon: '/assets/service-icon-2.svg',
     image: '/assets/service-2.webp',
-    title: 'Sheet metal fabrication',
+    title: 'Engineering & Advisory',
     features: [
-      'Laser cutting up to 1" thickness',
-      'Press brake forming',
-      'TIG/MIG welding services',
-      'Powder coating & finishing'
+      'BOM and takeoff review against specifications',
+      'Grade/section matching to ASTM/AISC/EN codes',
+      'Value engineering to reduce project costs',
+      'Split-sourcing strategy for long-lead items'
     ]
   },
   {
     id: 3,
     icon: '/assets/service-icon-3.svg',
     image: '/assets/service-3.webp',
-    title: 'CNC machining services',
+    title: 'Quality & Certification',
     features: [
-      '±0.0001" tolerance capability',
-      'Multi-axis machining centers',
-      'Materials: Metals, plastics, composites',
-      'Prototype to production volumes'
+      'Full mill test certificates (MTC) on all runs',
+      'Strict chain-of-custody documentation',
+      'Third-party inspection coordination',
+      'Dimensional, coating, and grade verification'
     ]
   },
   {
     id: 4,
     icon: '/assets/service-icon-4.svg',
     image: '/assets/service-4.webp',
-    title: 'Injection molding',
+    title: 'Global Logistics & Freight',
     features: [
-      '50-1000 ton molding machines',
-      'Multi-cavity tooling design',
-      'Insert molding capabilities',
-      'Cleanroom Fabrication Unit'
+      'Flat rack, breakbulk, container cargo coordination',
+      'Port-to-port and port-to-site trucking',
+      'Customs clearance and import documentation',
+      'Delivery scheduling aligned to erection sequence'
     ]
   }
 ];
@@ -57,6 +57,12 @@ const arrowIcon = '/assets/icon-arrow.svg';
 const ctaBg = '/assets/services-cta-bg.png';
 
 const ServicesSection: React.FC = () => {
+  const navigateTo = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new Event('popstate'));
+  };
+
   return (
     <section className="services-section" id="services">
       <div className="services-container">
@@ -69,11 +75,11 @@ const ServicesSection: React.FC = () => {
               <span className="pill-text">What we do</span>
             </div>
             <h2 className="services-title">
-              Scalable <span className="text-orange">capabilities</span><br/>for every challenge
+              End-to-end procurement, <span className="text-orange">engineering</span>, and logistics — not just a steel quote
             </h2>
           </div>
           <div className="sh-right">
-            <a href="#capabilities" className="btn-learn-more">
+            <a href="/services" className="btn-learn-more" onClick={(e) => navigateTo(e, '/services')}>
               <span className="btn-lm-text">Explore all capabilities</span>
               <span className="btn-lm-icon">
                 <img src={arrowIcon} alt="Arrow" style={{ filter: 'brightness(0) invert(1)' }} />
@@ -114,7 +120,7 @@ const ServicesSection: React.FC = () => {
               
               {/* Action Button */}
               <div className="sr-action">
-                <button className="btn-icon-orange">
+                <button className="btn-icon-orange" onClick={(e) => navigateTo(e, '/services')}>
                   <img src={arrowIcon} alt="Go" />
                 </button>
               </div>
@@ -127,13 +133,13 @@ const ServicesSection: React.FC = () => {
         <div className="services-cta">
           <img src={ctaBg} alt="CTA Background" className="cta-bg-image" />
           <div className="cta-content">
-            <h2 className="cta-title">Ready to start your next project?</h2>
-            <a href="#contact" className="btn-cta-white">
-              <span className="btn-cw-text">Schedule consultation</span>
+            <h2 className="cta-title">Ready to source your next structural steel package?</h2>
+            <button className="btn-cta-white" onClick={(e) => navigateTo(e, '/contact')}>
+              <span className="btn-cw-text">Schedule a Consultation</span>
               <span className="btn-cw-icon">
                 <img src={arrowIcon} alt="Arrow" />
               </span>
-            </a>
+            </button>
           </div>
         </div>
 

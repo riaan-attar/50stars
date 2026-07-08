@@ -3,64 +3,77 @@ import './ProductsPage.css';
 
 const productsData = [
   {
-    title: "Aluminum gear housing",
+    title: "Structural Steel",
     image: "/assets/product-1.webp",
-    material: "Aluminum 6061 / 7075",
-    capability: "CNC machining",
-    size: "Custom dimensions up to 500mm"
+    standard: "ASTM A36 / A572 / A992 / EN 10025",
+    sourcing: "Global Mill Partnerships",
+    members: "Beams (W, HP, S, M), girders, channels, leg angles, sheet plates"
   },
   {
-    title: "Custom plastic enclosures",
-    image: "/assets/product-2.png",
-    material: "ABS, Polycarbonate, Nylon",
-    capability: "Injection molding",
-    size: "Varies – custom moldable"
-  },
-  {
-    title: "Electrical control panels",
+    title: "Joists & Long-Span Systems",
     image: "/assets/product-3.webp",
-    material: "Mild Steel, Stainless Steel",
-    capability: "Sheet metal fabrication & Assembly",
-    size: "Small to full-scale cabinets"
+    standard: "Steel Joist Institute (SJI) Specs",
+    sourcing: "Pre-Qualified Fabricators",
+    members: "Open-web steel joists (K-series, LH/DLH), joist girders"
   },
   {
-    title: "Precision shaft assemblies",
-    image: "/assets/product-4.webp",
-    material: "Alloy Steel, Stainless steel",
-    capability: "Turning & Grinding",
-    size: "Up to 1200mm"
+    title: "Hollow & Tubular Sections",
+    image: "/assets/product-2.png",
+    standard: "ASTM A500 / A1085 / EN 10219",
+    sourcing: "Vetted Tube Mills",
+    members: "Square (SHS), rectangular (RHS), circular (CHS), H-piles"
   },
   {
-    title: "Power distribution boards",
+    title: "Fasteners & Connection Hardware",
     image: "/assets/product-5.png",
-    material: "Mild Steel, Stainless steel",
-    capability: "Sheet Metal fabrication & Assembly",
-    size: "Small to large-scale units"
+    standard: "ASTM F1554 / A325 / A490",
+    sourcing: "Approved Bolt & Anchor Mills",
+    members: "Anchor bolts, structural bolts, washers, nuts, base/embed plates"
   },
   {
-    title: "Copper busbar systems",
+    title: "Reinforcement & Concrete-Adjacent",
     image: "/assets/product-6.png",
-    material: "Copper / Aluminum busbars",
-    capability: "Metal fabrication & Assembly",
-    size: "Medium to large"
+    standard: "ASTM A615 / A706",
+    sourcing: "Domestic & Global Mills",
+    members: "Rebar, welded wire mesh, precast embed plates and inserts"
   },
   {
-    title: "Stainless steel junction boxes",
+    title: "Decking, Access & Safety",
     image: "/assets/product-7.png",
-    material: "Stainless steel 304 / 316",
-    capability: "Laser cutting & Welding",
-    size: "Small to medium"
+    standard: "Steel Deck Institute (SDI) Specs",
+    sourcing: "Vetted Decking Manufacturers",
+    members: "Metal decking, bar grating, checkered plate, stairs, handrails"
   },
   {
-    title: "Titanium sensor housings",
+    title: "Specialty & Corrosion-Resistant",
+    image: "/assets/product-4.webp",
+    standard: "ASTM A240 / A588 / A123",
+    sourcing: "Specialized Mills",
+    members: "Stainless steel sections, weathering steel (Corten), galvanized steel"
+  },
+  {
+    title: "Support & Ancillary Structural Steel",
     image: "/assets/product-8.png",
-    material: "Titanium alloy",
-    capability: "Precision CNC machining",
-    size: "Small"
+    standard: "ASTM / AISC Specifications",
+    sourcing: "Qualified Fabrication Partners",
+    members: "Pipe racks, cable tray support steel, expansion joints, bearing pads"
+  },
+  {
+    title: "Site & Project Support Materials",
+    image: "/assets/service-1.webp",
+    standard: "AWS / ANSI Standards",
+    sourcing: "Distribution Partners",
+    members: "Welding consumables, industrial coatings, rigging, scaffolding"
   }
 ];
 
 const ProductsPage: React.FC = () => {
+  const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new Event('popstate'));
+  };
+
   return (
     <div className="products-page-wrapper">
       {/* 1. HERO SECTION */}
@@ -71,17 +84,17 @@ const ProductsPage: React.FC = () => {
               {/* Badge */}
               <div className="products-badge">
                 <div className="badge-gradient-square"></div>
-                <span className="badge-text">What we manufacture</span>
+                <span className="badge-text">What we procure</span>
               </div>
               {/* Title */}
               <h1 className="products-hero-title">
-                Innovative <span className="text-orange">products</span> across all sectors
+                Certified <span className="text-orange">products</span> delivered to your job site
               </h1>
             </div>
 
             <div className="products-hero-right">
               {/* Contact Button */}
-              <a href="/contact" className="products-hero-btn">
+              <a href="/contact" className="products-hero-btn" onClick={(e) => navigateTo(e, '/contact')}>
                 <span className="btn-text">Contact now</span>
                 <span className="btn-icon-box">
                   <img src="/assets/services-btn-icon.svg" alt="Arrow" />
@@ -97,28 +110,35 @@ const ProductsPage: React.FC = () => {
                 <div className="product-card-top">
                   <h2>{product.title}</h2>
                   <div className="product-image-container">
-                    <img src={product.image} alt={product.title} />
+                    <img src={product.image} alt={product.title} className="product-card-photo" />
                   </div>
                 </div>
 
                 <div className="product-card-bottom">
                   <div className="product-spec-row">
-                    <span className="spec-label">Material</span>
-                    <span className="spec-value">{product.material}</span>
+                    <span className="spec-label">Standard</span>
+                    <span className="spec-value">{product.standard}</span>
                   </div>
                   <div className="product-spec-divider"></div>
                   <div className="product-spec-row">
-                    <span className="spec-label">Capability</span>
-                    <span className="spec-value">{product.capability}</span>
+                    <span className="spec-label">Sourcing</span>
+                    <span className="spec-value">{product.sourcing}</span>
                   </div>
                   <div className="product-spec-divider"></div>
                   <div className="product-spec-row">
-                    <span className="spec-label">Size range</span>
-                    <span className="spec-value">{product.size}</span>
+                    <span className="spec-label">Members</span>
+                    <span className="spec-value">{product.members}</span>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Spec Note Footer */}
+          <div className="products-spec-note-wrap" style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: '#151515', borderRadius: '6px', borderLeft: '4px solid var(--color-orange)' }}>
+            <p style={{ color: '#c5c1c0', fontSize: '0.9rem', lineHeight: '1.6', fontStyle: 'italic', margin: 0 }}>
+              <strong>Spec note:</strong> every item shipped with full mill test certificates (MTC) and chain-of-custody documentation, matched to the ASTM/AISC/EN/regional standard your project requires.
+            </p>
           </div>
 
           {/* 3. BOTTOM CTA BANNER */}
@@ -127,12 +147,12 @@ const ProductsPage: React.FC = () => {
               <div className="products-cta-content">
                 <h2>Custom order inquiry</h2>
                 <p>
-                  Looking for a product we don't offer yet? Send us your custom specifications and we will take it forward from there.
+                  Looking for a structural member or specialty steel grade not listed here? Send us your project drawings and custom specifications, and our engineering team will review them.
                 </p>
               </div>
               
               <div className="products-cta-action">
-                <a href="/contact" className="btn-products-cta">
+                <a href="/contact" className="btn-products-cta" onClick={(e) => navigateTo(e, '/contact')}>
                   <span className="btn-cta-text">Send request</span>
                   <span className="btn-cta-icon-box">
                     <img src="/assets/services-btn-icon.svg" alt="Arrow" />

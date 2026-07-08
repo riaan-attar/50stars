@@ -5,39 +5,45 @@ import AnimatedNumber from './AnimatedNumber';
 const productsData = [
   {
     id: 1,
-    title: 'Aluminum gear housing',
+    title: 'Structural Steel',
     image: '/assets/product-1.webp',
-    material: 'Aluminum 6061 / 7075',
-    capability: 'CNC Machining',
-    size: 'Custom dimensions up to 500mm',
+    standard: 'ASTM A36 / A572 / A992 / EN 10025',
+    sourcing: 'Global Mill Partnerships',
+    members: 'Beams (W, HP, S, M), channels, angles, plates',
   },
   {
     id: 2,
-    title: 'Custom plastic enclosures',
+    title: 'Hollow & Tubular Sections',
     image: '/assets/product-2.png',
-    material: 'ABS, Polycarbonate, Nylon',
-    capability: 'Injection Molding',
-    size: 'Varies – custom moldable',
+    standard: 'ASTM A500 / A1085 / EN 10219',
+    sourcing: 'Vetted Tube Mills',
+    members: 'Square (SHS), rectangular (RHS), circular (CHS), H-piles',
   },
   {
     id: 3,
-    title: 'Electrical control panels',
+    title: 'Joists & Long-Span Systems',
     image: '/assets/product-3.webp',
-    material: 'Mild Steel, Stainless Steel',
-    capability: 'Sheet Metal Fabrication & Assembly',
-    size: 'Small to full-scale cabinets',
+    standard: 'Steel Joist Institute (SJI) Specs',
+    sourcing: 'Specialized Fabricators',
+    members: 'Open-web steel joists (K-series, LH/DLH), joist girders',
   },
   {
     id: 4,
-    title: 'Precision shaft assemblies',
+    title: 'Specialty & Corrosion-Resistant',
     image: '/assets/product-4.webp',
-    material: 'Alloy Steel, Stainless Steel',
-    capability: 'Turning & Grinding',
-    size: 'Up to 1200mm',
+    standard: 'ASTM A240 / A588 (Corten) / Galvanized',
+    sourcing: 'Specialized Sourcing Network',
+    members: 'Stainless steel sections, weathering steel, coated steel',
   },
 ];
 
 const ProductsSection: React.FC = () => {
+  const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new Event('popstate'));
+  };
+
   return (
     <section className="products-section" id="products">
       {/* Background shadow image at the top */}
@@ -50,15 +56,15 @@ const ProductsSection: React.FC = () => {
         <div className="ps-header">
           <div className="pill-who-we-are">
             <div className="pill-gradient-square"></div>
-            <span className="pill-text" style={{ color: 'var(--color-white)' }}>What we manufacture</span>
+            <span className="pill-text" style={{ color: 'var(--color-white)' }}>What we procure</span>
           </div>
 
           <div className="ps-header-content">
             <h2 className="ps-counter">
-              <AnimatedNumber value={50000} /><span className="text-orange">+</span>
+              <AnimatedNumber value={9} /><span className="text-orange">+</span>
             </h2>
             <p className="ps-subtitle">
-              Precision-built products delivered to clients across industries and continents.
+              Certified product categories delivered to job sites across industries and continents.
             </p>
           </div>
         </div>
@@ -79,18 +85,18 @@ const ProductsSection: React.FC = () => {
 
               <div className="ps-specs-list">
                 <div className="ps-spec-row">
-                  <span className="ps-spec-label">Material</span>
-                  <span className="ps-spec-value">{product.material}</span>
+                  <span className="ps-spec-label">Standard</span>
+                  <span className="ps-spec-value">{product.standard}</span>
                 </div>
                 <div className="ps-divider"></div>
                 <div className="ps-spec-row">
-                  <span className="ps-spec-label">Capability</span>
-                  <span className="ps-spec-value">{product.capability}</span>
+                  <span className="ps-spec-label">Sourcing</span>
+                  <span className="ps-spec-value">{product.sourcing}</span>
                 </div>
                 <div className="ps-divider"></div>
                 <div className="ps-spec-row">
-                  <span className="ps-spec-label">Size Range</span>
-                  <span className="ps-spec-value">{product.size}</span>
+                  <span className="ps-spec-label">Members</span>
+                  <span className="ps-spec-value">{product.members}</span>
                 </div>
               </div>
             </div>
@@ -103,12 +109,12 @@ const ProductsSection: React.FC = () => {
             Explore our complete product<br />range across industries.
           </h2>
           <div className="ps-footer-actions">
-            <a href="/assets/brochure.pdf" download className="btn-download-white">
-              Download brochure
+            <a href="/assets/about-brochure.pdf" download className="btn-download-white">
+              Download Brochure
               <img src="/assets/icon-download.svg" alt="Download" />
             </a>
             
-            <a href="#product" className="btn-orange-solid">
+            <a href="/products" className="btn-orange-solid" onClick={(e) => navigateTo(e, '/products')}>
               <span className="btn-os-text">View all products</span>
               <span className="btn-os-icon">
                 <img src="/assets/icon-arrow.svg" alt="Arrow" />

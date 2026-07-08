@@ -156,3 +156,43 @@
     right: 1rem;
   }
 }
+
+.btn-quote-who-we-are {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--color-orange);
+  color: var(--color-black);
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border-radius: 4px 4px 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+  height: 52px;
+  width: fit-content;
+}
+
+.btn-quote-who-we-are:hover {
+  background-color: #ff7a50;
+  transform: translateY(-2px);
+}
+
+.btn-quote-who-we-are .btn-text {
+  color: var(--color-black);
+}
+
+.btn-quote-who-we-are .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-black);
+  border-radius: 4px 4px 8px;
+}
+
+.btn-quote-who-we-are .btn-icon img {
+  filter: brightness(0) invert(1);
+}
+

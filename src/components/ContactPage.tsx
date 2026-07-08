@@ -71,7 +71,7 @@ const ContactPage: React.FC = () => {
                   Let’s <span className="text-orange">work</span> together
                 </h1>
                 <p className="contact-hero-desc">
-                  Got questions or need assistance? Reach out to us anytime — our team is ready to provide the support and guidance you need.
+                  Got questions or need assistance with your steel procurement? Reach out to us anytime — our team is ready to provide the support and guidance you need.
                 </p>
                 <div className="contact-hero-action-btn">
                   <a href="/assets/about-brochure.pdf" download className="contact-btn-brochure">
@@ -89,9 +89,8 @@ const ContactPage: React.FC = () => {
                 <div className="contact-detail-col">
                   <h4 className="detail-title">// Contact us on //</h4>
                   <div className="detail-links">
-                    <a href="tel:+(558)845889">+(558) 845 889</a>
-                    <a href="tel:+(41)845889568">+(41) 845 889 568</a>
-                    <a href="mailto:support@example.com">support@example.com</a>
+                    <a href="tel:+14155550167">+1 (415) 555-0167</a>
+                    <a href="mailto:procure@50stars.com">procure@50stars.com</a>
                   </div>
                 </div>
 
@@ -100,10 +99,7 @@ const ContactPage: React.FC = () => {
                   <h4 className="detail-title">// Find us //</h4>
                   <div className="detail-links">
                     <a href="https://www.google.com/maps" target="_blank" rel="noreferrer">
-                      USA - 123 creative street, suite 456, new york, NY 10001
-                    </a>
-                    <a href="https://www.google.com/maps" target="_blank" rel="noreferrer">
-                      USA - 93 back street, suite 786, new york, ny 10005
+                      USA - 1238 Echo Ridge Blvd, Suite 400, San Francisco, CA 94103
                     </a>
                   </div>
                 </div>

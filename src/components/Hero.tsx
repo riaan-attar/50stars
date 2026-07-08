@@ -3,6 +3,12 @@ import { ArrowRight } from 'lucide-react';
 import './Hero.css';
 
 const Hero: React.FC = () => {
+  const navigateTo = (e: React.MouseEvent<HTMLButtonElement>, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new Event('popstate'));
+  };
+
   return (
     <section className="hero-section">
       <div className="hero-container">
@@ -11,26 +17,26 @@ const Hero: React.FC = () => {
           <div className="hero-left">
             <div className="tag-pill">
               <span className="tag-dot"></span>
-              Trusted manufacturing partner
+              Trusted global procurement partner
             </div>
 
             <h1 className="hero-title">
-              <span className="nobr">From raw <span className="text-orange">materials</span></span><br />
-              <span className="nobr">to finished products</span>
+              From mill <span className="text-orange">to job site,</span><br />
+              every certified steel section you need
             </h1>
           </div>
 
           <div className="hero-right">
             <div className="since-text">
-              // SINCE - 2005 //
+              // SINCE — 2005 //
             </div>
 
             <p className="hero-description">
-              We deliver end-to-end manufacturing solutions from machining and fabrication to molding and assembly engineered for quality, efficiency, and on-time delivery.
+              We source and deliver certified structural steel and construction materials — every beam, joist, hollow section, and site-critical component your project calls for — through a global partner network of mills, fabricators, ports, and freight carriers, engineered for certified quality and on-time delivery.
             </p>
 
-            <button className="btn-explore">
-              <span className="btn-explore-text">Explore our capabilities</span>
+            <button className="btn-explore" onClick={(e) => navigateTo(e, '/services')}>
+              <span className="btn-explore-text">Explore Our Capabilities</span>
               <span className="btn-explore-icon">
                 <ArrowRight size={18} />
               </span>
@@ -40,13 +46,13 @@ const Hero: React.FC = () => {
 
         <div className="hero-footer">
           <div className="footer-location">
-            Based in: Los Angeles, USA
+            Based in: San Francisco, USA
           </div>
           <div className="footer-scroll">
             SCROLL DOWN &darr;
           </div>
           <div className="footer-coords">
-            21.0278° N, 105.8342° E
+            37.7749° N, 122.4194° W
           </div>
         </div>
 

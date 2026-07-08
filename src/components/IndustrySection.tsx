@@ -3,68 +3,81 @@ import './IndustrySection.css';
 
 const industries = [
   {
-    id: 'aerospace',
-    tabLabel: 'Aerospace industry',
-    title: 'Aerospace',
-    description: 'Certified aerospace components built for mission-critical performance and full traceability.',
+    id: 'industrial',
+    tabLabel: 'Industrial & Heavy',
+    title: 'Industrial & Heavy Construction',
+    description: 'Certified structural steel and materials packages built for large-scale, mission-critical projects, with full material traceability.',
     icon: '/assets/icon-aerospace.svg',
-    image: '/assets/industry-aerospace.jpg',
+    image: '/assets/service-1.webp',
     features: [
-      'Full material traceability',
-      'NADCAP special process approval',
-      'Critical safety component expertise'
+      'Full mill test certificate traceability',
+      'Multi-standard certification (ASTM/AISC/EN)',
+      'Split-sourcing for critical long-lead components'
     ]
   },
   {
-    id: 'automotive',
-    tabLabel: 'Automotive',
-    title: 'Automotive',
-    description: 'High-volume precision manufacturing to keep your supply chain moving efficiently.',
-    icon: '/assets/icon-aerospace.svg', 
+    id: 'datacenters',
+    tabLabel: 'Data Centers',
+    title: 'Data Centers & Advanced Technology',
+    description: 'Sourcing for fast-track hyperscale and co-location builds, coordinating heavy framing, composite metal decking, and support steel.',
+    icon: '/assets/icon-aerospace.svg',
     image: '/assets/product-1.webp',
     features: [
-      'High volume production',
-      'TS16949 certified quality',
-      'Just-in-time delivery'
-    ]
-  },
-  {
-    id: 'medical',
-    tabLabel: 'Medical devices',
-    title: 'Medical devices',
-    description: 'High-precision medical devices for safer, more effective patient care and diagnostics.',
-    icon: '/assets/icon-aerospace.svg',
-    image: '/assets/product-2.png', 
-    features: [
-      'Enhanced Patient Care',
-      'Safety and Reliability',
-      'Operational Efficiency'
+      'Just-In-Time site delivery sequencing',
+      'Multi-origin supply tracking',
+      'High-strength structural columns'
     ]
   },
   {
     id: 'energy',
-    tabLabel: 'Energy & power',
-    title: 'Energy & power',
-    description: 'Durable, high-strength components designed for harsh environments and demanding applications.',
+    tabLabel: 'Power & Energy',
+    title: 'Power, Energy & Utilities',
+    description: 'Materials engineered for extreme loads and harsh corrosion profiles in substations, solar arrays, wind towers, and power plants.',
     icon: '/assets/icon-aerospace.svg',
     image: '/assets/product-3.webp',
     features: [
-      'Extreme environment testing',
-      'Large-scale machining',
-      'Corrosion resistant materials'
+      'Corrosion-resistant weathering steel',
+      'Heavy plate girder sourcing',
+      'Strict certificate compliance checking'
     ]
   },
   {
-    id: 'industrial',
-    tabLabel: 'Industrial equipment',
-    title: 'Industrial equipment',
-    description: 'Robust assemblies and parts to keep heavy machinery running at peak performance.',
+    id: 'oilgas',
+    tabLabel: 'Oil & Gas',
+    title: 'Oil, Gas & Petrochemical',
+    description: 'Highly traceable structural components for offshore platforms, pipe racks, refineries, and petrochemical storage facilities.',
     icon: '/assets/icon-aerospace.svg',
     image: '/assets/product-4.webp',
     features: [
-      'Heavy duty assemblies',
-      'Tight tolerance controls',
-      'Long lifecycle durability'
+      'ASTM A500 CHS/H-piles',
+      'Full EN 10204 3.1 certification',
+      'Special alloy structural components'
+    ]
+  },
+  {
+    id: 'warehousing',
+    tabLabel: 'Warehousing & Logistics',
+    title: 'Warehousing & Logistics',
+    description: 'Optimized joists, trusses, columns, and metal decking designed to deliver cost-effective long-span configurations.',
+    icon: '/assets/icon-aerospace.svg',
+    image: '/assets/product-2.png',
+    features: [
+      'Value-engineered section designs',
+      'Steel Joist Institute (SJI) spec matching',
+      'Vendor-managed staging and inventory'
+    ]
+  },
+  {
+    id: 'bridges',
+    tabLabel: 'Bridges & Civil',
+    title: 'Bridges & Civil Infrastructure',
+    description: 'Heavy-duty structural plates, built-up members, and custom connection hardware certified for civil works.',
+    icon: '/assets/icon-aerospace.svg',
+    image: '/assets/product-3.webp',
+    features: [
+      'Chain-of-custody documentation',
+      'DOT compliance verification',
+      'Third-party inspection reports'
     ]
   }
 ];
@@ -103,7 +116,7 @@ const IndustrySection: React.FC = () => {
             <span className="pill-text">Build for every industry</span>
           </div>
           <h2 className="industry-title">
-            Manufacturing <span className="text-orange">solutions</span><br/>for every industry
+            Structural steel and materials <span className="text-orange">procurement</span> for every sector
           </h2>
         </div>
 

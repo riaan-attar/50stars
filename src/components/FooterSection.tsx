@@ -27,7 +27,7 @@ const FooterSection: React.FC = () => {
           <div className="ft-col ft-col-1">
             <h3 className="ft-col-title">Stay connected</h3>
             <p className="ft-col-desc">
-              Join our newsletter for tips, updates, and project highlights—only the good stuff.
+              Get sourcing tips, market updates, and project highlights from the global steel supply chain.
             </p>
             <form className="ft-form" onSubmit={(e) => e.preventDefault()}>
               <input type="email" placeholder="Enter your email" required className="ft-input" />
@@ -45,10 +45,13 @@ const FooterSection: React.FC = () => {
                 <li><a href="/" onClick={(e) => navigateTo(e, '/')}>Home</a></li>
                 <li><a href="/about" onClick={(e) => navigateTo(e, '/about')}>About</a></li>
                 <li><a href="/services" onClick={(e) => navigateTo(e, '/services')}>Services</a></li>
+                <li><a href="/blog" onClick={(e) => navigateTo(e, '/blog')}>Blog</a></li>
               </ul>
               <ul className="ft-link-list">
                 <li><a href="/products" onClick={(e) => navigateTo(e, '/products')}>Products</a></li>
+                <li><a href="/#case-study" onClick={(e) => navigateTo(e, '/')}>Case Studies</a></li>
                 <li><a href="/contact" onClick={(e) => navigateTo(e, '/contact')}>Contact</a></li>
+                <li><a href="/contact" onClick={(e) => navigateTo(e, '/contact')}>Privacy Policy</a></li>
               </ul>
             </div>
           </div>
@@ -57,9 +60,9 @@ const FooterSection: React.FC = () => {
           <div className="ft-col ft-col-3">
             <h3 className="ft-col-title">Contact info</h3>
             <ul className="ft-link-list">
-              <li><a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">1238 echo ridge blvd, suite 400, san francisco, CA 94103</a></li>
+              <li><a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">1238 Echo Ridge Blvd, Suite 400, San Francisco, CA 94103</a></li>
               <li><a href="tel:+14155550167">+1 (415) 555-0167</a></li>
-              <li><a href="mailto:support@example.com">support@example.com</a></li>
+              <li><a href="mailto:procure@50stars.com">procure@50stars.com</a></li>
             </ul>
           </div>
 

@@ -17,6 +17,12 @@ const VideoSection: React.FC = () => {
     }
   };
 
+  const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new Event('popstate'));
+  };
+
   return (
     <section className="video-section">
       <div className="video-background-container">
@@ -51,8 +57,21 @@ const VideoSection: React.FC = () => {
 
         <div className="quote-container">
           <p className="quote-text">
-            Great manufacturing isn't just about precision it's about vision, commitment, and the relentless pursuit of excellence.
+            "Great procurement isn't just about finding steel — it's about certainty. Certainty on grade, certainty on schedule, certainty on price."
           </p>
+          
+          <div className="quote-action-wrap" style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+            <a 
+              href="/about" 
+              className="btn-quote-who-we-are" 
+              onClick={(e) => navigateTo(e, '/about')}
+            >
+              <span className="btn-text">Who We Are</span>
+              <span className="btn-icon">
+                <img src="/assets/icon-arrow.svg" alt="Arrow" style={{ width: '14px', height: '10px' }} />
+              </span>
+            </a>
+          </div>
         </div>
       </div>
 

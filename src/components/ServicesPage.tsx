@@ -45,63 +45,81 @@ const ServicesPage: React.FC = () => {
 
   const services = [
     {
-      title: "Product assembly",
-      description: "Complete assembly services with quality testing and packaging.",
+      title: "Structural Steel & Materials Sourcing",
+      description: "Global mill sourcing across major regions, providing beams, joists, hollow sections, plate, angles, and specialty alloys.",
       image: "/assets/service-1.webp",
-      link: "./service/product-assembly"
+      link: "/contact"
     },
     {
-      title: "Sheet metal fabrication",
-      description: "Complete sheet metal solutions from cutting to finishing.",
+      title: "Engineering & Sourcing Advisory",
+      description: "BOM and takeoff reviews, grade/section matching to ASTM/AISC/EN codes, and value engineering.",
       image: "/assets/service-2.webp",
-      link: "./service/sheet-metal-fabrication"
+      link: "/contact"
     },
     {
-      title: "CNC machining services",
-      description: "CNC machining with 5-axis technology for complex parts.",
+      title: "Quality Assurance & Certification",
+      description: "Full mill test certificates (MTC), chain-of-custody tracking, and dimensional/coating inspections.",
       image: "/assets/service-3.webp",
-      link: "./service/cnc-machining-services"
+      link: "/contact"
     },
     {
-      title: "Injection molding",
-      description: "High-volume plastic injection molding with state-of-the-art equipment.",
+      title: "Fabrication Coordination",
+      description: "Pre-qualified fabrication shops for custom cutting, drilling, coating, galvanizing, and pre-assembly.",
       image: "/assets/service-4.webp",
-      link: "./service/injection-molding"
+      link: "/contact"
     },
     {
-      title: "Surface finishing",
-      description: "Surface treatment finishing services for durability, aesthetics, performance.",
+      title: "Global Logistics & Freight",
+      description: "Flat rack, breakbulk, and container cargo, customs clearance, and sequencing to your erection schedule.",
       image: "/assets/service-5.webp",
-      link: "./service/surface-finishing"
+      link: "/contact"
     },
     {
-      title: "Quality control & testing",
-      description: "Rigorous inspection for consistent component quality.",
+      title: "Trade Finance & Compliance Support",
+      description: "Letter of credit (LC) structuring guidance, tariff reviews, and cross-border payment compliance support.",
       image: "/assets/service-6.webp",
-      link: "./service/quality-control-testing"
+      link: "/contact"
+    },
+    {
+      title: "Warehousing & Inventory",
+      description: "Staging and vendor-managed inventory near major corridors to support multi-phase projects.",
+      image: "/assets/product-1.webp",
+      link: "/contact"
+    },
+    {
+      title: "Fair Trade Pricing Policy",
+      description: "Flat $10-per-metric-ton procurement fee, providing complete transparency without markup games.",
+      image: "/assets/product-3.webp",
+      link: "/contact"
+    },
+    {
+      title: "Maintenance & Lifecycle Support",
+      description: "Coating touch-up, corrosion protection consulting, and re-certification support for completed structures.",
+      image: "/assets/product-4.webp",
+      link: "/contact"
     }
   ];
 
   const faqItems = [
     {
-      question: "What manufacturing services do you provide?",
-      answer: "We provide end-to-end manufacturing solutions, including component sourcing, product assembly, quality inspection, and final packaging."
+      question: "How do you ensure material quality and standard compliance?",
+      answer: "Every shipment is delivered with full mill test certificates (MTC) and chain-of-custody documentation, matched to the ASTM, AISC, EN, or other regional standards your project requires."
     },
     {
-      question: "What types of products can you manufacture?",
-      answer: "We manufacture a wide range of products including sheet metal components, CNC machined parts, plastic injection molded components, and fully assembled beauty devices."
+      question: "What is your pricing model for steel procurement?",
+      answer: "We charge a flat $10-per-metric-ton procurement fee. You see the mill price and you see our fee — there are no hidden markups or inflated service charges."
     },
     {
-      question: "How do you maintain quality throughout production?",
-      answer: "We implement rigorous quality inspection protocols, raw material analysis, in-line testing, and final quality control checks to meet FDA, CE, and ISO standards."
+      question: "Can you manage custom cutting and drilling before shipping?",
+      answer: "Yes, we coordinate with pre-qualified fabrication partners to manage custom cutting, drilling, galvanizing, and pre-assembly to deliver site-ready steel packages."
     },
     {
-      question: "Can you manage low and high-volume production?",
-      answer: "Yes, we support flexible production options. We handle low-volume prototype builds and high-volume mass manufacturing runs with equal attention to detail."
+      question: "What logistics and shipping capabilities do you offer?",
+      answer: "We handle flat rack, breakbulk, standard containers, and out-of-gauge (OOG) cargo, including port-to-port shipping, customs clearance, and just-in-time delivery to site."
     },
     {
-      question: "What industries do you serve?",
-      answer: "We serve various sectors including industrial engineering, commercial manufacturing, medical components, and advanced electronic beauty equipment."
+      question: "What industries do you supply structural steel to?",
+      answer: "We serve data centers, power/energy utilities, oil & gas installations, heavy manufacturing, warehousing logistics hubs, and bridges & civil infrastructure builds."
     }
   ];
 
@@ -146,14 +164,19 @@ const ServicesPage: React.FC = () => {
           </div>
 
           {/* CTA Banner right below services grid */}
+          {/* CTA Banner right below services grid */}
           <div className="services-page-cta">
             <div className="services-cta-banner">
               <div className="cta-banner-bg" style={{ backgroundImage: 'url("/assets/services-cta-bg.png")' }}></div>
               <div className="cta-banner-content">
-                <h2>Ready to start your next project?</h2>
+                <h2>Ready to source your next structural steel package?</h2>
                 <div className="cta-banner-button-wrap">
-                  <a href="/contact" className="btn-cta-schedule">
-                    <span className="btn-cta-text">Schedule now</span>
+                  <a href="/contact" className="btn-cta-schedule" onClick={(e) => {
+                    e.preventDefault();
+                    window.history.pushState({}, '', '/contact');
+                    window.dispatchEvent(new Event('popstate'));
+                  }}>
+                    <span className="btn-cta-text">Schedule a Consultation</span>
                     <span className="btn-cta-icon-box">
                       <img src="/assets/services-btn-icon.svg" alt="Arrow icon" className="btn-cta-icon-img" />
                     </span>
@@ -235,7 +258,7 @@ const ServicesPage: React.FC = () => {
               </div>
               
               <h2 className="services-contact-title">
-                Start your <span className="text-orange">precision</span> manufacturing journey
+                Start your <span className="text-orange">certified</span> procurement journey
               </h2>
             </div>
 

@@ -22,30 +22,34 @@ const AboutSection: React.FC = () => {
                 <div className="avatar-wrap"><img src="/assets/about-avatar-2.png" alt="Avatar 2" /></div>
                 <div className="avatar-wrap"><img src="/assets/about-avatar-3.png" alt="Avatar 3" /></div>
                 <div className="avatar-wrap"><img src="/assets/about-avatar-4.png" alt="Avatar 4" /></div>
-                <div className="avatar-count">10+</div>
+                <div className="avatar-count">25+</div>
               </div>
-              <p className="team-text">Team of passionate<br/>professionals</p>
+              <p className="team-text">Team of dedicated procurement,<br/>engineering, and logistics professionals</p>
             </div>
           </div>
           
           {/* Right Column */}
           <div className="about-top-right">
             <h2 className="about-title">
-              Driven by technology, backed<br/>by experience, focused on<br/><span className="text-orange">manufacturing</span> excellence
+              Driven by standards, backed<br/>by a global network, focused on<br/><span className="text-orange">certified</span> delivery
             </h2>
             <p className="about-description">
-              Backed by advanced technology, skilled craftsmanship, and a commitment to quality, we help businesses bring their ideas to life with confidence and speed. Whether it's prototyping or full-scale production, we're your trusted partner every step of the way.
+              We connect contractors and fabricators to a vetted network of mills, ports, fabricators, and freight partners spanning every major steel-producing region. Whether it's a single joist order or a full structural package for a large-scale build, we manage sourcing, certification, fabrication coordination, and logistics as one accountable process.
             </p>
             
             <div className="about-actions">
-              <a href="#about" className="btn-learn-more">
-                <span className="btn-lm-text">Learn more about us</span>
+              <a href="/about" className="btn-learn-more" onClick={(e) => {
+                e.preventDefault();
+                window.history.pushState({}, '', '/about');
+                window.dispatchEvent(new Event('popstate'));
+              }}>
+                <span className="btn-lm-text">Learn More About Us</span>
                 <span className="btn-lm-icon">
                   <img src="/assets/icon-arrow.svg" alt="Arrow" style={{ filter: 'brightness(0) invert(1)' }} />
                 </span>
               </a>
-              <a href="/assets/brochure.pdf" download className="btn-download">
-                Download brochure
+              <a href="/assets/about-brochure.pdf" download className="btn-download">
+                Download Brochure
                 <img src="/assets/about-download-icon.svg" alt="Download" />
               </a>
             </div>
@@ -58,8 +62,8 @@ const AboutSection: React.FC = () => {
           {/* Card 1 */}
           <div className="about-card card-light">
             <div className="card-logo-text">50stars</div>
-            <h2 className="card-counter text-orange"><AnimatedNumber value={100} /><span className="text-dark">+</span></h2>
-            <p className="card-text text-dark">Trusted by businesses across multiple<br/>manufacturing industries worldwide</p>
+            <h2 className="card-counter text-orange"><AnimatedNumber value={150} /><span className="text-dark">+</span></h2>
+            <p className="card-text text-dark">Contractors and fabricators<br/>served worldwide</p>
             <div className="card-review-info">
               <div className="rating">
                 <h2><AnimatedNumber value={4.9} decimals={1} /></h2>
@@ -78,8 +82,8 @@ const AboutSection: React.FC = () => {
           <div className="about-card card-orange">
             <div className="card-orange-content">
               <p className="card-pretitle">// 2005-2K26 //</p>
-              <h2 className="card-counter text-dark"><AnimatedNumber value={20} />+</h2>
-              <p className="card-text text-light">Delivering consistent manufacturing<br/>excellence since day one.</p>
+              <h2 className="card-counter text-dark"><AnimatedNumber value={9} />+</h2>
+              <p className="card-text text-light">Product categories supplied with full<br/>traceability and certification.</p>
             </div>
             <img className="card-badge" src="/assets/about-badge.png" alt="Badge" />
           </div>

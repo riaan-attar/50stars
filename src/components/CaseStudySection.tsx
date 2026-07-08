@@ -5,37 +5,37 @@ import './CaseStudySection.css';
 const caseStudies = [
   {
     id: 1,
-    title: 'Lightweight castings for Industrial equipment',
-    description: 'Redesigned metal castings to reduce material use and maintain strength, optimizing cost and weight.',
+    title: 'Split-sourcing strategy for a large-scale structural steel package',
+    description: 'Developed a combined domestic-and-international sourcing model to solve a critical long-member constraint on a major industrial build — balancing lead time, cost, and field-splice engineering requirements.',
     stat: '35%',
-    scope: 'Heavy-duty machinery',
+    scope: 'Reduction in projected lead time',
     image: '/assets/case-1.webp',
     logo: '/assets/logo-1.svg'
   },
   {
     id: 2,
-    title: 'Precision CNC milling for automotive components',
-    description: 'Improved machining process to achieve tighter tolerances and faster production cycles for car parts.',
-    stat: '54%',
-    scope: 'Engine components',
+    title: 'Just-In-Time delivery coordination for high-tech data center construction',
+    description: 'Managed fabrication and transport logistics for 12,000 metric tons of structural columns and composite decking, aligning shipments to the precise daily crane schedule.',
+    stat: '100%',
+    scope: 'On-time delivery record',
     image: '/assets/case-2.webp',
     logo: '/assets/logo-2.svg'
   },
   {
     id: 3,
-    title: 'Additive manufacturing for custom tooling',
-    description: 'Implemented 3D-printed tools to accelerate prototyping and reduce lead time in production.',
-    stat: '50%',
-    scope: 'Traditional tooling',
+    title: 'Grade matching and value engineering for port corridor warehousing',
+    description: 'Optimized steel section profiles and grade matching for a 450,000 sq ft logistics facility, saving on material cost without reducing structural load-bearing capacity.',
+    stat: '12%',
+    scope: 'Material cost reduction',
     image: '/assets/case-3.webp',
     logo: '/assets/logo-3.svg'
   },
   {
     id: 4,
-    title: 'Automated assembly line optimization',
-    description: 'Streamlined assembly processes with robotics, reducing labor costs and improving output consistency.',
-    stat: '62%',
-    scope: 'Assembly process',
+    title: 'Multi-origin raw material procurement for utility power plant build',
+    description: 'Coordinated heavy-member plate girder sourcing from domestic and global mills, managing material certification and import clearing ahead of field assembly.',
+    stat: '0',
+    scope: 'Certification compliance issues',
     image: '/assets/case-4.webp',
     logo: '/assets/logo-4.svg'
   }
@@ -43,6 +43,12 @@ const caseStudies = [
 
 const CaseStudySection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new Event('popstate'));
+  };
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? caseStudies.length - 1 : prev - 1));
@@ -98,7 +104,7 @@ const CaseStudySection: React.FC = () => {
                   <h4 className="cs-stat-number">{activeCase.stat}</h4>
                   <p className="cs-stat-label">{activeCase.scope}</p>
                 </div>
-                <a href="#case" className="btn-view-case">
+                <a href="/contact" className="btn-view-case" onClick={(e) => navigateTo(e, '/contact')}>
                   <span className="btn-vc-text">View case</span>
                   <span className="btn-vc-icon">
                     <img src="/assets/icon-arrow.svg" alt="Arrow" />
@@ -132,7 +138,7 @@ const CaseStudySection: React.FC = () => {
             </div>
           </div>
           <div className="cs-banner-right">
-            <a href="#contact" className="btn-contact-black">
+            <a href="/contact" className="btn-contact-black" onClick={(e) => navigateTo(e, '/contact')}>
               <span className="btn-cb-text">Contact us now</span>
               <span className="btn-cb-icon">
                 <img src="/assets/icon-arrow.svg" alt="Arrow" style={{ filter: 'brightness(0) invert(1)' }} />

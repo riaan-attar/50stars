@@ -5,43 +5,49 @@ import AnimatedNumber from './AnimatedNumber';
 const testimonialsData = [
   {
     id: 1,
-    name: 'Emily Carter',
-    role: 'Product Designer',
+    name: 'James Mitchell',
+    role: 'Senior Sourcing Director, Infrastructure Build Group',
     avatar: '/assets/testi-avatar-1.png',
-    quote: 'The team’s dedication and innovative approach transformed our ideas into reality. Every stage of the project was handled with care and expertise.'
+    quote: '50 Stars turned a three-country sourcing headache into a single phone call. Full certification, no markup surprises, delivered on schedule.'
   },
   {
     id: 2,
     name: 'David Kim',
-    role: 'Technical Lead',
+    role: 'Technical Sourcing Lead, Energy Systems Corp',
     avatar: '/assets/avatar-4.png',
-    quote: 'Superb attention to detail and outstanding project management. They delivered our high-precision parts ahead of schedule.'
+    quote: 'Superb attention to detail and outstanding project management. They delivered our high-precision structural beams and anchor bolts ahead of schedule.'
   },
   {
     id: 3,
     name: 'Sophia Chen',
-    role: 'Operations Director',
+    role: 'Operations Director, Apex Logistics Hub',
     avatar: '/assets/testi-avatar-3.png',
-    quote: 'Exceptional quality assurance. The prototypes were perfect, and the transition to full-scale manufacturing was seamless.'
+    quote: 'Exceptional quality assurance. The mill test certificates (MTC) were perfect, and the transition from import clearance to job site delivery was seamless.'
   },
   {
     id: 4,
     name: 'Sarah Jenkins',
-    role: 'VP of Engineering',
+    role: 'VP of Engineering, Civil Partners Inc',
     avatar: '/assets/testi-avatar-4.png',
-    quote: 'Their engineering support was invaluable. They optimized our design for manufacturability, saving us significant production costs.'
+    quote: 'Their structural advisory was invaluable. They optimized our section profiles, saving us significant material costs while maintaining full code compliance.'
   },
   {
     id: 5,
-    name: 'James Mitchell',
-    role: 'Procurement Manager',
+    name: 'Emily Carter',
+    role: 'Project Manager, Metro Developers',
     avatar: '/assets/testi-avatar-5.png',
-    quote: 'Reliable, transparent, and highly communicative. We\'ve found a long-term partner for our custom injection molding needs.'
+    quote: 'Reliable, transparent, and highly communicative. We\'ve found a long-term partner for our multi-phase steel framing and decking needs.'
   }
 ];
 
 const TestimonialSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new Event('popstate'));
+  };
 
   const activeTestimonial = testimonialsData[activeIndex];
 
@@ -94,21 +100,29 @@ const TestimonialSection: React.FC = () => {
           {/* Column 2: Image and Stats */}
           <div className="tm-col-2">
             <div className="tm-image-card">
-              <img src="/assets/testi-img.webp" alt="Factory" className="tm-img-bg" />
+              <img src="/assets/testi-img.webp" alt="Steel mill loading dock" className="tm-img-bg" />
               <div className="tm-img-overlay">
                 <p className="tm-img-year">// 2005-2K26 //</p>
                 <div className="tm-logo-text">50stars</div>
               </div>
             </div>
             
-            <div className="tm-stats-card">
-              <div className="tm-stat-item">
-                <h3><AnimatedNumber value={98} />%</h3>
-                <p>On-Time delivery rate</p>
+            <div className="tm-stats-card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+              <div className="tm-stat-item" style={{ padding: '0.75rem 0.5rem' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '2px' }}><AnimatedNumber value={98} />%</h3>
+                <p style={{ fontSize: '0.75rem' }}>On-time delivery</p>
               </div>
-              <div className="tm-stat-item">
-                <h3><AnimatedNumber value={50} />+</h3>
-                <p>Skilled professionals</p>
+              <div className="tm-stat-item" style={{ padding: '0.75rem 0.5rem' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '2px' }}><AnimatedNumber value={250000} />+</h3>
+                <p style={{ fontSize: '0.75rem' }}>Tons procured</p>
+              </div>
+              <div className="tm-stat-item" style={{ padding: '0.75rem 0.5rem' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '2px' }}><AnimatedNumber value={120} />+</h3>
+                <p style={{ fontSize: '0.75rem' }}>Global partners</p>
+              </div>
+              <div className="tm-stat-item" style={{ padding: '0.75rem 0.5rem' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '2px' }}><AnimatedNumber value={9} />+</h3>
+                <p style={{ fontSize: '0.75rem' }}>Product categories</p>
               </div>
             </div>
           </div>
@@ -120,10 +134,10 @@ const TestimonialSection: React.FC = () => {
             </div>
             <div className="tm-support-content">
               <img src="/assets/support-icon.svg" alt="Support" className="tm-support-icon" />
-              <h4 className="tm-support-title">Need help choosing the right product?</h4>
-              <p className="tm-support-desc">Always ready with guidance, product details, and after-sales support.</p>
+              <h4 className="tm-support-title">Need help selecting the right steel grade, profile, or sourcing strategy?</h4>
+              <p className="tm-support-desc">We're ready with product specs, certification guidance, and sourcing support at every stage.</p>
               
-              <a href="#contact" className="btn-white-solid tm-support-btn">
+              <a href="/contact" className="btn-white-solid tm-support-btn" onClick={(e) => navigateTo(e, '/contact')}>
                 <span className="btn-ws-text">Contact Support</span>
                 <span className="btn-ws-icon">
                   <img src="/assets/icon-arrow.svg" alt="Arrow" />

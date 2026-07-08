@@ -35,23 +35,51 @@ const WhyChooseSection: React.FC = () => {
         <div className="wc-banner">
           
           <div className="wc-banner-bg">
-            <img src="/assets/why-bg.webp" alt="Machinery" />
+            <img src="/assets/why-bg.webp" alt="Global Steel Sourcing" />
           </div>
 
           <div className="wc-banner-content">
             <div className="wc-content-inner">
-              <h2 className="wc-title">Manufacturing solutions<br/>you can count on</h2>
+              <h2 className="wc-title" style={{ fontSize: '2.5rem', lineHeight: '1.2', letterSpacing: '-1.5px', marginBottom: '1.5rem' }}>
+                Sourced anywhere. Certified everywhere.<br/>Delivered on your schedule.
+              </h2>
               
-              <ul className="wc-features">
-                <li><img src="/assets/icon-check.svg" alt="check" /> Manual & automated assembly</li>
-                <li><img src="/assets/icon-check.svg" alt="check" /> Certified quality assurance</li>
-                <li><img src="/assets/icon-check.svg" alt="check" /> On-time delivery</li>
-                <li><img src="/assets/icon-check.svg" alt="check" /> End-to-end solutions</li>
-                <li><img src="/assets/icon-check.svg" alt="check" /> Advanced technology</li>
-                <li><img src="/assets/icon-check.svg" alt="check" /> Customer-centric approach</li>
+              <ul className="wc-features" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '2rem' }}>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                  <div><strong>Mill Partnerships</strong> — direct relationships across major steel-producing regions</div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                  <div><strong>Fabrication Partners</strong> — pre-qualified shops for cut, drilled, and pre-assembled packages</div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                  <div><strong>Port & Freight</strong> — flat rack, breakbulk, container, and OOG logistics coordination</div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                  <div><strong>Regional Compliance</strong> — sourcing matched to ASTM, EN, AS/NZS, depending on destination</div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                  <div><strong>Warehousing Partners</strong> — staging and inventory support near major project corridors</div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                  <div><strong>Fair Trade Pricing</strong> — flat $10-per-metric-ton procurement fee, no hidden markups</div>
+                </li>
               </ul>
 
-              <a href="#capabilities" className="btn-orange-solid wc-btn">
+              <a 
+                href="/services" 
+                className="btn-orange-solid wc-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.history.pushState({}, '', '/services');
+                  window.dispatchEvent(new Event('popstate'));
+                }}
+              >
                 <span className="btn-os-text">Our Capabilities</span>
                 <span className="btn-os-icon">
                   <img src="/assets/icon-arrow.svg" alt="Arrow" />
