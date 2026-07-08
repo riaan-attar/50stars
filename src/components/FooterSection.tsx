@@ -37,7 +37,6 @@ const FooterSection: React.FC = () => {
             </form>
           </div>
 
-          {/* Col 2: Links */}
           <div className="ft-col ft-col-2">
             <h3 className="ft-col-title">Links</h3>
             <div className="ft-links-wrap">
@@ -45,11 +44,9 @@ const FooterSection: React.FC = () => {
                 <li><a href="/" onClick={(e) => navigateTo(e, '/')}>Home</a></li>
                 <li><a href="/about" onClick={(e) => navigateTo(e, '/about')}>About</a></li>
                 <li><a href="/services" onClick={(e) => navigateTo(e, '/services')}>Services</a></li>
-                <li><a href="/blog" onClick={(e) => navigateTo(e, '/blog')}>Blog</a></li>
               </ul>
               <ul className="ft-link-list">
                 <li><a href="/products" onClick={(e) => navigateTo(e, '/products')}>Products</a></li>
-                <li><a href="/#case-study" onClick={(e) => navigateTo(e, '/')}>Case Studies</a></li>
                 <li><a href="/contact" onClick={(e) => navigateTo(e, '/contact')}>Contact</a></li>
                 <li><a href="/contact" onClick={(e) => navigateTo(e, '/contact')}>Privacy Policy</a></li>
               </ul>

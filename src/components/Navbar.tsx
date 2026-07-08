@@ -10,10 +10,9 @@ const Navbar: React.FC = () => {
   const isAboutPage = currentPath === '/about' || currentPath.endsWith('/about');
   const isServicesPage = currentPath === '/services' || currentPath.endsWith('/services');
   const isProductsPage = currentPath === '/products' || currentPath.endsWith('/products');
-  const isBlogPage = currentPath === '/blog' || currentPath.endsWith('/blog');
   const isContactPage = currentPath === '/contact' || currentPath.endsWith('/contact');
 
-  const isHomeActive = !isAboutPage && !isServicesPage && !isProductsPage && !isBlogPage && !isContactPage;
+  const isHomeActive = !isAboutPage && !isServicesPage && !isProductsPage && !isContactPage;
 
   const navigateTo = (e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>, path: string) => {
     e.preventDefault();
@@ -57,13 +56,6 @@ const Navbar: React.FC = () => {
             onClick={(e) => navigateTo(e, '/products')}
           >
             {isProductsPage && <span className="dot"></span>}Products
-          </a>
-          <a 
-            href="/blog" 
-            className={`nav-link ${isBlogPage ? 'active' : ''}`}
-            onClick={(e) => navigateTo(e, '/blog')}
-          >
-            {isBlogPage && <span className="dot"></span>}Blog
           </a>
           <a 
             href="/contact" 
@@ -128,13 +120,6 @@ const Navbar: React.FC = () => {
             onClick={(e) => navigateTo(e, '/products')}
           >
             Products
-          </a>
-          <a 
-            href="/blog" 
-            className={`sidebar-link ${isBlogPage ? 'active' : ''}`}
-            onClick={(e) => navigateTo(e, '/blog')}
-          >
-            Blog
           </a>
           <a 
             href="/contact" 

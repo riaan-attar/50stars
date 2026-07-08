@@ -15,7 +15,6 @@ import AboutHero from './components/AboutHero';
 import ServicesPage from './components/ServicesPage';
 import ProductsPage from './components/ProductsPage';
 import ContactPage from './components/ContactPage';
-import BlogPage from './components/BlogPage';
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -34,7 +33,6 @@ function App() {
   const isAboutPage = currentPath === '/about' || currentPath.endsWith('/about');
   const isServicesPage = currentPath === '/services' || currentPath.endsWith('/services');
   const isProductsPage = currentPath === '/products' || currentPath.endsWith('/products');
-  const isBlogPage = currentPath === '/blog' || currentPath.endsWith('/blog');
   const isContactPage = currentPath === '/contact' || currentPath.endsWith('/contact');
 
   useEffect(() => {
@@ -63,9 +61,7 @@ function App() {
       // Products page animations
       '.products-badge', '.products-hero-title', '.products-hero-btn', '.product-catalog-card', '.products-cta-banner',
       // Contact page animations
-      '.contact-hero-title', '.contact-hero-desc', '.contact-hero-action-btn', '.contact-detail-col', '.contact-form-card', '.contact-ticker-section',
-      // Blog page animations
-      '.blog-hero-title', '.blog-grid', '.blog-card-item'
+      '.contact-hero-title', '.contact-hero-desc', '.contact-hero-action-btn', '.contact-detail-col', '.contact-form-card', '.contact-ticker-section'
     ];
 
     const observer = new IntersectionObserver(
@@ -134,11 +130,6 @@ function App() {
       ) : isContactPage ? (
         <div className="main-content-wrapper">
           <ContactPage />
-          <FooterSection />
-        </div>
-      ) : isBlogPage ? (
-        <div className="main-content-wrapper">
-          <BlogPage />
           <FooterSection />
         </div>
       ) : (
