@@ -1,7 +1,7 @@
 .why-choose-section {
   width: 100%;
   background-color: var(--color-white);
-  padding: 4rem 0;
+  padding: 4rem 0 6rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,6 +59,34 @@
   filter: grayscale(0%);
 }
 
+/* Sourcing Section Pill Badge */
+.pill-who-we-are {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.pill-gradient-square {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(46deg, rgb(200, 55, 11) 0%, rgb(246, 98, 52) 100%);
+  border-radius: 2px;
+}
+
+.pill-text {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .wc-container {
   max-width: 1440px;
   width: 100%;
@@ -89,47 +117,51 @@
 .wc-banner-content {
   position: absolute;
   top: 0; left: 0; bottom: 0;
-  width: 50%;
+  width: 60%;
   z-index: 2;
-  background: linear-gradient(90deg, rgba(15,15,15,0.95) 60%, rgba(15,15,15,0) 100%);
-  padding: 4rem;
+  background: linear-gradient(90deg, rgba(15,15,15,0.98) 70%, rgba(15,15,15,0.5) 85%, rgba(15,15,15,0) 100%);
+  padding: 3rem 4rem;
   display: flex;
   align-items: center;
 }
 
 .wc-content-inner {
-  max-width: 400px;
+  max-width: 680px;
+  width: 100%;
 }
 
 .wc-title {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--color-white);
   line-height: 1.2;
+  letter-spacing: -1px;
   margin: 0 0 2rem 0;
 }
 
 .wc-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 2.5rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  margin: 0 0 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
 }
 
 .wc-features li {
   display: flex;
-  align-items: center;
-  gap: 0.8rem;
+  align-items: flex-start;
+  gap: 0.75rem;
   color: #e0e0e0;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .wc-features li img {
   width: 14px;
   height: 10px;
+  margin-top: 5px;
+  flex-shrink: 0;
 }
 
 .wc-btn {
@@ -177,9 +209,9 @@
   font-weight: 500;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .wc-container {
-    padding: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
   }
   .wc-banner {
     min-height: auto;
@@ -189,18 +221,24 @@
   .wc-banner-content {
     width: 100%;
     position: relative;
-    background: rgba(15,15,15,0.9);
-    padding: 2.5rem 2rem;
+    background: rgba(15,15,15,0.96);
+    padding: 3rem 2rem;
     display: flex;
     align-items: center;
   }
   .wc-content-inner {
     max-width: 100%;
   }
+  .wc-title {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 500px) {
   .wc-banner-content {
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
+  }
+  .wc-title {
+    font-size: 1.6rem;
   }
 }

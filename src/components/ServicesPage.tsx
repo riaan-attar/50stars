@@ -51,8 +51,8 @@ const ServicesPage: React.FC = () => {
       link: "/contact"
     },
     {
-      title: "Engineering & Sourcing Advisory",
-      description: "BOM and takeoff reviews, grade/section matching to ASTM/AISC/EN codes, and value engineering.",
+      title: "Engineering & Procurement Advisory",
+      description: "BOM and takeoff reviews against drawings, grade/section matching to ASTM/AISC/EN codes, and value engineering.",
       image: "/assets/service-2.webp",
       link: "/contact"
     },
@@ -81,14 +81,14 @@ const ServicesPage: React.FC = () => {
       link: "/contact"
     },
     {
-      title: "Warehousing & Inventory",
+      title: "Warehousing & Inventory Management",
       description: "Staging and vendor-managed inventory near major corridors to support multi-phase projects.",
       image: "/assets/product-1.webp",
       link: "/contact"
     },
     {
-      title: "Fair Trade Pricing Policy",
-      description: "Flat $10-per-metric-ton procurement fee, providing complete transparency without markup games.",
+      title: "Fair Trade Pricing",
+      description: "We charge a flat $10 per metric ton procurement fee — full stop. No hidden markups, no inflated service charges. You see the mill price, you see our fee, and that's the whole invoice.",
       image: "/assets/product-3.webp",
       link: "/contact"
     },

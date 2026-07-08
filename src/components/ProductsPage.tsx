@@ -7,63 +7,63 @@ const productsData = [
     image: "/assets/product-1.webp",
     standard: "ASTM A36 / A572 / A992 / EN 10025",
     sourcing: "Global Mill Partnerships",
-    members: "Beams (W, HP, S, M), girders, channels, leg angles, sheet plates"
+    members: "Wide-flange beams (W, HP, S, M series), built-up plate girders, structural channels (C, MC), equal and unequal leg angles, structural plate and sheet steel"
   },
   {
     title: "Joists & Long-Span Systems",
     image: "/assets/product-3.webp",
     standard: "Steel Joist Institute (SJI) Specs",
     sourcing: "Pre-Qualified Fabricators",
-    members: "Open-web steel joists (K-series, LH/DLH), joist girders"
+    members: "Open-web steel joists (K-series, LH/DLH), joist girders, long-span roof and floor framing systems"
   },
   {
     title: "Hollow & Tubular Sections",
     image: "/assets/product-2.png",
     standard: "ASTM A500 / A1085 / EN 10219",
     sourcing: "Vetted Tube Mills",
-    members: "Square (SHS), rectangular (RHS), circular (CHS), H-piles"
+    members: "Square hollow sections (SHS), rectangular hollow sections (RHS), round/circular hollow sections (CHS), structural pipe piles and H-pile foundations"
   },
   {
     title: "Fasteners & Connection Hardware",
     image: "/assets/product-5.png",
     standard: "ASTM F1554 / A325 / A490",
     sourcing: "Approved Bolt & Anchor Mills",
-    members: "Anchor bolts, structural bolts, washers, nuts, base/embed plates"
+    members: "Anchor bolts (ASTM F1554), structural bolts (A325 / A490), nuts, washers, embed plates, base plates and connection assemblies"
   },
   {
-    title: "Reinforcement & Concrete-Adjacent",
+    title: "Reinforcement & Concrete-Adjacent Materials",
     image: "/assets/product-6.png",
     standard: "ASTM A615 / A706",
     sourcing: "Domestic & Global Mills",
-    members: "Rebar, welded wire mesh, precast embed plates and inserts"
+    members: "Rebar (deformed reinforcing bar), welded wire mesh, precast embed plates and inserts"
   },
   {
-    title: "Decking, Access & Safety",
+    title: "Decking, Access & Safety Structures",
     image: "/assets/product-7.png",
     standard: "Steel Deck Institute (SDI) Specs",
     sourcing: "Vetted Decking Manufacturers",
-    members: "Metal decking, bar grating, checkered plate, stairs, handrails"
+    members: "Composite and non-composite metal decking, bar grating and checkered/diamond plate, prefabricated stairs, cage ladders, handrail systems, guardrail and fall-protection anchor systems"
   },
   {
-    title: "Specialty & Corrosion-Resistant",
+    title: "Specialty & Corrosion-Resistant Materials",
     image: "/assets/product-4.webp",
     standard: "ASTM A240 / A588 / A123",
     sourcing: "Specialized Mills",
-    members: "Stainless steel sections, weathering steel (Corten), galvanized steel"
+    members: "Stainless steel structural sections, weathering steel (Corten) for exposed architectural applications, galvanized and coated structural steel"
   },
   {
     title: "Support & Ancillary Structural Steel",
     image: "/assets/product-8.png",
     standard: "ASTM / AISC Specifications",
     sourcing: "Qualified Fabrication Partners",
-    members: "Pipe racks, cable tray support steel, expansion joints, bearing pads"
+    members: "Pipe racks and cable tray support steel, expansion joints and structural bearing pads, pre-engineered metal building (PEMB) components"
   },
   {
     title: "Site & Project Support Materials",
     image: "/assets/service-1.webp",
     standard: "AWS / ANSI Standards",
     sourcing: "Distribution Partners",
-    members: "Welding consumables, industrial coatings, rigging, scaffolding"
+    members: "Welding consumables (electrodes, filler wire, shielding gas), industrial coatings and fireproofing systems, scaffolding and temporary access systems, rigging and lifting hardware, site PPE and fall-protection equipment"
   }
 ];
 

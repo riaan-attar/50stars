@@ -6,36 +6,35 @@ const servicesData = [
     id: 1,
     icon: '/assets/service-icon-1.svg',
     image: '/assets/service-1.webp',
-    title: 'Structural Steel & Sourcing',
+    title: 'Structural Steel & Materials Sourcing',
     features: [
-      'Global mill sourcing across major regions',
-      'Beams, joists, hollow sections, angles, plate',
-      'Multi-origin cost & lead-time comparison',
-      'Specialty alloys and custom sections'
+      'Global mill sourcing across every major steel-producing region',
+      'Beams, joists, hollow sections, plate, angles, rebar, and specialty alloys',
+      'Multi-origin comparison for cost, grade, and lead time'
     ]
   },
   {
     id: 2,
     icon: '/assets/service-icon-2.svg',
     image: '/assets/service-2.webp',
-    title: 'Engineering & Advisory',
+    title: 'Engineering & Procurement Advisory',
     features: [
-      'BOM and takeoff review against specifications',
-      'Grade/section matching to ASTM/AISC/EN codes',
-      'Value engineering to reduce project costs',
-      'Split-sourcing strategy for long-lead items'
+      'BOM and takeoff review against project drawings and specs',
+      'Grade and section matching to ASTM/AISC/EN/regional codes',
+      'Value engineering — alternate sections or grades to reduce cost without compromising design intent',
+      'Split-sourcing strategy for long-lead or oversized members'
     ]
   },
   {
     id: 3,
     icon: '/assets/service-icon-3.svg',
     image: '/assets/service-3.webp',
-    title: 'Quality & Certification',
+    title: 'Quality Assurance & Certification',
     features: [
-      'Full mill test certificates (MTC) on all runs',
-      'Strict chain-of-custody documentation',
-      'Third-party inspection coordination',
-      'Dimensional, coating, and grade verification'
+      'Full mill test certificates (MTC) on every shipment',
+      'Chain-of-custody documentation',
+      'Third-party inspection coordination where required',
+      'Dimensional, coating, and grade verification before release'
     ]
   },
   {
@@ -44,10 +43,10 @@ const servicesData = [
     image: '/assets/service-4.webp',
     title: 'Global Logistics & Freight',
     features: [
-      'Flat rack, breakbulk, container cargo coordination',
+      'Flat rack, breakbulk, container, and OOG (out-of-gauge) cargo coordination',
       'Port-to-port and port-to-site trucking',
       'Customs clearance and import documentation',
-      'Delivery scheduling aligned to erection sequence'
+      'Shipment tracking and delivery scheduling aligned to erection sequence'
     ]
   }
 ];

@@ -40,33 +40,37 @@ const WhyChooseSection: React.FC = () => {
 
           <div className="wc-banner-content">
             <div className="wc-content-inner">
-              <h2 className="wc-title" style={{ fontSize: '2.5rem', lineHeight: '1.2', letterSpacing: '-1.5px', marginBottom: '1.5rem' }}>
+              <div className="pill-who-we-are" style={{ marginBottom: '1.25rem' }}>
+                <div className="pill-gradient-square"></div>
+                <span className="pill-text">Why choose us</span>
+              </div>
+              <h2 className="wc-title">
                 Sourced anywhere. Certified everywhere.<br/>Delivered on your schedule.
               </h2>
               
-              <ul className="wc-features" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '2rem' }}>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
-                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
-                  <div><strong>Mill Partnerships</strong> — direct relationships across major steel-producing regions</div>
+              <ul className="wc-features">
+                <li>
+                  <img src="/assets/icon-check.svg" alt="check" />
+                  <div><strong>Mill Partnerships</strong> — direct relationships across multiple steel-producing regions</div>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
-                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                <li>
+                  <img src="/assets/icon-check.svg" alt="check" />
                   <div><strong>Fabrication Partners</strong> — pre-qualified shops for cut, drilled, and pre-assembled packages</div>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
-                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
-                  <div><strong>Port & Freight</strong> — flat rack, breakbulk, container, and OOG logistics coordination</div>
+                <li>
+                  <img src="/assets/icon-check.svg" alt="check" />
+                  <div><strong>Port & Freight Partnerships</strong> — flat rack, breakbulk, container, and OOG logistics</div>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
-                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
-                  <div><strong>Regional Compliance</strong> — sourcing matched to ASTM, EN, AS/NZS, depending on destination</div>
+                <li>
+                  <img src="/assets/icon-check.svg" alt="check" />
+                  <div><strong>Regional Compliance Coverage</strong> — sourcing matched to ASTM, EN, AS/NZS, and other certification regimes depending on destination</div>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
-                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                <li>
+                  <img src="/assets/icon-check.svg" alt="check" />
                   <div><strong>Warehousing Partners</strong> — staging and inventory support near major project corridors</div>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--color-white)', fontSize: '0.9rem', lineHeight: '1.4' }}>
-                  <img src="/assets/icon-check.svg" alt="check" style={{ marginTop: '3px' }} />
+                <li>
+                  <img src="/assets/icon-check.svg" alt="check" />
                   <div><strong>Fair Trade Pricing</strong> — flat $10-per-metric-ton procurement fee, no hidden markups</div>
                 </li>
               </ul>
