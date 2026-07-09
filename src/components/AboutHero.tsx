@@ -166,8 +166,9 @@ const AboutHero: React.FC = () => {
           <div className="about-journey-content">
             {/* Left Column: Founder Card */}
             <div className="about-founder-card">
-              <div className="founder-overlay"></div>
-              <img src="/assets/about-founder.png" alt="Josef Unger Senior, Founder of Unger Steel Group" className="founder-img" />
+              <div className="founder-img-wrapper">
+                <img src="/assets/about-founder.png" alt="Josef Unger Senior, Founder of Unger Steel Group" className="founder-img" />
+              </div>
               <div className="founder-info">
                 <h3>Josef Unger Senior</h3>
                 <p>Founder, Unger Steel Group (Austria)</p>

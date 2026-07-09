@@ -2,6 +2,27 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-orange) #111111;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange);
+  border-radius: 4px;
+  border: 1px solid #111111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f45e38;
 }
 
 .scroll-progress-bar {
