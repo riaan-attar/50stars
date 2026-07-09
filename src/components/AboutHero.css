@@ -489,14 +489,14 @@
 }
 
 .founder-info h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
 .founder-info p {
-  color: #a7a3a2;
+  color: var(--color-orange);
   font-size: 0.85rem;
   font-weight: 500;
   margin: 0;
@@ -1120,6 +1120,13 @@
   z-index: 2;
 }
 
+.about-team-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
 .about-team-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -1344,6 +1351,12 @@
   .about-team-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+  
+  .about-team-header {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.5rem;
   }
   
   .about-team-left-col {

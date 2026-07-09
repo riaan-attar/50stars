@@ -57,7 +57,7 @@ const FooterSection: React.FC = () => {
           <div className="ft-col ft-col-3">
             <h3 className="ft-col-title">Contact info</h3>
             <ul className="ft-link-list">
-              <li><a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">1238 Echo Ridge Blvd, Suite 400, San Francisco, CA 94103</a></li>
+              <li><a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Corporate Office: Santa Clara, CA</a></li>
               <li><a href="tel:+14155550167">+1 (415) 555-0167</a></li>
               <li><a href="mailto:procure@50stars.com">procure@50stars.com</a></li>
             </ul>

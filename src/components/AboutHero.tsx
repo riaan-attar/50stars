@@ -167,10 +167,10 @@ const AboutHero: React.FC = () => {
             {/* Left Column: Founder Card */}
             <div className="about-founder-card">
               <div className="founder-overlay"></div>
-              <img src="/assets/about-founder.png" alt="Michael Bennett, Founder & CEO" className="founder-img" />
+              <img src="/assets/about-founder.png" alt="Josef Unger Senior, Founder of Unger Steel Group" className="founder-img" />
               <div className="founder-info">
-                <h3>Michael Bennett</h3>
-                <p>Founder & CEO</p>
+                <h3>Josef Unger Senior</h3>
+                <p>Founder, Unger Steel Group (Austria)</p>
               </div>
             </div>
             
@@ -369,18 +369,20 @@ const AboutHero: React.FC = () => {
       <section className="about-team-section" id="team">
         <div className="about-team-container">
           
+          <div className="about-team-header">
+            <div className="about-team-badge">
+              <div className="badge-gradient-square"></div>
+              <span className="badge-text">Meet our experts</span>
+            </div>
+            
+            <h2 className="about-team-title">
+              Leaders in <span className="text-orange">procurement</span> &amp; logistics
+            </h2>
+          </div>
+
           <div className="about-team-grid">
-            {/* Left Column: Title & Hero Image */}
+            {/* Left Column: Hero Image */}
             <div className="about-team-left-col">
-              <div className="about-team-badge">
-                <div className="badge-gradient-square"></div>
-                <span className="badge-text">Meet our experts</span>
-              </div>
-              
-              <h2 className="about-team-title">
-                Leaders in <span className="text-orange">procurement</span> &amp; logistics
-              </h2>
-              
               <div className="about-team-img">
                 <img 
                   src={teamMembers[activeTeamIndex]?.image} 

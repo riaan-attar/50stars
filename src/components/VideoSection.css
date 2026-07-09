@@ -95,14 +95,14 @@
 }
 
 .founder-name {
-  color: rgb(255, 255, 255);
+  color: var(--color-orange);
   font-size: 0.95rem;
   font-weight: 600;
   margin: 0 0 0.3rem 0;
 }
 
 .founder-title {
-  color: rgb(167, 163, 162);
+  color: var(--color-orange);
   font-size: 0.8rem;
   font-weight: 500;
   margin: 0;

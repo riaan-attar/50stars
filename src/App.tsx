@@ -44,7 +44,7 @@ function App() {
       '.ps-counter', '.ps-subtitle', '.ps-diagram-container', '.ps-card',
       '.is-title', '.is-desc', '.is-tab-btn', '.is-panel',
       '.cs-title', '.cs-slide',
-      '.wc-title', '.wc-features li', '.wc-btn', '.wc-banner',
+      '.wc-main-title', '.wc-intro-grid',
       '.tm-title', '.tm-card', '.tm-col-2',
       '.ft-col', '.ft-bottom',
       // About page animations

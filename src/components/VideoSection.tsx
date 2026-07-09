@@ -45,19 +45,19 @@ const VideoSection: React.FC = () => {
           <div className="founder-image-wrapper">
             <img 
               src="/assets/home-founder.png" 
-              alt="Michael R. Bennett" 
+              alt="Josef Unger Senior" 
               className="founder-image"
             />
           </div>
           <div className="founder-info">
-            <h3 className="founder-name">Michael R. Bennett</h3>
-            <p className="founder-title">Founder & CEO</p>
+            <h3 className="founder-name">Josef Unger Senior</h3>
+            <p className="founder-title">Founder, Unger Steel Group (Austria)</p>
           </div>
         </div>
 
         <div className="quote-container">
           <p className="quote-text">
-            "Great procurement isn't just about finding steel — it's about certainty. Certainty on grade, certainty on schedule, certainty on price."
+            "Most procurement firms hand us a job and disappear until delivery. 50 Stars stays in the loop — clarifying specs, protecting our timeline, and making sure what we build actually matches what the job site needs. That's the difference between a supplier and a partner."
           </p>
           
           <div className="quote-action-wrap" style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>

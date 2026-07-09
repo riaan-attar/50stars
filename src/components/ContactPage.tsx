@@ -99,7 +99,7 @@ const ContactPage: React.FC = () => {
                   <h4 className="detail-title">// Find us //</h4>
                   <div className="detail-links">
                     <a href="https://www.google.com/maps" target="_blank" rel="noreferrer">
-                      USA - 1238 Echo Ridge Blvd, Suite 400, San Francisco, CA 94103
+                      Corporate Office: Santa Clara, CA
                     </a>
                   </div>
                 </div>

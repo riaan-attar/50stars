@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
 
             <h1 className="hero-title">
               From mill <span className="text-orange">to job site,</span><br />
-              every certified steel section you need
+              every material your project needs, sourced and delivered.
             </h1>
           </div>
 

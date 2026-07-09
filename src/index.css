@@ -148,7 +148,7 @@ body {
 .ps-counter, .ps-subtitle, .ps-diagram-container, .ps-card,
 .is-title, .is-desc, .is-tab-btn, .is-panel,
 .cs-title, .cs-slide,
-.wc-title, .wc-features li, .wc-btn, .wc-banner,
+.wc-main-title, .wc-intro-grid,
 .tm-title, .tm-card, .tm-col-2,
 .ft-col, .ft-bottom {
   opacity: 0;
@@ -164,7 +164,7 @@ body {
 .ps-counter.revealed, .ps-subtitle.revealed, .ps-diagram-container.revealed, .ps-card.revealed,
 .is-title.revealed, .is-desc.revealed, .is-tab-btn.revealed, .is-panel.revealed,
 .cs-title.revealed, .cs-slide.revealed,
-.wc-title.revealed, .wc-features li.revealed, .wc-btn.revealed, .wc-banner.revealed,
+.wc-main-title.revealed, .wc-intro-grid.revealed,
 .tm-title.revealed, .tm-card.revealed, .tm-col-2.revealed,
 .ft-col.revealed, .ft-bottom.revealed {
   opacity: 1;
