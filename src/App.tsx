@@ -9,6 +9,7 @@ import ProductsSection from './components/ProductsSection';
 import IndustrySection from './components/IndustrySection';
 import CaseStudySection from './components/CaseStudySection';
 import WhyChooseSection from './components/WhyChooseSection';
+import WhyGCChooseSection from './components/WhyGCChooseSection';
 import TestimonialSection from './components/TestimonialSection';
 import FooterSection from './components/FooterSection';
 import AboutHero from './components/AboutHero';
@@ -143,6 +144,7 @@ function App() {
             <IndustrySection />
             <CaseStudySection />
             <WhyChooseSection />
+            <WhyGCChooseSection />
             <TestimonialSection />
             <FooterSection />
           </div>

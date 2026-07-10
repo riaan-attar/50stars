@@ -149,15 +149,22 @@ body {
   background-color: var(--color-white);
 }
 
+.why-gc-choose-section {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: var(--color-white);
+}
+
 .testimonial-section {
   position: relative;
-  z-index: 9;
+  z-index: 10;
   background-color: var(--color-white);
 }
 
 .footer-section {
   position: relative;
-  z-index: 10;
+  z-index: 11;
   background-color: var(--color-black);
 }
 

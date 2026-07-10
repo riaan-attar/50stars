@@ -10,7 +10,7 @@ const FooterSection: React.FC = () => {
 
   return (
     <footer className="footer-section">
-      
+
       {/* Background Glow */}
       <div className="ft-shadow ft-shadow-left">
         <img src="/assets/footer-shadow.svg" alt="Shadow" />
@@ -20,9 +20,9 @@ const FooterSection: React.FC = () => {
       </div>
 
       <div className="ft-container">
-        
+
         <div className="ft-top">
-          
+
           {/* Col 1: Stay Connected */}
           <div className="ft-col ft-col-1">
             <h3 className="ft-col-title">Stay connected</h3>
@@ -79,9 +79,9 @@ const FooterSection: React.FC = () => {
 
         <div className="ft-bottom">
           <div className="ft-copyright">
-            <p>Developed by <a href="https://riaanattar.me" target="_blank" rel="noreferrer">Riaan Attar</a> from <a href="https://thebootstack.io" target="_blank" rel="noreferrer">Bootstack</a></p>
+            <p>Developed by <a href="https://riaanattar.me" target="_blank" rel="noreferrer">Riaan Attar</a></p>
           </div>
-          
+
           <div className="ft-socials">
             <a href="#" className="ft-social-link">
               <img src="/assets/icon-facebook.svg" alt="Facebook" />
