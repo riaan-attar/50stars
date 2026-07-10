@@ -24,8 +24,9 @@ const Navbar: React.FC = () => {
   return (
     <header className="navbar">
       <div className="navbar-container">
-        <div className="navbar-logo" style={{ cursor: 'pointer' }} onClick={(e) => navigateTo(e, '/')}>
-          50stars
+        <div className="navbar-logo-container" style={{ display: 'flex', flexDirection: 'column', cursor: 'pointer' }} onClick={(e) => navigateTo(e, '/')}>
+          <div className="navbar-logo" style={{ lineHeight: '1.1' }}>50stars</div>
+          <span className="navbar-logo-subtitle" style={{ fontSize: '0.55rem', color: 'var(--color-text-muted)', textTransform: 'none', letterSpacing: 'normal', fontWeight: '500', opacity: '0.8' }}>An Initiative by ArcelorMittal</span>
         </div>
         
         <nav className="navbar-links">
@@ -84,8 +85,9 @@ const Navbar: React.FC = () => {
       <div className={`navbar-backdrop ${isMenuOpen ? 'visible' : ''}`} onClick={() => setIsMenuOpen(false)} />
       <div className={`navbar-sidebar ${isMenuOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <div className="navbar-logo" style={{ color: 'var(--color-white)' }}>
-            50stars
+          <div className="navbar-logo-container" style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className="navbar-logo" style={{ color: 'var(--color-white)', lineHeight: '1.1' }}>50stars</div>
+            <span className="navbar-logo-subtitle" style={{ fontSize: '0.55rem', color: 'rgba(255,255,255,0.6)', textTransform: 'none', letterSpacing: 'normal', fontWeight: '500' }}>An Initiative by ArcelorMittal</span>
           </div>
           <button className="btn-sidebar-close" onClick={() => setIsMenuOpen(false)} aria-label="Close menu">
             <X size={24} />
