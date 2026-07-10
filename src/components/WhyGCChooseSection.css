@@ -257,3 +257,31 @@
     padding: 0.9rem 1.1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .wgc-container {
+    padding: 2rem 1rem;
+  }
+  .wgc-benefit-card {
+    padding: 1.5rem 1rem;
+  }
+  .wgc-pricing-table th, 
+  .wgc-pricing-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  .wgc-fee-val {
+    font-size: 1.1rem;
+  }
+  .wgc-fee-unit {
+    font-size: 0.75rem;
+  }
+  .wgc-card-num-bg {
+    font-size: 4rem;
+    right: 0.75rem;
+    top: 0.5rem;
+  }
+  .wgc-benefit-title {
+    font-size: 1.1rem;
+  }
+}
