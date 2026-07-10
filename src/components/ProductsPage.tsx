@@ -60,7 +60,7 @@ const productsData = [
   },
   {
     title: "Site & Project Support Materials",
-    image: "/assets/service-1.webp",
+    image: "/assets/service-1.jpg",
     standard: "AWS / ANSI Standards",
     sourcing: "Distribution Partners",
     members: "Welding consumables (electrodes, filler wire, shielding gas), industrial coatings and fireproofing systems, scaffolding and temporary access systems, rigging and lifting hardware, site PPE and fall-protection equipment"

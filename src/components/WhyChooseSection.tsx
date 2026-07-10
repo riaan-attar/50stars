@@ -44,32 +44,32 @@ const WhyChooseSection: React.FC = () => {
                 One supplier. Every material. <br className="hidden-mobile" />Mill to job site.
               </h2>
               <p className="wc-lead-text">
-                50 Stars isn't a broker. We're the procurement partner general contractors, EPCs, and subcontractors call before they call anyone else — for steel, for fabrication, for the materials shortages that are slowing down every job in the country right now.
+                50 Stars isn't a broker. We're the procurement partner general contractors, EPCs, and subcontractors call before they call anyone else. We handle steel, custom fabrication, and the materials shortages that are slowing down every job in the country right now.
               </p>
             </div>
             <div className="wc-intro-col-right">
               <h4 className="wc-network-title">Global Partner Network</h4>
               <ul className="wc-network-list">
                 <li>
-                  <strong className="wc-network-country">Japan</strong> — precision structural steel and specialty alloys
+                  <strong className="wc-network-country">Japan</strong>: precision structural steel and specialty alloys
                 </li>
                 <li>
-                  <strong className="wc-network-country">Singapore</strong> — regional sourcing and logistics hub for Southeast Asia
+                  <strong className="wc-network-country">Singapore</strong>: regional sourcing and logistics hub for Southeast Asia
                 </li>
                 <li>
-                  <strong className="wc-network-country">Turkey</strong> — competitive structural steel with strong export infrastructure
+                  <strong className="wc-network-country">Turkey</strong>: competitive structural steel with strong export infrastructure
                 </li>
                 <li>
-                  <strong className="wc-network-country">Philippines</strong> — fabrication and cost-competitive supply
+                  <strong className="wc-network-country">Philippines</strong>: fabrication and cost-competitive supply
                 </li>
                 <li>
-                  <strong className="wc-network-country">Europe</strong> — premium-grade steel and compliance-certified materials
+                  <strong className="wc-network-country">Europe</strong>: premium-grade steel and compliance-certified materials
                 </li>
               </ul>
               
               <div className="wc-network-callout">
                 <p>
-                  Combined with our in-house fabrication coordination, this network means 50 Stars can source, certify, fabricate, and deliver — without you managing five different vendor relationships.
+                  Combined with our in-house fabrication coordination, this network means 50 Stars can source, certify, fabricate, and deliver directly, without you managing five different vendor relationships.
                 </p>
               </div>
             </div>

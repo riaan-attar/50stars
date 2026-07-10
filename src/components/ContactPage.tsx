@@ -71,7 +71,7 @@ const ContactPage: React.FC = () => {
                   Let’s <span className="text-orange">work</span> together
                 </h1>
                 <p className="contact-hero-desc">
-                  Got questions or need assistance with your steel procurement? Reach out to us anytime — our team is ready to provide the support and guidance you need.
+                  Got questions or need assistance with your steel procurement? Reach out to us anytime; our team is ready to provide the support and guidance you need.
                 </p>
                 <div className="contact-hero-action-btn">
                   <a href="/assets/about-brochure.pdf" download className="contact-btn-brochure">

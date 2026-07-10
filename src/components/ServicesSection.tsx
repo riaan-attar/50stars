@@ -21,7 +21,7 @@ const servicesData = [
     features: [
       'BOM and takeoff review against project drawings and specs',
       'Grade and section matching to ASTM/AISC/EN/regional codes',
-      'Value engineering — alternate sections or grades to reduce cost without compromising design intent',
+      'Value engineering: alternate sections or grades to reduce cost without compromising design intent',
       'Split-sourcing strategy for long-lead or oversized members'
     ]
   },
@@ -74,7 +74,7 @@ const ServicesSection: React.FC = () => {
               <span className="pill-text">What we do</span>
             </div>
             <h2 className="services-title">
-              End-to-end procurement, <span className="text-orange">engineering</span>, and logistics — not just a steel quote
+              End-to-end procurement, <span className="text-orange">engineering</span>, and logistics, rather than just a steel quote
             </h2>
           </div>
           <div className="sh-right">

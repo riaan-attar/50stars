@@ -100,7 +100,7 @@ const TestimonialSection: React.FC = () => {
           {/* Column 2: Image and Stats */}
           <div className="tm-col-2">
             <div className="tm-image-card">
-              <img src="/assets/testi-img.webp" alt="Steel mill loading dock" className="tm-img-bg" />
+              <img src="/assets/product-3.jpg" alt="Steel mill loading dock" className="tm-img-bg" />
               <div className="tm-img-overlay">
                 <p className="tm-img-year">// 2005-2K26 //</p>
                 <div className="tm-logo-text">50stars</div>

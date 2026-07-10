@@ -8,7 +8,7 @@ const industries = [
     title: 'Industrial & Heavy Construction',
     description: 'Certified structural steel and materials packages built for large-scale, mission-critical projects, with full material traceability.',
     icon: '/assets/icon-aerospace.svg',
-    image: '/assets/service-1.webp',
+    image: '/assets/service-1.jpg',
     features: [
       'Full mill test certificate traceability',
       'Multi-standard certification (ASTM/AISC/EN)',
@@ -21,7 +21,7 @@ const industries = [
     title: 'Data Centers & Advanced Technology',
     description: 'Sourcing for fast-track hyperscale and co-location builds, coordinating heavy framing, composite metal decking, and support steel.',
     icon: '/assets/icon-aerospace.svg',
-    image: '/assets/product-1.webp',
+    image: '/assets/product-1.jpg',
     features: [
       'Just-In-Time site delivery sequencing',
       'Multi-origin supply tracking',
@@ -34,7 +34,7 @@ const industries = [
     title: 'Power, Energy & Utilities',
     description: 'Materials engineered for extreme loads and harsh corrosion profiles in substations, solar arrays, wind towers, and power plants.',
     icon: '/assets/icon-aerospace.svg',
-    image: '/assets/product-3.webp',
+    image: '/assets/product-3.jpg',
     features: [
       'Corrosion-resistant weathering steel',
       'Heavy plate girder sourcing',
@@ -47,7 +47,7 @@ const industries = [
     title: 'Oil, Gas & Petrochemical',
     description: 'Highly traceable structural components for offshore platforms, pipe racks, refineries, and petrochemical storage facilities.',
     icon: '/assets/icon-aerospace.svg',
-    image: '/assets/product-4.webp',
+    image: '/assets/product-4.jpg',
     features: [
       'ASTM A500 CHS/H-piles',
       'Full EN 10204 3.1 certification',
@@ -60,7 +60,7 @@ const industries = [
     title: 'Warehousing & Logistics',
     description: 'Optimized joists, trusses, columns, and metal decking designed to deliver cost-effective long-span configurations.',
     icon: '/assets/icon-aerospace.svg',
-    image: '/assets/product-2.png',
+    image: '/assets/product-2.jpg',
     features: [
       'Value-engineered section designs',
       'Steel Joist Institute (SJI) spec matching',
@@ -73,7 +73,7 @@ const industries = [
     title: 'Bridges & Civil Infrastructure',
     description: 'Heavy-duty structural plates, built-up members, and custom connection hardware certified for civil works.',
     icon: '/assets/icon-aerospace.svg',
-    image: '/assets/product-3.webp',
+    image: '/assets/product-3.jpg',
     features: [
       'Chain-of-custody documentation',
       'DOT compliance verification',

@@ -6,10 +6,10 @@ const caseStudies = [
   {
     id: 1,
     title: 'Split-sourcing strategy for a large-scale structural steel package',
-    description: 'Developed a combined domestic-and-international sourcing model to solve a critical long-member constraint on a major industrial build — balancing lead time, cost, and field-splice engineering requirements.',
+    description: 'Developed a combined domestic-and-international sourcing model to solve a critical long-member constraint on a major industrial build, balancing lead time, cost, and field-splice engineering requirements.',
     stat: '35%',
     scope: 'Reduction in projected lead time',
-    image: '/assets/case-1.webp',
+    image: '/assets/case-1.jpg',
     logo: '/assets/logo-1.svg'
   },
   {
@@ -18,7 +18,7 @@ const caseStudies = [
     description: 'Managed fabrication and transport logistics for 12,000 metric tons of structural columns and composite decking, aligning shipments to the precise daily crane schedule.',
     stat: '100%',
     scope: 'On-time delivery record',
-    image: '/assets/case-2.webp',
+    image: '/assets/product-8.png',
     logo: '/assets/logo-2.svg'
   },
   {
@@ -27,7 +27,7 @@ const caseStudies = [
     description: 'Optimized steel section profiles and grade matching for a 450,000 sq ft logistics facility, saving on material cost without reducing structural load-bearing capacity.',
     stat: '12%',
     scope: 'Material cost reduction',
-    image: '/assets/case-3.webp',
+    image: '/assets/about-building.png',
     logo: '/assets/logo-3.svg'
   },
   {
@@ -36,7 +36,7 @@ const caseStudies = [
     description: 'Coordinated heavy-member plate girder sourcing from domestic and global mills, managing material certification and import clearing ahead of field assembly.',
     stat: '0',
     scope: 'Certification compliance issues',
-    image: '/assets/case-4.webp',
+    image: '/assets/product-3.jpg',
     logo: '/assets/logo-4.svg'
   }
 ];

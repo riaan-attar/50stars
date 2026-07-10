@@ -79,7 +79,7 @@ const FooterSection: React.FC = () => {
 
         <div className="ft-bottom">
           <div className="ft-copyright">
-            <p>Developed by <a href="https://riaanattar.me" target="_blank" rel="noreferrer">Riaan Attar</a></p>
+            <p>Developed by <a href="https://riaanattar.me" target="_blank" rel="noreferrer">Riaan Attar</a> From <a href="https://thebootstack.io" target="_blank" rel="noreferrer">THEBOOTSTACK.IO</a></p>
           </div>
 
           <div className="ft-socials">

@@ -65,7 +65,7 @@ const ServicesPage: React.FC = () => {
     {
       title: "Fabrication Coordination",
       description: "Pre-qualified fabrication shops for custom cutting, drilling, coating, galvanizing, and pre-assembly.",
-      image: "/assets/service-4.webp",
+      image: "/assets/service-4.png",
       link: "/contact"
     },
     {
@@ -77,25 +77,25 @@ const ServicesPage: React.FC = () => {
     {
       title: "Trade Finance & Compliance Support",
       description: "Letter of credit (LC) structuring guidance, tariff reviews, and cross-border payment compliance support.",
-      image: "/assets/service-6.webp",
+      image: "/assets/service-6.png",
       link: "/contact"
     },
     {
       title: "Warehousing & Inventory Management",
       description: "Staging and vendor-managed inventory near major corridors to support multi-phase projects.",
-      image: "/assets/product-1.webp",
+      image: "/assets/product-1.jpg",
       link: "/contact"
     },
     {
       title: "Fair Trade Pricing",
-      description: "We charge a flat $10 per metric ton procurement fee — full stop. No hidden markups, no inflated service charges. You see the mill price, you see our fee, and that's the whole invoice.",
-      image: "/assets/product-3.webp",
+      description: "We charge a flat $10 per metric ton procurement fee. There are no hidden markups, and no inflated service charges. You see the mill price, you see our fee, and that's the whole invoice.",
+      image: "/assets/product-3.jpg",
       link: "/contact"
     },
     {
       title: "Maintenance & Lifecycle Support",
       description: "Coating touch-up, corrosion protection consulting, and re-certification support for completed structures.",
-      image: "/assets/product-4.webp",
+      image: "/assets/product-4.jpg",
       link: "/contact"
     }
   ];
@@ -107,7 +107,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       question: "What is your pricing model for steel procurement?",
-      answer: "We charge a flat $10-per-metric-ton procurement fee. You see the mill price and you see our fee — there are no hidden markups or inflated service charges."
+      answer: "We charge a flat $10 per metric ton procurement fee. You see the mill price and you see our fee, and there are no hidden markups or inflated service charges."
     },
     {
       question: "Can you manage custom cutting and drilling before shipping?",
@@ -356,7 +356,7 @@ const ServicesPage: React.FC = () => {
 
         {/* Backdrop images */}
         <div className="services-contact-bg-wrapper">
-          <img src="/assets/services-contact-bg.webp" alt="Factory Backdrop" className="services-contact-bg-img" />
+          <img src="/assets/service-1.jpg" alt="Factory Backdrop" className="services-contact-bg-img" />
           <div className="services-contact-bg-overlay"></div>
         </div>
       </section>

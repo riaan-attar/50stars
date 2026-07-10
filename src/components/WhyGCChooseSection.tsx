@@ -23,10 +23,10 @@ const WhyGCChooseSection: React.FC = () => {
                   <h4 className="wgc-benefit-title">We solve the shortage problem</h4>
                 </div>
                 <p className="wgc-benefit-desc">
-                  US steel and materials shortages have made project timelines unpredictable. GCs are increasingly referring their subcontractors to 50 Stars because we maintain live global sourcing relationships that domestic-only suppliers can't match — when your regular mill is backlogged, we already have the alternative lined up.
+                  US steel and materials shortages have made project timelines unpredictable. GCs are increasingly referring their subcontractors to 50 Stars because we maintain live global sourcing relationships that domestic-only suppliers can't match. When your regular mill is backlogged, we already have the alternative lined up.
                 </p>
               </div>
-
+ 
               {/* Card 2 */}
               <div className="wgc-benefit-card wgc-card-pricing">
                 <div className="wgc-card-num-bg">02</div>
@@ -35,11 +35,11 @@ const WhyGCChooseSection: React.FC = () => {
                   <h4 className="wgc-benefit-title">Better pricing, structured simply</h4>
                 </div>
                 <p className="wgc-benefit-desc">
-                  We negotiate directly with mills and fabricators across our partner network, which means better pricing passed straight to you — not layered through multiple middlemen.
+                  We negotiate directly with mills and fabricators across our partner network, which means better pricing passed straight to you, rather than being layered through multiple middlemen.
                 </p>
               </div>
             </div>
-
+ 
             {/* Card 3 (Pricing Tier) */}
             <div className="wgc-benefit-card wgc-card-pricing-table">
               <div className="wgc-card-num-bg">03</div>
@@ -52,7 +52,7 @@ const WhyGCChooseSection: React.FC = () => {
                   No hidden markups, no per-project renegotiation. Our flat-fee structure scales with your order volume:
                 </p>
               </div>
-
+ 
               <div className="wgc-table-wrapper">
                 <table className="wgc-pricing-table">
                   <thead>
@@ -81,9 +81,9 @@ const WhyGCChooseSection: React.FC = () => {
                   </tbody>
                 </table>
               </div>
-
+ 
               <p className="wgc-table-caption">
-                The bigger the order, the lower your per-ton cost — built for GCs and EPCs running real project volume, not one-off buys.
+                The bigger the order, the lower your per-ton cost. This is built for GCs and EPCs running real project volume, not one-off buys.
               </p>
             </div>
           </div>

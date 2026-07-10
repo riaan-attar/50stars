@@ -57,7 +57,7 @@ const VideoSection: React.FC = () => {
 
         <div className="quote-container">
           <p className="quote-text">
-            "Most procurement firms hand us a job and disappear until delivery. 50 Stars stays in the loop — clarifying specs, protecting our timeline, and making sure what we build actually matches what the job site needs. That's the difference between a supplier and a partner."
+            "Most procurement firms hand us a job and disappear until delivery. 50 Stars stays in the loop, clarifying specs, protecting our timeline, and making sure what we build actually matches what the job site needs. That's the difference between a supplier and a partner."
           </p>
           
           <div className="quote-action-wrap" style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>

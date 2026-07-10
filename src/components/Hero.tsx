@@ -28,11 +28,11 @@ const Hero: React.FC = () => {
 
           <div className="hero-right">
             <div className="since-text">
-              // SINCE — 2005 //
+              // SINCE 2005 //
             </div>
 
             <p className="hero-description">
-              We source and deliver certified structural steel and construction materials — every beam, joist, hollow section, and site-critical component your project calls for — through a global partner network of mills, fabricators, ports, and freight carriers, engineered for certified quality and on-time delivery.
+              We source and deliver certified structural steel and construction materials, including every beam, joist, hollow section, and site-critical component your project calls for, through a global partner network of mills, fabricators, ports, and freight carriers, engineered for certified quality and on-time delivery.
             </p>
 
             <button className="btn-explore" onClick={(e) => navigateTo(e, '/services')}>
