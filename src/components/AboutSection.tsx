@@ -75,7 +75,7 @@ const AboutSection: React.FC = () => {
           
           {/* Card 2 */}
           <div className="about-card card-image">
-            <img src="/assets/about-machinery.webp" alt="Machinery" />
+            <img src="/assets/about-machinery.jpg" alt="Machinery" />
           </div>
           
           {/* Card 3 */}

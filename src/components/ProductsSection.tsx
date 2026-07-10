@@ -6,7 +6,7 @@ const productsData = [
   {
     id: 1,
     title: 'Structural Steel',
-    image: '/assets/product-1.webp',
+    image: '/assets/product-1.jpg',
     standard: 'ASTM A36 / A572 / A992 / EN 10025',
     sourcing: 'Global Mill Partnerships',
     members: 'Wide-flange beams, built-up plate girders, channels, equal/unequal angles, plate and sheet steel',
@@ -14,7 +14,7 @@ const productsData = [
   {
     id: 2,
     title: 'Hollow & Tubular Sections',
-    image: '/assets/product-2.png',
+    image: '/assets/product-2.jpg',
     standard: 'ASTM A500 / A1085 / EN 10219',
     sourcing: 'Vetted Tube Mills',
     members: 'Square (SHS), rectangular (RHS), circular (CHS) sections, pipe piles and H-piles',
@@ -22,7 +22,7 @@ const productsData = [
   {
     id: 3,
     title: 'Joists & Long-Span Systems',
-    image: '/assets/product-3.webp',
+    image: '/assets/product-3.jpg',
     standard: 'Steel Joist Institute (SJI) Specs',
     sourcing: 'Specialized Fabricators',
     members: 'Open-web steel joists (K-series, LH/DLH), joist girders, long-span roof/floor framing systems',
@@ -30,7 +30,7 @@ const productsData = [
   {
     id: 4,
     title: 'Specialty & Corrosion-Resistant',
-    image: '/assets/product-4.webp',
+    image: '/assets/product-4.jpg',
     standard: 'ASTM A240 / A588 (Corten) / Galvanized',
     sourcing: 'Specialized Sourcing Network',
     members: 'Stainless steel structural sections, weathering steel (Corten), galvanized and coated steel',

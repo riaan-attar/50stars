@@ -47,19 +47,19 @@ const ServicesPage: React.FC = () => {
     {
       title: "Structural Steel & Materials Sourcing",
       description: "Global mill sourcing across major regions, providing beams, joists, hollow sections, plate, angles, and specialty alloys.",
-      image: "/assets/service-1.webp",
+      image: "/assets/service-1.jpg",
       link: "/contact"
     },
     {
       title: "Engineering & Procurement Advisory",
       description: "BOM and takeoff reviews against drawings, grade/section matching to ASTM/AISC/EN codes, and value engineering.",
-      image: "/assets/service-2.webp",
+      image: "/assets/service-2.jpg",
       link: "/contact"
     },
     {
       title: "Quality Assurance & Certification",
       description: "Full mill test certificates (MTC), chain-of-custody tracking, and dimensional/coating inspections.",
-      image: "/assets/service-3.webp",
+      image: "/assets/service-3.jpg",
       link: "/contact"
     },
     {
@@ -71,7 +71,7 @@ const ServicesPage: React.FC = () => {
     {
       title: "Global Logistics & Freight",
       description: "Flat rack, breakbulk, and container cargo, customs clearance, and sequencing to your erection schedule.",
-      image: "/assets/service-5.webp",
+      image: "/assets/service-5.jpg",
       link: "/contact"
     },
     {

@@ -5,7 +5,7 @@ const servicesData = [
   {
     id: 1,
     icon: '/assets/service-icon-1.svg',
-    image: '/assets/service-1.webp',
+    image: '/assets/service-1.jpg',
     title: 'Structural Steel & Materials Sourcing',
     features: [
       'Global mill sourcing across every major steel-producing region',
@@ -16,7 +16,7 @@ const servicesData = [
   {
     id: 2,
     icon: '/assets/service-icon-2.svg',
-    image: '/assets/service-2.webp',
+    image: '/assets/service-2.jpg',
     title: 'Engineering & Procurement Advisory',
     features: [
       'BOM and takeoff review against project drawings and specs',
@@ -28,7 +28,7 @@ const servicesData = [
   {
     id: 3,
     icon: '/assets/service-icon-3.svg',
-    image: '/assets/service-3.webp',
+    image: '/assets/service-3.jpg',
     title: 'Quality Assurance & Certification',
     features: [
       'Full mill test certificates (MTC) on every shipment',
@@ -40,7 +40,7 @@ const servicesData = [
   {
     id: 4,
     icon: '/assets/service-icon-4.svg',
-    image: '/assets/service-4.webp',
+    image: '/assets/service-4.jpg',
     title: 'Global Logistics & Freight',
     features: [
       'Flat rack, breakbulk, container, and OOG (out-of-gauge) cargo coordination',
