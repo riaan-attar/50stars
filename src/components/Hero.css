@@ -3,7 +3,7 @@
   flex-direction: column;
   position: sticky;
   top: 0;
-  padding: 8rem 0;
+  padding: 5rem 0 8rem 0;
   min-height: 60vh;
   z-index: 1;
   background-color: #f1f2f3;
@@ -171,7 +171,7 @@
 
 @media (max-width: 900px) {
   .hero-section {
-    padding: 6rem 0;
+    padding: 4rem 0 6rem 0;
     position: relative;
     height: auto;
     min-height: auto;
