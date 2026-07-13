@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import './ContactPage.css';
 
-const clientLogos = [
-  "/assets/about-client-1.svg",
-  "/assets/about-client-2.svg",
-  "/assets/about-client-3.svg",
-  "/assets/about-client-4.svg",
-  "/assets/about-client-5.svg",
-  "/assets/about-client-6.svg",
-  "/assets/about-client-7.svg",
-  "/assets/about-client-8.svg",
-  "/assets/about-client-9.svg",
-  "/assets/about-client-10.svg"
-];
+import { partners } from '../assets/PartnerLogos';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -227,15 +216,15 @@ const ContactPage: React.FC = () => {
             <div className="contact-ticker-wrapper">
               <div className="contact-ticker-track">
                 {/* Loop 1 */}
-                {clientLogos.map((logo, idx) => (
-                  <div key={`logo-1-${idx}`} className="contact-ticker-item">
-                    <img src={logo} alt="Client Logo" />
+                {partners.map((partner) => (
+                  <div key={`logo-1-${partner.id}`} className="contact-ticker-item" title={`${partner.name} — ${partner.location}`}>
+                    {partner.logo}
                   </div>
                 ))}
                 {/* Loop 2 (Infinite marquee backup) */}
-                {clientLogos.map((logo, idx) => (
-                  <div key={`logo-2-${idx}`} className="contact-ticker-item">
-                    <img src={logo} alt="Client Logo" />
+                {partners.map((partner) => (
+                  <div key={`logo-2-${partner.id}`} className="contact-ticker-item" title={`${partner.name} — ${partner.location}`}>
+                    {partner.logo}
                   </div>
                 ))}
               </div>

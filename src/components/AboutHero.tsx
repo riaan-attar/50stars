@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './AboutHero.css';
 import AnimatedNumber from './AnimatedNumber';
+import { partners } from '../assets/PartnerLogos';
 
 const AboutHero: React.FC = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
@@ -266,7 +267,7 @@ const AboutHero: React.FC = () => {
           <div className="about-client-top">
             <div className="about-client-badge">
               <div className="badge-gradient-square"></div>
-              <span className="badge-text">Our clients</span>
+              <span className="badge-text">Our Partners</span>
             </div>
             
             <h2 className="about-client-title">
@@ -276,16 +277,11 @@ const AboutHero: React.FC = () => {
           
           {/* Center client logos grid */}
           <div className="about-client-logos">
-            <div className="client-logo-box"><img src="/assets/about-client-1.svg" alt="Swiss Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-2.svg" alt="Alaska Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-3.svg" alt="Berlin Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-4.svg" alt="Cairo Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-5.svg" alt="Thera Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-6.svg" alt="Kobe Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-7.svg" alt="On_Event Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-8.svg" alt="Oslo Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-9.svg" alt="U-Turn Client Logo" /></div>
-            <div className="client-logo-box"><img src="/assets/about-client-10.svg" alt="Imprintify Client Logo" /></div>
+            {partners.map((partner) => (
+              <div key={partner.id} className="client-logo-box" title={`${partner.name} — ${partner.location} (${partner.info})`}>
+                {partner.logo}
+              </div>
+            ))}
           </div>
           
           {/* Divider */}

@@ -84,12 +84,33 @@
   height: auto;
 }
 
-/* Product Grid */
-.ps-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+/* Product Marquee */
+.ps-marquee-container {
+  width: 100%;
+  overflow: hidden;
   margin-bottom: 6rem;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.ps-marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: slideRight 35s linear infinite;
+}
+
+.ps-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .ps-card {
@@ -99,6 +120,14 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  width: 350px;
+  flex-shrink: 0;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.ps-card:hover {
+  border-color: var(--color-orange);
+  transform: translateY(-4px);
 }
 
 .ps-card-title {

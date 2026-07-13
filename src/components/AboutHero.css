@@ -100,7 +100,7 @@
   overflow: hidden;
   margin-right: -6px;
   z-index: 1;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .avatar-wrapper img {
@@ -124,7 +124,7 @@
   border: 2px solid var(--color-white);
   z-index: 2;
   margin-left: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .about-hero-desc {
@@ -317,7 +317,8 @@
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.icon-primary, .icon-hover {
+.icon-primary,
+.icon-hover {
   width: 16px;
   height: 12px;
   object-fit: contain;
@@ -382,6 +383,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -674,7 +676,8 @@
   background-color: #eeeeee;
 }
 
-.client-logo-box img {
+.client-logo-box img,
+.client-logo-box svg {
   max-width: 85%;
   max-height: 50%;
   object-fit: contain;
@@ -683,7 +686,8 @@
   transition: opacity 0.2s ease, filter 0.2s ease;
 }
 
-.client-logo-box:hover img {
+.client-logo-box:hover img,
+.client-logo-box:hover svg {
   opacity: 1;
   filter: none;
 }
@@ -782,24 +786,69 @@
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-hero-badge.revealed { transition-delay: 0.1s; }
-.about-hero-title.revealed { transition-delay: 0.2s; }
-.about-hero-avatars.revealed { transition-delay: 0.3s; }
-.about-hero-coords.revealed { transition-delay: 0.4s; }
-.about-info-desc.revealed { transition-delay: 0.1s; }
-.about-info-buttons.revealed { transition-delay: 0.2s; }
+.about-hero-badge.revealed {
+  transition-delay: 0.1s;
+}
 
-.about-journey-badge.revealed { transition-delay: 0.1s; }
-.about-journey-title.revealed { transition-delay: 0.2s; }
-.about-founder-card.revealed { transition-delay: 0.3s; }
-.about-story-col.revealed { transition-delay: 0.4s; }
-.about-caps-col.revealed { transition-delay: 0.5s; }
+.about-hero-title.revealed {
+  transition-delay: 0.2s;
+}
 
-.about-client-badge.revealed { transition-delay: 0.1s; }
-.about-client-title.revealed { transition-delay: 0.2s; }
-.about-client-logos.revealed { transition-delay: 0.3s; }
-.about-client-awards-title.revealed { transition-delay: 0.4s; }
-.about-client-awards.revealed { transition-delay: 0.5s; }
+.about-hero-avatars.revealed {
+  transition-delay: 0.3s;
+}
+
+.about-hero-coords.revealed {
+  transition-delay: 0.4s;
+}
+
+.about-info-desc.revealed {
+  transition-delay: 0.1s;
+}
+
+.about-info-buttons.revealed {
+  transition-delay: 0.2s;
+}
+
+.about-journey-badge.revealed {
+  transition-delay: 0.1s;
+}
+
+.about-journey-title.revealed {
+  transition-delay: 0.2s;
+}
+
+.about-founder-card.revealed {
+  transition-delay: 0.3s;
+}
+
+.about-story-col.revealed {
+  transition-delay: 0.4s;
+}
+
+.about-caps-col.revealed {
+  transition-delay: 0.5s;
+}
+
+.about-client-badge.revealed {
+  transition-delay: 0.1s;
+}
+
+.about-client-title.revealed {
+  transition-delay: 0.2s;
+}
+
+.about-client-logos.revealed {
+  transition-delay: 0.3s;
+}
+
+.about-client-awards-title.revealed {
+  transition-delay: 0.4s;
+}
+
+.about-client-awards.revealed {
+  transition-delay: 0.5s;
+}
 
 
 /* RESPONSIVE DESIGN BREAKPOINTS */
@@ -807,11 +856,11 @@
   .about-image-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .about-img-left img {
     min-height: 380px;
   }
-  
+
   .about-info-right {
     padding: 4rem 3rem 2.5rem 3rem;
   }
@@ -844,6 +893,7 @@
 }
 
 @media (max-width: 768px) {
+
   .about-hero-section,
   .about-journey-section,
   .about-client-section {
@@ -907,7 +957,7 @@
   .ticker-track h2 {
     font-size: 3rem;
   }
-  
+
   .about-ticker-container {
     margin-top: 3.5rem;
   }
@@ -939,7 +989,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .btn-meet-team {
     width: 100%;
     justify-content: space-between;
@@ -1218,6 +1268,7 @@
     opacity: 0.8;
     transform: scale(0.98);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -1328,21 +1379,57 @@
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-video-text-top.revealed { transition-delay: 0.1s; }
-.about-video-text-bottom.revealed { transition-delay: 0.2s; }
-.about-video-wrapper.revealed { transition-delay: 0.3s; }
+.about-video-text-top.revealed {
+  transition-delay: 0.1s;
+}
 
-.about-team-badge.revealed { transition-delay: 0.1s; }
-.about-team-title.revealed { transition-delay: 0.2s; }
-.about-team-img.revealed { transition-delay: 0.3s; }
+.about-video-text-bottom.revealed {
+  transition-delay: 0.2s;
+}
 
-.about-team-member-row.revealed:nth-child(1) { transition-delay: 0.4s; }
-.about-team-member-row.revealed:nth-child(2) { transition-delay: 0.45s; }
-.about-team-member-row.revealed:nth-child(3) { transition-delay: 0.5s; }
-.about-team-member-row.revealed:nth-child(4) { transition-delay: 0.55s; }
-.about-team-member-row.revealed:nth-child(5) { transition-delay: 0.6s; }
-.about-team-member-row.revealed:nth-child(6) { transition-delay: 0.65s; }
-.about-team-member-row.revealed:nth-child(7) { transition-delay: 0.7s; }
+.about-video-wrapper.revealed {
+  transition-delay: 0.3s;
+}
+
+.about-team-badge.revealed {
+  transition-delay: 0.1s;
+}
+
+.about-team-title.revealed {
+  transition-delay: 0.2s;
+}
+
+.about-team-img.revealed {
+  transition-delay: 0.3s;
+}
+
+.about-team-member-row.revealed:nth-child(1) {
+  transition-delay: 0.4s;
+}
+
+.about-team-member-row.revealed:nth-child(2) {
+  transition-delay: 0.45s;
+}
+
+.about-team-member-row.revealed:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.about-team-member-row.revealed:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+.about-team-member-row.revealed:nth-child(5) {
+  transition-delay: 0.6s;
+}
+
+.about-team-member-row.revealed:nth-child(6) {
+  transition-delay: 0.65s;
+}
+
+.about-team-member-row.revealed:nth-child(7) {
+  transition-delay: 0.7s;
+}
 
 
 /* ADDITIONAL MEDIA OVERRIDES */
@@ -1351,18 +1438,18 @@
     grid-template-columns: 1fr;
     gap: 4rem;
   }
-  
+
   .about-team-header {
     align-items: center;
     text-align: center;
     margin-bottom: 2.5rem;
   }
-  
+
   .about-team-left-col {
     align-items: center;
     text-align: center;
   }
-  
+
   .about-team-img {
     max-width: 400px;
   }
@@ -1372,23 +1459,23 @@
   .about-video-section {
     height: 500px;
   }
-  
+
   .about-video-container {
     padding: 0 1.5rem;
   }
-  
+
   .about-video-content {
     padding: 4rem 0;
   }
-  
+
   .about-video-text-top h2 {
     font-size: 2rem;
   }
-  
+
   .video-counter-wrap {
     font-size: 2.8rem;
   }
-  
+
   .btn-video-play-pause {
     bottom: 2rem;
     right: 2rem;
@@ -1433,4 +1520,3 @@
     padding: 1.2rem 0;
   }
 }
-

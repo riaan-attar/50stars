@@ -202,14 +202,24 @@
 
 .cs-client-logo {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 1.5rem;
+  left: 1.5rem;
   z-index: 2;
-  height: 32px;
+  height: 48px;
+  background-color: var(--color-white);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cs-client-logo img {
+.cs-client-logo img,
+.cs-client-logo svg {
   height: 100%;
+  width: auto;
+  max-width: 140px;
   object-fit: contain;
 }
 

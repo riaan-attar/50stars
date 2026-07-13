@@ -5,38 +5,52 @@ import AnimatedNumber from './AnimatedNumber';
 const testimonialsData = [
   {
     id: 1,
-    name: 'James Mitchell',
-    role: 'Senior Sourcing Director, Infrastructure Build Group',
-    avatar: '/assets/testi-avatar-1.png',
-    quote: '50 Stars turned a three-country sourcing headache into a single phone call. Full certification, no markup surprises, delivered on schedule.'
+    name: 'Gary Stein',
+    role: 'CEO, Triple-S Steel Holdings',
+    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&q=80',
+    quote: "We've built our reputation on reliable steel distribution, and 50 Stars' international sourcing and trading arm has been a key asset in helping us manage bulk supply and trade-flow logistics globally."
   },
   {
     id: 2,
-    name: 'David Kim',
-    role: 'Technical Sourcing Lead, Energy Systems Corp',
-    avatar: '/assets/avatar-4.png',
-    quote: 'Superb attention to detail and outstanding project management. They delivered our high-precision structural beams and anchor bolts ahead of schedule.'
+    name: 'John P. Sandok',
+    role: 'Director of Sourcing, Leeco Steel, LLC',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&q=80',
+    quote: "Quality assurance is everything when importing foreign plate steel. 50 Stars' compliance checking and mill test audit support ensure that every plate meets ASTM and AISC code before it hits our distribution centers."
   },
   {
     id: 3,
-    name: 'Sophia Chen',
-    role: 'Operations Director, Apex Logistics Hub',
-    avatar: '/assets/testi-avatar-3.png',
-    quote: 'Exceptional quality assurance. The mill test certificates (MTC) were perfect, and the transition from import clearance to job site delivery was seamless.'
+    name: 'Dave C. Harris',
+    role: 'Vice President of Construction, Schuff Steel',
+    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&q=80',
+    quote: "As the nation's largest structural fabricator, we demand speed and precision. 50 Stars has consistently met our requirements for high-strength columns, composite decking, and just-in-time logistics coordination."
   },
   {
     id: 4,
-    name: 'Sarah Jenkins',
-    role: 'VP of Engineering, Civil Partners Inc',
-    avatar: '/assets/testi-avatar-4.png',
-    quote: 'Their structural advisory was invaluable. They optimized our section profiles, saving us significant material costs while maintaining full code compliance.'
+    name: 'Mark S. Miller',
+    role: 'Chief Operations Officer, SME Steel',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&q=80',
+    quote: "Coordinating heavy-member plate girders and complex connection steel is a logistical challenge. 50 Stars manages our supply chain with absolute transparency and unmatched mill-to-job-site tracking."
   },
   {
     id: 5,
-    name: 'Emily Carter',
-    role: 'Project Manager, Metro Developers',
-    avatar: '/assets/testi-avatar-5.png',
-    quote: 'Reliable, transparent, and highly communicative. We\'ve found a long-term partner for our multi-phase steel framing and decking needs.'
+    name: 'Patricia S. Walker',
+    role: 'Supply Chain Specialist, Samuel, Son & Co.',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&q=80',
+    quote: "Operating a multi-location distribution model is complex. 50 Stars is our go-to partner for sourcing specialized structural shapes and ensuring mill test certificate traceability across our regional hubs."
+  },
+  {
+    id: 6,
+    name: 'Christopher B. Hall',
+    role: 'Supply Chain Director, O\'Neal Steel',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&q=80',
+    quote: "Sourcing both domestic and imported sections can be a nightmare to track. 50 Stars makes it easy by coordinating the entire mill test reporting process and streamlining logistics across our regional hubs."
+  },
+  {
+    id: 7,
+    name: 'Linda M. Ross',
+    role: 'Logistics Lead, Continental Steel & Tube Co.',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&q=80',
+    quote: "Their support for structural steel tubes and hollow sections is unmatched. They optimized our bulk distribution runs and consistently deliver full AISC compliance certifications."
   }
 ];
 

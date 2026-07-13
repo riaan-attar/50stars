@@ -1,43 +1,53 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import './CaseStudySection.css';
+import { partners } from '../assets/PartnerLogos';
 
-const caseStudies = [
+const blogs = [
   {
     id: 1,
-    title: 'Split-sourcing strategy for a large-scale structural steel package',
-    description: 'Developed a combined domestic-and-international sourcing model to solve a critical long-member constraint on a major industrial build, balancing lead time, cost, and field-splice engineering requirements.',
-    stat: '35%',
-    scope: 'Reduction in projected lead time',
-    image: '/assets/case-1.jpg',
-    logo: '/assets/logo-1.svg'
+    partnerId: 'triple-s',
+    title: 'Global Steel Supply Chains: Sourcing & Logistical Resilience',
+    description: 'Exploring modern international sourcing models, trade regulations, and mitigating transport delay risks for utility and infrastructure projects.',
+    stat: '01',
+    scope: '6 Min Read',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=80'
   },
   {
     id: 2,
-    title: 'Just-In-Time delivery coordination for high-tech data center construction',
-    description: 'Managed fabrication and transport logistics for 12,000 metric tons of structural columns and composite decking, aligning shipments to the precise daily crane schedule.',
-    stat: '100%',
-    scope: 'On-time delivery record',
-    image: '/assets/product-8.png',
-    logo: '/assets/logo-2.svg'
+    partnerId: 'leeco',
+    title: 'Vetting Foreign Steel: Quality Testing & Compliance',
+    description: 'Vetting and importing plate steel requires strict compliance checks. A deep dive into Mill Test Reports (MTRs) and third-party inspection certifications.',
+    stat: '02',
+    scope: '5 Min Read',
+    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&auto=format&fit=crop&q=80'
   },
   {
     id: 3,
-    title: 'Grade matching and value engineering for port corridor warehousing',
-    description: 'Optimized steel section profiles and grade matching for a 450,000 sq ft logistics facility, saving on material cost without reducing structural load-bearing capacity.',
-    stat: '12%',
-    scope: 'Material cost reduction',
-    image: '/assets/about-building.png',
-    logo: '/assets/logo-3.svg'
+    partnerId: 'schuff',
+    title: 'Innovations in High-Rise Structural Steel Fabrication',
+    description: 'How modular structural design and pre-assembly steel connections are accelerating commercial and residential skyscraper development.',
+    stat: '03',
+    scope: '8 Min Read',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&auto=format&fit=crop&q=80'
   },
   {
     id: 4,
-    title: 'Multi-origin raw material procurement for utility power plant build',
-    description: 'Coordinated heavy-member plate girder sourcing from domestic and global mills, managing material certification and import clearing ahead of field assembly.',
-    stat: '0',
-    scope: 'Certification compliance issues',
-    image: '/assets/product-3.jpg',
-    logo: '/assets/logo-4.svg'
+    partnerId: 'samuel',
+    title: 'Multi-Location Inventory Models for Complex Logistics',
+    description: 'Analyzing just-in-time delivery models for hyperscale tech projects, coordinating between Canadian parent facilities and multiple US distribution yards.',
+    stat: '04',
+    scope: '7 Min Read',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 5,
+    partnerId: 'cives',
+    title: 'Coordinating Multi-Plant Steel Fabrication on Megaprojects',
+    description: 'Managing capacity and quality control across multiple regional fabrication plants to keep nationwide civil infrastructure builds on-track.',
+    stat: '05',
+    scope: '6 Min Read',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80'
   }
 ];
 
@@ -51,14 +61,15 @@ const CaseStudySection: React.FC = () => {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? caseStudies.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? blogs.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === caseStudies.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === blogs.length - 1 ? 0 : prev + 1));
   };
 
-  const activeCase = caseStudies[currentIndex];
+  const activeBlog = blogs[currentIndex];
+  const activePartner = partners.find(p => p.id === activeBlog.partnerId) || partners[0];
 
   return (
     <section className="case-study-section" id="case-study">
@@ -69,17 +80,17 @@ const CaseStudySection: React.FC = () => {
           <div className="cs-header-left">
             <div className="pill-who-we-are">
               <div className="pill-gradient-square"></div>
-              <span className="pill-text">Real-world success</span>
+              <span className="pill-text">Blogs & Insights</span>
             </div>
             <h2 className="cs-title">
-              Real <span className="text-orange">results</span> from real projects
+              Industry <span className="text-orange">insights</span> &amp; partner expertise
             </h2>
           </div>
           <div className="cs-header-controls">
-            <button className="btn-slider-nav" onClick={handlePrev} aria-label="Previous case study">
+            <button className="btn-slider-nav" onClick={handlePrev} aria-label="Previous blog article">
               <ArrowLeft size={20} strokeWidth={1.5} />
             </button>
-            <button className="btn-slider-nav" onClick={handleNext} aria-label="Next case study">
+            <button className="btn-slider-nav" onClick={handleNext} aria-label="Next blog article">
               <ArrowRight size={20} strokeWidth={1.5} />
             </button>
           </div>
@@ -95,17 +106,17 @@ const CaseStudySection: React.FC = () => {
               </div>
               
               <div className="cs-left-top">
-                <h3 className="cs-card-title">{activeCase.title}</h3>
-                <p className="cs-card-desc">{activeCase.description}</p>
+                <h3 className="cs-card-title">{activeBlog.title}</h3>
+                <p className="cs-card-desc">{activeBlog.description}</p>
               </div>
               
               <div className="cs-left-bottom">
                 <div className="cs-stats">
-                  <h4 className="cs-stat-number">{activeCase.stat}</h4>
-                  <p className="cs-stat-label">{activeCase.scope}</p>
+                  <h4 className="cs-stat-number">{activeBlog.stat}</h4>
+                  <p className="cs-stat-label">{activeBlog.scope}</p>
                 </div>
                 <a href="/contact" className="btn-view-case" onClick={(e) => navigateTo(e, '/contact')}>
-                  <span className="btn-vc-text">View case</span>
+                  <span className="btn-vc-text">Read Article</span>
                   <span className="btn-vc-icon">
                     <img src="/assets/icon-arrow.svg" alt="Arrow" />
                   </span>
@@ -115,10 +126,10 @@ const CaseStudySection: React.FC = () => {
 
             <div className="cs-right-block">
               <div className="cs-client-logo">
-                <img src={activeCase.logo} alt="Client Logo" />
+                {activePartner.logo}
               </div>
               <div className="cs-image-wrap">
-                <img src={activeCase.image} alt={activeCase.title} />
+                <img src={activeBlog.image} alt={activeBlog.title} />
               </div>
             </div>
 
@@ -133,13 +144,13 @@ const CaseStudySection: React.FC = () => {
               <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="Agent 2" className="cs-avatar" />
             </div>
             <div className="cs-banner-text">
-              <h4 className="cs-banner-title">Open a conversation</h4>
-              <p className="cs-banner-desc">Contact us to explore solutions tailored to your needs.</p>
+              <h4 className="cs-banner-title">Stay informed with our network</h4>
+              <p className="cs-banner-desc">Explore technical procurement insights, mill capacities, and trade analysis.</p>
             </div>
           </div>
           <div className="cs-banner-right">
             <a href="/contact" className="btn-contact-black" onClick={(e) => navigateTo(e, '/contact')}>
-              <span className="btn-cb-text">Contact us now</span>
+              <span className="btn-cb-text">Subscribe to insights</span>
               <span className="btn-cb-icon">
                 <img src="/assets/icon-arrow.svg" alt="Arrow" style={{ filter: 'brightness(0) invert(1)' }} />
               </span>

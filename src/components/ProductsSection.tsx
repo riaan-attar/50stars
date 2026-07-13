@@ -74,33 +74,62 @@ const ProductsSection: React.FC = () => {
           <img src="/assets/product-diagram.svg" alt="Product exploded view" className="ps-diagram" />
         </div>
 
-        {/* Product Grid */}
-        <div className="ps-grid">
-          {productsData.map((product) => (
-            <div className="ps-card" key={product.id}>
-              <h3 className="ps-card-title">{product.title}</h3>
-              <div className="ps-card-image-wrap">
-                <img src={product.image} alt={product.title} />
-              </div>
+        {/* Product Marquee (Sliding Left to Right) */}
+        <div className="ps-marquee-container">
+          <div className="ps-marquee-track">
+            {/* Loop 1 */}
+            {productsData.map((product) => (
+              <div className="ps-card" key={`loop1-${product.id}`}>
+                <h3 className="ps-card-title">{product.title}</h3>
+                <div className="ps-card-image-wrap">
+                  <img src={product.image} alt={product.title} />
+                </div>
 
-              <div className="ps-specs-list">
-                <div className="ps-spec-row">
-                  <span className="ps-spec-label">Standard</span>
-                  <span className="ps-spec-value">{product.standard}</span>
-                </div>
-                <div className="ps-divider"></div>
-                <div className="ps-spec-row">
-                  <span className="ps-spec-label">Sourcing</span>
-                  <span className="ps-spec-value">{product.sourcing}</span>
-                </div>
-                <div className="ps-divider"></div>
-                <div className="ps-spec-row">
-                  <span className="ps-spec-label">Members</span>
-                  <span className="ps-spec-value">{product.members}</span>
+                <div className="ps-specs-list">
+                  <div className="ps-spec-row">
+                    <span className="ps-spec-label">Standard</span>
+                    <span className="ps-spec-value">{product.standard}</span>
+                  </div>
+                  <div className="ps-divider"></div>
+                  <div className="ps-spec-row">
+                    <span className="ps-spec-label">Sourcing</span>
+                    <span className="ps-spec-value">{product.sourcing}</span>
+                  </div>
+                  <div className="ps-divider"></div>
+                  <div className="ps-spec-row">
+                    <span className="ps-spec-label">Members</span>
+                    <span className="ps-spec-value">{product.members}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+            {/* Loop 2 */}
+            {productsData.map((product) => (
+              <div className="ps-card" key={`loop2-${product.id}`}>
+                <h3 className="ps-card-title">{product.title}</h3>
+                <div className="ps-card-image-wrap">
+                  <img src={product.image} alt={product.title} />
+                </div>
+
+                <div className="ps-specs-list">
+                  <div className="ps-spec-row">
+                    <span className="ps-spec-label">Standard</span>
+                    <span className="ps-spec-value">{product.standard}</span>
+                  </div>
+                  <div className="ps-divider"></div>
+                  <div className="ps-spec-row">
+                    <span className="ps-spec-label">Sourcing</span>
+                    <span className="ps-spec-value">{product.sourcing}</span>
+                  </div>
+                  <div className="ps-divider"></div>
+                  <div className="ps-spec-row">
+                    <span className="ps-spec-label">Members</span>
+                    <span className="ps-spec-value">{product.members}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Footer CTA */}

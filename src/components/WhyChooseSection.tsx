@@ -1,17 +1,7 @@
 import React from 'react';
 import './WhyChooseSection.css';
 
-const clients = [
-  '/assets/client-1.svg',
-  '/assets/client-2.svg',
-  '/assets/client-3.svg',
-  '/assets/client-4.svg',
-  '/assets/client-5.svg',
-  '/assets/client-6.svg',
-  '/assets/client-7.svg',
-  '/assets/client-8.svg',
-  '/assets/client-9.svg',
-];
+import { partners } from '../assets/PartnerLogos';
 
 const WhyChooseSection: React.FC = () => {
   return (
@@ -21,9 +11,9 @@ const WhyChooseSection: React.FC = () => {
       <div className="wc-ticker-wrap">
         <div className="wc-ticker">
           {/* Double the list for seamless infinite scroll */}
-          {[...clients, ...clients].map((client, idx) => (
-            <div className="wc-client-logo" key={idx}>
-              <img src={client} alt={`Client ${idx}`} />
+          {[...partners, ...partners].map((partner, idx) => (
+            <div className="wc-client-logo" key={idx} title={`${partner.name} — ${partner.location}`}>
+              {partner.logo}
             </div>
           ))}
         </div>
@@ -44,7 +34,7 @@ const WhyChooseSection: React.FC = () => {
                 One supplier. Every material. <br className="hidden-mobile" />Mill to job site.
               </h2>
               <p className="wc-lead-text">
-                50 Stars isn't a broker. We're the procurement partner general contractors, EPCs, and subcontractors call before they call anyone else. We handle steel, custom fabrication, and the materials shortages that are slowing down every job in the country right now.
+                50 Stars isn't a broker. We're the procurement partner general contractors, EPCs, and subcontractors trust. We operate directly through our network of 20+ specialized partnering firms—including Triple-S Steel, Leeco Steel, Schuff Steel, and others—to get your structural sourcing, custom fabrication, and logistics done seamlessly and on time.
               </p>
             </div>
             <div className="wc-intro-col-right">
