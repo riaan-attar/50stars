@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   background-color: #151515; /* The dark background */
-  padding: 4rem 0 8rem 0;
+  padding: 2rem 0 8rem 0;
   display: flex;
   justify-content: center;
   z-index: 5;
@@ -88,8 +88,8 @@
 .ps-marquee-container {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 6rem;
-  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0 0.5rem 0;
   position: relative;
 }
 
@@ -97,7 +97,7 @@
   display: flex;
   gap: 1.5rem;
   width: max-content;
-  animation: slideRight 35s linear infinite;
+  animation: slideRight 55s linear infinite;
 }
 
 .ps-marquee-track:hover {
@@ -117,7 +117,7 @@
   background-color: #1a1a1a;
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -164,6 +164,10 @@
   padding: 0.75rem 0;
 }
 
+.ps-spec-row:last-child {
+  padding-bottom: 0;
+}
+
 .ps-spec-label {
   font-size: 0.8rem;
   font-weight: 500;
@@ -191,8 +195,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 4rem;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 2rem;
 }
 
 .ps-footer-title {
