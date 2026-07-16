@@ -6,7 +6,7 @@ import { partners } from '../assets/PartnerLogos';
 const WhyChooseSection: React.FC = () => {
   return (
     <section className="why-choose-section" id="why-choose">
-      
+
       {/* Top Ticker */}
       <div className="wc-ticker-wrap">
         <div className="wc-ticker">
@@ -20,10 +20,10 @@ const WhyChooseSection: React.FC = () => {
       </div>
 
       <div className="wc-container">
-        
+
         {/* Intro Block: Why 50 Stars */}
         <div className="wc-intro-block">
-          
+
           <div className="wc-intro-grid">
             <div className="wc-intro-col-left">
               <div className="pill-who-we-are" style={{ marginBottom: '1.25rem' }}>
@@ -34,7 +34,7 @@ const WhyChooseSection: React.FC = () => {
                 One supplier. Every material. <br className="hidden-mobile" />Mill to job site.
               </h2>
               <p className="wc-lead-text">
-                50 Stars isn't a broker. We're the procurement partner general contractors, EPCs, and subcontractors trust. We operate directly through our network of 20+ specialized partnering firms—including Triple-S Steel, Leeco Steel, Schuff Steel, and others—to get your structural sourcing, custom fabrication, and logistics done seamlessly and on time.
+                50 Stars isn't a broker. We're the procurement partner general contractors, EPCs, and subcontractors trust. We operate directly through our network of 20+ specialized partnering firms including Triple-S Steel, Leeco Steel, Schuff Steel, and others to get your structural sourcing, custom fabrication, and logistics done seamlessly and on time.
               </p>
             </div>
             <div className="wc-intro-col-right">
@@ -56,7 +56,7 @@ const WhyChooseSection: React.FC = () => {
                   <strong className="wc-network-country">Europe</strong>: premium-grade steel and compliance-certified materials
                 </li>
               </ul>
-              
+
               <div className="wc-network-callout">
                 <p>
                   Combined with our in-house fabrication coordination, this network means 50 Stars can source, certify, fabricate, and deliver directly, without you managing five different vendor relationships.

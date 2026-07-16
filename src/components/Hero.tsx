@@ -11,6 +11,19 @@ const Hero: React.FC = () => {
 
   return (
     <section className="hero-section">
+      <video 
+        className="hero-video-bg" 
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        preload="auto"
+        poster="/assets/home-video-poster.jpg"
+      >
+        <source src="/assets/herosection.mp4" type="video/mp4" />
+      </video>
+      <div className="hero-video-overlay"></div>
+
       <div className="hero-container">
 
         <div className="hero-content">
@@ -32,7 +45,7 @@ const Hero: React.FC = () => {
             </div> */}
 
             <p className="hero-description">
-              We work directly through our trusted partnering firms—including Triple-S Steel, Leeco Steel, and other industry leaders—to get every structural beam, joist, and component sourced, fabricated, and delivered to your job site with certified quality and full compliance.
+              We work directly through our trusted partnering firms including Triple-S Steel, Leeco Steel, and other industry leaders to get every structural beam, joist, and component sourced, fabricated, and delivered to your job site with certified quality and full compliance.
             </p>
 
             <button className="btn-explore" onClick={(e) => navigateTo(e, '/services')}>

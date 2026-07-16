@@ -59,7 +59,7 @@ const AboutSection: React.FC = () => {
             <p className="card-text text-dark">Contractors and fabricators<br />served worldwide</p>
             <div className="card-review-info">
               <div className="rating">
-                <h2><AnimatedNumber value={4.9} decimals={1} /></h2>
+                <h2><AnimatedNumber value={4.7} decimals={1} /></h2>
                 <p>/5.0</p>
               </div>
               <img className="review-stars" src="/assets/rating-stars-orange.svg" alt="Review Stars" />
@@ -74,7 +74,7 @@ const AboutSection: React.FC = () => {
           {/* Card 3 */}
           <div className="about-card card-orange">
             <div className="card-orange-content">
-              <p className="card-pretitle">// 2005-2K26 //</p>
+              {/* <p className="card-pretitle">// 2005-2K26 //</p> */}
               <h2 className="card-counter text-dark"><AnimatedNumber value={9} />+</h2>
               <p className="card-text text-light">Product categories supplied with full<br />traceability and certification.</p>
             </div>

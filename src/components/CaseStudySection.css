@@ -241,21 +241,7 @@
   gap: 1.5rem;
 }
 
-.cs-avatars {
-  display: flex;
-  align-items: center;
-}
 
-.cs-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid var(--color-white);
-  object-fit: cover;
-}
-.cs-avatar:nth-child(2) {
-  margin-left: -12px;
-}
 
 .cs-banner-title {
   font-size: 1.25rem;
@@ -346,8 +332,5 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-  }
-  .cs-avatars {
-    margin-left: 12px;
   }
 }
