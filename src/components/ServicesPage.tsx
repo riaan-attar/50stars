@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ServicesPage.css';
+import ReactorVideoSection from './ReactorVideoSection';
 
 const ServicesPage: React.FC = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -45,57 +46,27 @@ const ServicesPage: React.FC = () => {
 
   const services = [
     {
-      title: "Structural Steel & Materials Sourcing",
-      description: "Global mill sourcing across major regions, providing beams, joists, hollow sections, plate, angles, and specialty alloys.",
+      title: "Light & Medium Fabrication",
+      description: "Partner-fabricated components for structural, architectural, and equipment applications. Cutting, forming, welding, and finishing coordinated across a vetted shop network with capacity scaling from single-piece prototypes to production runs.",
       image: "/assets/service-1.jpg",
       link: "/contact"
     },
     {
-      title: "Engineering & Procurement Advisory",
-      description: "BOM and takeoff reviews against drawings, grade/section matching to ASTM/AISC/EN codes, and value engineering.",
+      title: "Reactor Internals",
+      description: "Precision-fabricated internals sourced through certified pressure-vessel and process-equipment partners. Material traceability and code compliance (ASME, etc.) maintained for trays, baffles, supports, and custom project specs.",
       image: "/assets/service-2.jpg",
       link: "/contact"
     },
     {
-      title: "Quality Assurance & Certification",
-      description: "Full mill test certificates (MTC), chain-of-custody tracking, and dimensional/coating inspections.",
+      title: "Hardware & Fasteners",
+      description: "Structural bolts, anchors, and specialty fasteners sourced to project spec and grade. Bulk and just-in-time supply coordinated to construction schedule with certified material and mill test documentation on request.",
       image: "/assets/service-3.jpg",
       link: "/contact"
     },
     {
-      title: "Fabrication Coordination",
-      description: "Pre-qualified fabrication shops for custom cutting, drilling, coating, galvanizing, and pre-assembly.",
+      title: "Structural Steel & Materials Sourcing",
+      description: "Global mill sourcing across every major steel-producing region. Grade and spec matching to project engineering requirements with volume pricing coordinated across a vetted supplier network.",
       image: "/assets/service-4.png",
-      link: "/contact"
-    },
-    {
-      title: "Global Logistics & Freight",
-      description: "Flat rack, breakbulk, and container cargo, customs clearance, and sequencing to your erection schedule.",
-      image: "/assets/service-5.jpg",
-      link: "/contact"
-    },
-    {
-      title: "Trade Finance & Compliance Support",
-      description: "Letter of credit (LC) structuring guidance, tariff reviews, and cross-border payment compliance support.",
-      image: "/assets/service-6.png",
-      link: "/contact"
-    },
-    {
-      title: "Warehousing & Inventory Management",
-      description: "Staging and vendor-managed inventory near major corridors to support multi-phase projects.",
-      image: "/assets/product-1.jpg",
-      link: "/contact"
-    },
-    {
-      title: "Fair Trade Pricing",
-      description: "We charge a flat $10 per metric ton procurement fee. There are no hidden markups, and no inflated service charges. You see the mill price, you see our fee, and that's the whole invoice.",
-      image: "/assets/product-3.jpg",
-      link: "/contact"
-    },
-    {
-      title: "Maintenance & Lifecycle Support",
-      description: "Coating touch-up, corrosion protection consulting, and re-certification support for completed structures.",
-      image: "/assets/product-4.jpg",
       link: "/contact"
     }
   ];
@@ -161,6 +132,11 @@ const ServicesPage: React.FC = () => {
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* Reactor Internals Video Demonstration */}
+          <div style={{ marginTop: '3rem', marginBottom: '3rem' }}>
+            <ReactorVideoSection />
           </div>
 
           {/* CTA Banner right below services grid */}

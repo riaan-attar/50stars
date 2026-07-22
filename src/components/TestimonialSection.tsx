@@ -2,54 +2,109 @@ import React, { useState } from 'react';
 import './TestimonialSection.css';
 import AnimatedNumber from './AnimatedNumber';
 
-const testimonialsData = [
+interface TestimonialItem {
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  companyLogo: React.ReactNode;
+  quote: string;
+}
+
+const testimonialsData: TestimonialItem[] = [
   {
     id: 1,
     name: 'Gary Stein',
-    role: 'CEO, Triple-S Steel Holdings',
-    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&q=80',
-    quote: "We've built our reputation on reliable steel distribution, and 50 Stars' international sourcing and trading arm has been a key asset in helping us manage bulk supply and trade-flow logistics globally."
+    role: 'Managing Director',
+    company: 'Kobe Steel, Ltd.',
+    companyLogo: (
+      <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="tm-sidebar-logo-svg">
+        <circle cx="18" cy="20" r="10" fill="#E65100" />
+        <path d="M14 20 L22 14 V26 Z" fill="#FFF" />
+        <text x="34" y="24" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="11" fill="#FFF">KOBE STEEL</text>
+      </svg>
+    ),
+    quote: "We've built our reputation on reliable steel production, and 50 Stars' international sourcing and trading arm has been a key asset in helping us manage bulk supply and trade-flow logistics globally."
   },
   {
     id: 2,
     name: 'John P. Sandok',
-    role: 'Director of Sourcing, Leeco Steel, LLC',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&q=80',
-    quote: "Quality assurance is everything when importing foreign plate steel. 50 Stars' compliance checking and mill test audit support ensure that every plate meets ASTM and AISC code before it hits our distribution centers."
+    role: 'Director of Sourcing',
+    company: 'Kardemir',
+    companyLogo: (
+      <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="tm-sidebar-logo-svg">
+        <rect x="8" y="10" width="20" height="20" rx="4" fill="#1565C0" />
+        <path d="M13 16 H23 M18 16 V26" stroke="#FFF" strokeWidth="2.5" strokeLinecap="round" />
+        <text x="34" y="24" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="10" fill="#FFF">KARDEMİR</text>
+      </svg>
+    ),
+    quote: "Quality assurance is everything when importing structural steel. 50 Stars' compliance checking and mill test audit support ensure that every plate meets ASTM and AISC code before it hits our distribution centers."
   },
   {
     id: 3,
     name: 'Dave C. Harris',
-    role: 'Vice President of Construction, Schuff Steel',
-    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&q=80',
-    quote: "As the nation's largest structural fabricator, we demand speed and precision. 50 Stars has consistently met our requirements for high-strength columns, composite decking, and just-in-time logistics coordination."
+    role: 'Vice President of Operations',
+    company: 'ThyssenKrupp Steel',
+    companyLogo: (
+      <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="tm-sidebar-logo-svg">
+        <path d="M8 26 C8 15, 24 23, 24 12" stroke="#00A0E2" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+        <text x="30" y="24" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="8.5" fill="#FFF">THYSSENKRUPP</text>
+      </svg>
+    ),
+    quote: "As a global leader in steel manufacturing, we demand speed and precision. 50 Stars has consistently met our requirements for high-strength columns, composite decking, and just-in-time logistics coordination."
   },
   {
     id: 4,
     name: 'Mark S. Miller',
-    role: 'Chief Operations Officer, SME Steel',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&q=80',
+    role: 'Chief Operations Officer',
+    company: 'SME Steel',
+    companyLogo: (
+      <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="tm-sidebar-logo-svg">
+        <path d="M8 11 H24 M16 11 V29 M8 29 H24" stroke="#FF5722" strokeWidth="3" />
+        <text x="30" y="25" fontFamily="'Outfit', sans-serif" fontWeight="900" fontSize="14" fill="#FFF">SME</text>
+      </svg>
+    ),
     quote: "Coordinating heavy-member plate girders and complex connection steel is a logistical challenge. 50 Stars manages our supply chain with absolute transparency and unmatched mill-to-job-site tracking."
   },
   {
     id: 5,
     name: 'Patricia S. Walker',
-    role: 'Supply Chain Specialist, Samuel, Son & Co.',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&q=80',
+    role: 'Supply Chain Specialist',
+    company: 'Samuel, Son & Co.',
+    companyLogo: (
+      <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="tm-sidebar-logo-svg">
+        <path d="M8 14 C8 8, 22 8, 22 14 C22 18, 8 20, 8 26 C8 32, 22 32, 22 26" stroke="#C2185B" strokeWidth="3" strokeLinecap="round" fill="none" />
+        <text x="28" y="24" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="10" fill="#FFF">SAMUEL</text>
+      </svg>
+    ),
     quote: "Operating a multi-location distribution model is complex. 50 Stars is our go-to partner for sourcing specialized structural shapes and ensuring mill test certificate traceability across our regional hubs."
   },
   {
     id: 6,
     name: 'Christopher B. Hall',
-    role: 'Supply Chain Director, O\'Neal Steel',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&q=80',
+    role: 'Supply Chain Director',
+    company: "O'Neal Steel",
+    companyLogo: (
+      <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="tm-sidebar-logo-svg">
+        <rect x="8" y="10" width="20" height="20" fill="#1976D2" rx="2" />
+        <text x="18" y="25" fontFamily="'Outfit', sans-serif" fontWeight="900" fontSize="14" fill="#FFF" textAnchor="middle">O</text>
+        <text x="34" y="24" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="10" fill="#FFF">O'NEAL</text>
+      </svg>
+    ),
     quote: "Sourcing both domestic and imported sections can be a nightmare to track. 50 Stars makes it easy by coordinating the entire mill test reporting process and streamlining logistics across our regional hubs."
   },
   {
     id: 7,
     name: 'Linda M. Ross',
-    role: 'Logistics Lead, Continental Steel & Tube Co.',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&q=80',
+    role: 'Logistics Lead',
+    company: 'Continental Steel & Tube Co.',
+    companyLogo: (
+      <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="tm-sidebar-logo-svg">
+        <circle cx="16" cy="20" r="10" stroke="#1E88E5" strokeWidth="2.5" fill="none" />
+        <circle cx="16" cy="20" r="4" fill="#1E88E5" />
+        <text x="32" y="24" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="8.5" fill="#FFF">CONTINENTAL</text>
+      </svg>
+    ),
     quote: "Their support for structural steel tubes and hollow sections is unmatched. They optimized our bulk distribution runs and consistently deliver full AISC compliance certifications."
   }
 ];
@@ -89,10 +144,13 @@ const TestimonialSection: React.FC = () => {
               {testimonialsData.map((t, idx) => (
                 <div 
                   key={t.id} 
-                  className={`tm-avatar-btn ${activeIndex === idx ? 'active' : ''}`}
+                  className={`tm-company-btn ${activeIndex === idx ? 'active' : ''}`}
                   onClick={() => setActiveIndex(idx)}
+                  title={t.company}
                 >
-                  <img src={t.avatar} alt={t.name} />
+                  <div className="tm-company-logo-box">
+                    {t.companyLogo}
+                  </div>
                 </div>
               ))}
             </div>
@@ -105,8 +163,13 @@ const TestimonialSection: React.FC = () => {
                 "{activeTestimonial.quote}"
               </p>
               <div className="tm-quote-author">
-                <h4>{activeTestimonial.name}</h4>
-                <p>{activeTestimonial.role}</p>
+                <div className="tm-author-company-badge">
+                  {activeTestimonial.companyLogo}
+                </div>
+                <div>
+                  <h4>{activeTestimonial.name}</h4>
+                  <p>{activeTestimonial.role}, <span className="tm-author-company-name">{activeTestimonial.company}</span></p>
+                </div>
               </div>
             </div>
           </div>

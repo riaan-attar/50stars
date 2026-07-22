@@ -18,17 +18,7 @@ const AboutHero: React.FC = () => {
     }
   };
 
-  const [activeTeamIndex, setActiveTeamIndex] = useState(0);
 
-  const teamMembers = [
-    { name: "James Anderson", role: "Head of Sourcing", image: "/assets/about-team-member-1.webp" },
-    { name: "Michael Turner", role: "Chief Logistics Officer", image: "/assets/about-team-member-2.webp" },
-    { name: "Olivia Bennett", role: "Quality Assurance Director", image: "/assets/about-team-member-3.webp" },
-    { name: "William Harris", role: "Sourcing Advisor", image: "/assets/about-team-member-4.webp" },
-    { name: "Sophie Walker", role: "Client Relations Director", image: "/assets/about-team-member-5.webp" },
-    { name: "William Carter", role: "Compliance Manager", image: "/assets/about-team-member-6.webp" },
-    { name: "Emily Carter", role: "Trade Finance Expert", image: "/assets/about-team-member-7.webp" }
-  ];
 
   const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     e.preventDefault();
@@ -41,7 +31,7 @@ const AboutHero: React.FC = () => {
       {/* 1. HERO SECTION */}
       <section className="about-hero-section">
         <div className="about-hero-container">
-          
+
           {/* Header Pill & Title */}
           <div className="about-hero-header">
             <div className="about-hero-badge">
@@ -50,61 +40,64 @@ const AboutHero: React.FC = () => {
             </div>
             <h1 className="about-hero-title">About us</h1>
           </div>
-          
+
           {/* Content Area with Avatar stack and coordinates */}
           <div className="about-hero-content">
             <div className="about-hero-left">
-              <div className="about-hero-avatars">
-                <div className="avatar-wrapper"><img src="/assets/about-avatar-1.png" alt="Team Avatar 1" /></div>
-                <div className="avatar-wrapper"><img src="/assets/about-avatar-2.png" alt="Team Avatar 2" /></div>
-                <div className="avatar-wrapper"><img src="/assets/about-avatar-3.png" alt="Team Avatar 3" /></div>
-                <div className="avatar-wrapper"><img src="/assets/about-avatar-4.png" alt="Team Avatar 4" /></div>
-                <div className="avatar-counter-badge">25+</div>
-              </div>
-              <p className="about-hero-desc">Team of dedicated procurement, engineering, and logistics professionals</p>
+              {/* <div className="about-hero-avatars">
+                  <div className="avatar-wrapper"><img src="/assets/about-avatar-1.png" alt="Team Avatar 1" /></div>
+                  <div className="avatar-wrapper"><img src="/assets/about-avatar-2.png" alt="Team Avatar 2" /></div>
+                  <div className="avatar-wrapper"><img src="/assets/about-avatar-3.png" alt="Team Avatar 3" /></div>
+                  <div className="avatar-wrapper"><img src="/assets/about-avatar-4.png" alt="Team Avatar 4" /></div>
+                  <div className="avatar-counter-badge">25+</div>
+                </div> */}
+              {/* <p className="about-hero-desc">Team of dedicated procurement, engineering, and logistics professionals</p> */}
             </div>
-            
-            <div className="about-hero-coords">
+
+            {/* <div className="about-hero-coords">
               37.7749° N, 122.4194° W
-            </div>
+            </div> */}
           </div>
-          
+
         </div>
-        
+
         {/* Background Grid Lines & Noise */}
         <div className="about-hero-bg-overlay">
-          <div className="bg-divider-grid">
+          <video
+            src="/assets/about-hero-bg.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="about-hero-video-bg"
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85, zIndex: 0 }}
+          />
+          <div className="bg-divider-grid" style={{ zIndex: 1, position: 'relative' }}>
             <div className="divider-line"></div>
             <div className="divider-line"></div>
             <div className="divider-line"></div>
             <div className="divider-line hidden-tablet"></div>
             <div className="divider-line hidden-mobile"></div>
           </div>
-          <div className="bg-noise-overlay" style={{ backgroundImage: 'url("/assets/about-noise.gif")' }}></div>
-        </div>
-
-        {/* Background Shadow Glow */}
-        <div className="about-hero-glow-shadow">
-          <img src="/assets/about-shadow.png" alt="Shadow glow effect" />
         </div>
       </section>
 
       {/* 2. ABOUT IMAGE & INFO SECTION */}
       <section className="about-image-section">
         <div className="about-image-grid">
-          
+
           {/* Left Column: Image */}
           <div className="about-img-left">
             <img src="/assets/about-building.png" alt="Precision structural steel storage warehouse" />
           </div>
-          
+
           {/* Right Column: Info text, Button, Brochure */}
           <div className="about-info-right">
             <div className="about-info-content">
               <p className="about-info-desc">
                 We connect contractors and fabricators to a vetted network of mills, ports, fabricators, and freight partners spanning every major steel-producing region. Whether it's a single joist order or a full structural package for a large-scale build, we manage sourcing, certification, fabrication coordination, and logistics as one accountable process.
               </p>
-              
+
               <div className="about-info-buttons">
                 {/* Custom sliding button */}
                 <a className="btn-meet-team" href="#team">
@@ -119,13 +112,13 @@ const AboutHero: React.FC = () => {
                     </div>
                   </div>
                 </a>
-                
+
                 {/* Download Brochure Link */}
-                <a 
-                  className="btn-download-brochure" 
-                  href="/assets/about-brochure.pdf" 
-                  download="brochure.pdf" 
-                  target="_blank" 
+                <a
+                  className="btn-download-brochure"
+                  href="/assets/about-brochure.pdf"
+                  download="brochure.pdf"
+                  target="_blank"
                   rel="noreferrer"
                 >
                   Download brochure
@@ -143,27 +136,27 @@ const AboutHero: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
           </div>
-          
+
         </div>
       </section>
 
       {/* 3. JOURNEY SECTION */}
       <section className="about-journey-section">
         <div className="about-journey-container">
-          
+
           <div className="about-journey-header">
             <div className="about-journey-badge">
               <div className="badge-gradient-square"></div>
               <span className="badge-text">Our journey</span>
             </div>
-            
+
             <h2 className="about-journey-title">
               Driven by standards, backed by a <span className="text-orange">global network</span>, focused on certified delivery
             </h2>
           </div>
-          
+
           <div className="about-journey-content">
             {/* Left Column: Founder Card */}
             <div className="about-founder-card">
@@ -175,10 +168,10 @@ const AboutHero: React.FC = () => {
                 <p>Founder, Unger Steel Group (Austria)</p>
               </div>
             </div>
-            
+
             {/* Right Columns: Story & Capabilities */}
             <div className="about-journey-info">
-              
+
               {/* Story Narrative */}
               <div className="about-story-col">
                 <h4>Our story</h4>
@@ -191,38 +184,38 @@ const AboutHero: React.FC = () => {
                   </p>
                 </div>
               </div>
-              
+
               {/* Capabilities Menu */}
               <div className="about-caps-col">
                 <h5>Our capabilities</h5>
-                
+
                 <div className="caps-list">
                   <a href="/services" className="cap-list-item" onClick={(e) => navigateTo(e, '/services')}>
-                    <span>Structural Steel & Sourcing</span>
+                    <span>Light & Medium Fabrication</span>
                     <div className="cap-arrow-wrap">
                       <img src="/assets/about-arrow-orange.svg" alt="Arrow" />
                     </div>
                   </a>
                   <a href="/services" className="cap-list-item" onClick={(e) => navigateTo(e, '/services')}>
-                    <span>Engineering Advisory</span>
+                    <span>Reactor Internals</span>
                     <div className="cap-arrow-wrap">
                       <img src="/assets/about-arrow-orange.svg" alt="Arrow" />
                     </div>
                   </a>
                   <a href="/services" className="cap-list-item" onClick={(e) => navigateTo(e, '/services')}>
-                    <span>Quality Assurance & MTCs</span>
+                    <span>Hardware & Fasteners</span>
                     <div className="cap-arrow-wrap">
                       <img src="/assets/about-arrow-orange.svg" alt="Arrow" />
                     </div>
                   </a>
                   <a href="/services" className="cap-list-item" onClick={(e) => navigateTo(e, '/services')}>
-                    <span>Global Logistics & Freight</span>
+                    <span>Structural Steel & Materials Sourcing</span>
                     <div className="cap-arrow-wrap">
                       <img src="/assets/about-arrow-orange.svg" alt="Arrow" />
                     </div>
                   </a>
                 </div>
-                
+
                 {/* View capabilities button */}
                 <div className="caps-cta-btn">
                   <a className="btn-meet-team" href="/services" onClick={(e) => navigateTo(e, '/services')}>
@@ -238,14 +231,14 @@ const AboutHero: React.FC = () => {
                     </div>
                   </a>
                 </div>
-                
+
               </div>
-              
+
             </div>
           </div>
-          
+
         </div>
-        
+
         {/* Background Grid Lines & Noise */}
         <div className="about-hero-bg-overlay">
           <div className="bg-divider-grid">
@@ -262,19 +255,19 @@ const AboutHero: React.FC = () => {
       {/* 4. CLIENT & AWARDS SECTION */}
       <section className="about-client-section">
         <div className="about-client-container">
-          
+
           {/* Top Title */}
           <div className="about-client-top">
             <div className="about-client-badge">
               <div className="badge-gradient-square"></div>
               <span className="badge-text">Our Partners</span>
             </div>
-            
+
             <h2 className="about-client-title">
               Trusted by <span className="text-orange">industry</span> leaders
             </h2>
           </div>
-          
+
           {/* Center client logos grid */}
           <div className="about-client-logos">
             {partners.map((partner) => (
@@ -283,16 +276,16 @@ const AboutHero: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Divider */}
           <div className="about-client-divider"></div>
-          
+
           {/* Bottom awards section */}
           <div className="about-client-awards-section">
             <h3 className="about-client-awards-title">
               <span className="text-orange">20 Years</span> of procurement excellence &amp; recognition
             </h3>
-            
+
             <div className="about-client-awards">
               <div className="award-badge-box style-1"><img src="/assets/about-award-1.svg" alt="Product of the Year award" /></div>
               <div className="award-badge-box style-2"><img src="/assets/about-award-2.svg" alt="ISO 9001 quality certificate badge" /></div>
@@ -300,9 +293,9 @@ const AboutHero: React.FC = () => {
               <div className="award-badge-box style-4"><img src="/assets/about-award-4.svg" alt="Quality safe check badge" /></div>
             </div>
           </div>
-          
+
         </div>
-        
+
         {/* Background Grid Lines & Noise */}
         <div className="about-hero-bg-overlay">
           <div className="bg-divider-grid">
@@ -324,7 +317,7 @@ const AboutHero: React.FC = () => {
               <div className="vertical-orange-bar"></div>
               <h2>Sourced anywhere. Certified everywhere. Delivered on schedule.</h2>
             </div>
-            
+
             <div className="about-video-text-bottom">
               <div className="video-counter-wrap">
                 <AnimatedNumber value={250000} />+
@@ -337,17 +330,17 @@ const AboutHero: React.FC = () => {
         {/* Video element backdrop wrapper */}
         <div className="about-video-wrapper">
           <div className="about-video-color-overlay"></div>
-          <video 
+          <video
             ref={videoRef}
-            src="/assets/about-video.mp4" 
-            loop 
-            muted 
-            autoPlay 
-            playsInline 
+            src="/assets/about-video.mp4"
+            loop
+            muted
+            autoPlay
+            playsInline
             poster="/assets/about-video-poster.jpg"
             className="video-backdrop"
           />
-          
+
           {/* Floating play/pause controller */}
           <button className="btn-video-play-pause" onClick={toggleVideoPlayback} aria-label="Toggle video playback">
             {isVideoPlaying ? (
@@ -356,90 +349,13 @@ const AboutHero: React.FC = () => {
               <span className="btn-video-play-icon">▶</span>
             )}
           </button>
-          
+
           {/* Backdrop Shadow Glow */}
           <div className="about-video-glow-shadow"></div>
         </div>
       </section>
 
-      {/* 6. TEAM SHOWCASE SECTION */}
-      <section className="about-team-section" id="team">
-        <div className="about-team-container">
-          
-          <div className="about-team-header">
-            <div className="about-team-badge">
-              <div className="badge-gradient-square"></div>
-              <span className="badge-text">Meet our experts</span>
-            </div>
-            
-            <h2 className="about-team-title">
-              Leaders in <span className="text-orange">procurement</span> &amp; logistics
-            </h2>
-          </div>
 
-          <div className="about-team-grid">
-            {/* Left Column: Hero Image */}
-            <div className="about-team-left-col">
-              <div className="about-team-img">
-                <img 
-                  src={teamMembers[activeTeamIndex]?.image} 
-                  alt={teamMembers[activeTeamIndex]?.name} 
-                  key={activeTeamIndex}
-                  className="team-active-photo"
-                />
-              </div>
-            </div>
-            
-            {/* Right Column: Interactive experts list */}
-            <div className="about-team-right-col">
-              <div className="about-team-members-list">
-                {teamMembers.map((member, index) => {
-                  const isActive = activeTeamIndex === index;
-                  return (
-                    <div 
-                      key={index}
-                      className="about-team-member-row"
-                      data-active={isActive}
-                      onMouseEnter={() => setActiveTeamIndex(index)}
-                      tabIndex={0}
-                      onFocus={() => setActiveTeamIndex(index)}
-                    >
-                      <h3 className="team-member-name">{member.name}</h3>
-                      <span className="team-member-role">{member.role}</span>
-                      
-                      {/* Social icons visible when row is active */}
-                      <div className="team-row-socials">
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Twitter">
-                          <img src="/assets/about-social-x.svg" alt="Twitter" />
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram">
-                          <img src="/assets/about-social-instagram.svg" alt="Instagram" />
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn">
-                          <img src="/assets/about-social-linkedin.svg" alt="LinkedIn" />
-                        </a>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        
-        {/* Background Grid Lines & Noise */}
-        <div className="about-hero-bg-overlay">
-          <div className="bg-divider-grid">
-            <div className="divider-line"></div>
-            <div className="divider-line"></div>
-            <div className="divider-line"></div>
-            <div className="divider-line hidden-tablet"></div>
-            <div className="divider-line hidden-mobile"></div>
-          </div>
-          <div className="bg-noise-overlay" style={{ backgroundImage: 'url("/assets/about-noise.gif")' }}></div>
-        </div>
-      </section>
     </div>
   );
 };

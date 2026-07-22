@@ -99,8 +99,9 @@ const FooterSection: React.FC = () => {
         </div>
 
         {/* Big Logo */}
-        <div className="ft-big-logo">
-          50stars
+        <div className="ft-big-logo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.5rem' }}>
+          <img src="/assets/50stars-logo.png" alt="50stars Logo" style={{ height: '80px', width: 'auto', objectFit: 'contain' }} />
+          <span>50stars</span>
         </div>
 
       </div>

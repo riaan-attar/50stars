@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import VideoSection from './components/VideoSection';
 import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
+import Airport3DSection from './components/Airport3DSection';
 import ProductsSection from './components/ProductsSection';
 import IndustrySection from './components/IndustrySection';
 import CaseStudySection from './components/CaseStudySection';
@@ -140,6 +141,7 @@ function App() {
             <VideoSection />
             <AboutSection />
             <ServicesSection />
+            <Airport3DSection />
             <ProductsSection />
             <IndustrySection />
             <CaseStudySection />

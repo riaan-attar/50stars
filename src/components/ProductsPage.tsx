@@ -1,78 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductsPage.css';
-
-const productsData = [
-  {
-    title: "Structural Steel",
-    image: "/assets/product-1.jpg",
-    standard: "ASTM A36 / A572 / A992 / EN 10025",
-    sourcing: "Global Mill Partnerships",
-    members: "Wide-flange beams (W, HP, S, M series), built-up plate girders, structural channels (C, MC), equal and unequal leg angles, structural plate and sheet steel"
-  },
-  {
-    title: "Joists & Long-Span Systems",
-    image: "/assets/product-3.jpg",
-    standard: "Steel Joist Institute (SJI) Specs",
-    sourcing: "Pre-Qualified Fabricators",
-    members: "Open-web steel joists (K-series, LH/DLH), joist girders, long-span roof and floor framing systems"
-  },
-  {
-    title: "Hollow & Tubular Sections",
-    image: "/assets/product-2.jpg",
-    standard: "ASTM A500 / A1085 / EN 10219",
-    sourcing: "Vetted Tube Mills",
-    members: "Square hollow sections (SHS), rectangular hollow sections (RHS), round/circular hollow sections (CHS), structural pipe piles and H-pile foundations"
-  },
-  {
-    title: "Fasteners & Connection Hardware",
-    image: "/assets/product-5.png",
-    standard: "ASTM F1554 / A325 / A490",
-    sourcing: "Approved Bolt & Anchor Mills",
-    members: "Anchor bolts (ASTM F1554), structural bolts (A325 / A490), nuts, washers, embed plates, base plates and connection assemblies"
-  },
-  {
-    title: "Reinforcement & Concrete-Adjacent Materials",
-    image: "/assets/product-6.png",
-    standard: "ASTM A615 / A706",
-    sourcing: "Domestic & Global Mills",
-    members: "Rebar (deformed reinforcing bar), welded wire mesh, precast embed plates and inserts"
-  },
-  {
-    title: "Decking, Access & Safety Structures",
-    image: "/assets/product-7.png",
-    standard: "Steel Deck Institute (SDI) Specs",
-    sourcing: "Vetted Decking Manufacturers",
-    members: "Composite and non-composite metal decking, bar grating and checkered/diamond plate, prefabricated stairs, cage ladders, handrail systems, guardrail and fall-protection anchor systems"
-  },
-  {
-    title: "Specialty & Corrosion-Resistant Materials",
-    image: "/assets/product-4.jpg",
-    standard: "ASTM A240 / A588 / A123",
-    sourcing: "Specialized Mills",
-    members: "Stainless steel structural sections, weathering steel (Corten) for exposed architectural applications, galvanized and coated structural steel"
-  },
-  {
-    title: "Support & Ancillary Structural Steel",
-    image: "/assets/product-8.png",
-    standard: "ASTM / AISC Specifications",
-    sourcing: "Qualified Fabrication Partners",
-    members: "Pipe racks and cable tray support steel, expansion joints and structural bearing pads, pre-engineered metal building (PEMB) components"
-  },
-  {
-    title: "Site & Project Support Materials",
-    image: "/assets/service-1.jpg",
-    standard: "AWS / ANSI Standards",
-    sourcing: "Distribution Partners",
-    members: "Welding consumables (electrodes, filler wire, shielding gas), industrial coatings and fireproofing systems, scaffolding and temporary access systems, rigging and lifting hardware, site PPE and fall-protection equipment"
-  }
-];
+import { productsData, productCategories } from '../data/productsData';
 
 const ProductsPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('All Products');
+
   const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     e.preventDefault();
     window.history.pushState({}, '', path);
     window.dispatchEvent(new Event('popstate'));
   };
+
+  const filteredProducts = selectedCategory === 'All Products'
+    ? productsData
+    : productsData.filter(p => p.category === selectedCategory);
 
   return (
     <div className="products-page-wrapper">
@@ -103,15 +44,30 @@ const ProductsPage: React.FC = () => {
             </div>
           </div>
 
-          {/* 2. PRODUCTS GRID */}
+          {/* Category Filter Tabs */}
+          <div className="products-category-tabs">
+            {productCategories.map((cat) => (
+              <button
+                key={cat}
+                className={`products-cat-tab ${selectedCategory === cat ? 'active' : ''}`}
+                onClick={() => setSelectedCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* 2. PRODUCTS GRID CATALOG */}
           <div className="products-grid-catalog">
-            {productsData.map((product, index) => (
-              <div key={index} className="product-catalog-card">
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="product-catalog-card">
                 <div className="product-card-top">
-                  <h2>{product.title}</h2>
+                  <span className="product-category-pill">{product.category}</span>
+                  <h2 className="product-card-title">{product.title}</h2>
                   <div className="product-image-container">
                     <img src={product.image} alt={product.title} className="product-card-photo" />
                   </div>
+                  <p className="product-card-overview">{product.overview}</p>
                 </div>
 
                 <div className="product-card-bottom">
@@ -125,10 +81,14 @@ const ProductsPage: React.FC = () => {
                     <span className="spec-value">{product.sourcing}</span>
                   </div>
                   <div className="product-spec-divider"></div>
-                  <div className="product-spec-row">
-                    <span className="spec-label">Members</span>
-                    <span className="spec-value">{product.members}</span>
-                  </div>
+                  <a
+                    href="/contact"
+                    className="btn-product-inquire"
+                    onClick={(e) => navigateTo(e, '/contact')}
+                  >
+                    <span>Inquire for Specs</span>
+                    <img src="/assets/icon-arrow.svg" alt="Arrow" />
+                  </a>
                 </div>
               </div>
             ))}
@@ -137,7 +97,7 @@ const ProductsPage: React.FC = () => {
           {/* Spec Note Footer */}
           <div className="products-spec-note-wrap" style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: '#151515', borderRadius: '6px', borderLeft: '4px solid var(--color-orange)' }}>
             <p style={{ color: '#c5c1c0', fontSize: '0.9rem', lineHeight: '1.6', fontStyle: 'italic', margin: 0 }}>
-              <strong>Spec note:</strong> every item shipped with full mill test certificates (MTC) and chain-of-custody documentation, matched to the ASTM/AISC/EN/regional standard your project requires.
+              <strong>Spec note:</strong> every item shipped with full mill test certificates (MTC) and chain-of-custody documentation, matched to the ASTM/AISC/EN/ASME standard your project requires.
             </p>
           </div>
 

@@ -10,31 +10,30 @@ export interface Partner {
 
 export const partners: Partner[] = [
   {
-    id: "triple-s",
-    name: "Triple-S Steel Holdings",
-    location: "Houston, TX",
-    info: "International sourcing & trading arm",
+    id: "kobesteel",
+    name: "Kobe Steel, Ltd.",
+    location: "Kobe, Japan",
+    info: "Precision structural steel & specialty alloys",
     logo: (
       <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="partner-svg-logo">
-        <path d="M15 15 L25 15 L20 25 Z" fill="#E65100" />
-        <path d="M22 25 L32 25 L27 35 Z" fill="#FFB74D" />
-        <path d="M8 25 L18 25 L13 35 Z" fill="#F57C00" />
-        <text x="45" y="32" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="14" fill="#1A1A1A">TRIPLE-S STEEL</text>
-        <text x="45" y="45" fontFamily="'Outfit', sans-serif" fontWeight="500" fontSize="8" fill="#666" letterSpacing="1">HOLDINGS</text>
+        <circle cx="22" cy="30" r="14" fill="#E65100" />
+        <path d="M16 30 L28 22 V38 Z" fill="#FFF" />
+        <text x="45" y="32" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="14" fill="#1A1A1A">KOBE STEEL</text>
+        <text x="45" y="45" fontFamily="'Outfit', sans-serif" fontWeight="500" fontSize="8" fill="#666" letterSpacing="1">KOBELCO GROUP</text>
       </svg>
     )
   },
   {
-    id: "leeco",
-    name: "Leeco Steel, LLC",
-    location: "Chicago, IL",
-    info: "Vets and imports foreign plate steel",
+    id: "kardemir",
+    name: "Kardemir",
+    location: "Karabük, Turkey",
+    info: "Structural steel & export infrastructure",
     logo: (
       <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="partner-svg-logo">
-        <rect x="10" y="15" width="24" height="24" rx="4" fill="#E65100" />
-        <path d="M16 22 H28 M16 27 H28 M16 32 H24" stroke="#FFF" strokeWidth="2.5" strokeLinecap="round" />
-        <text x="45" y="35" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="18" fill="#1A1A1A" letterSpacing="-0.5">LEECO STEEL</text>
-        <text x="45" y="46" fontFamily="'Outfit', sans-serif" fontWeight="600" fontSize="8" fill="#E65100" letterSpacing="2">PLATE SPECIALISTS</text>
+        <rect x="10" y="15" width="24" height="24" rx="4" fill="#1565C0" />
+        <path d="M16 22 H28 M22 22 V36" stroke="#FFF" strokeWidth="2.5" strokeLinecap="round" />
+        <text x="45" y="35" fontFamily="'Outfit', sans-serif" fontWeight="800" fontSize="18" fill="#1A1A1A" letterSpacing="-0.5">KARDEMİR</text>
+        <text x="45" y="46" fontFamily="'Outfit', sans-serif" fontWeight="600" fontSize="8" fill="#1565C0" letterSpacing="2">STEEL INDUSTRY</text>
       </svg>
     )
   },
@@ -252,14 +251,15 @@ export const partners: Partner[] = [
     )
   },
   {
-    id: "schuff",
-    name: "Schuff Steel",
-    location: "Phoenix, AZ",
-    info: "Largest structural steel fabricator in the US",
+    id: "thyssenkrupp",
+    name: "ThyssenKrupp Steel",
+    location: "Duisburg, Germany",
+    info: "Premium-grade steel & compliance-certified materials",
     logo: (
       <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="partner-svg-logo">
-        <path d="M12 40 C12 25, 32 35, 32 20" stroke="#1E88E5" strokeWidth="5" strokeLinecap="round" fill="none" />
-        <text x="45" y="35" fontFamily="'Outfit', sans-serif" fontWeight="900" fontSize="18" fill="#1A1A1A" letterSpacing="-0.5">SCHUFF STEEL</text>
+        <path d="M12 40 C12 25, 32 35, 32 20" stroke="#00A0E2" strokeWidth="5" strokeLinecap="round" fill="none" />
+        <text x="45" y="32" fontFamily="'Outfit', sans-serif" fontWeight="900" fontSize="15" fill="#1A1A1A" letterSpacing="-0.5">THYSSENKRUPP</text>
+        <text x="45" y="44" fontFamily="'Outfit', sans-serif" fontWeight="600" fontSize="9" fill="#00A0E2" letterSpacing="1">STEEL EUROPE</text>
       </svg>
     )
   },

@@ -1,41 +1,7 @@
 import React from 'react';
 import './ProductsSection.css';
 import AnimatedNumber from './AnimatedNumber';
-
-const productsData = [
-  {
-    id: 1,
-    title: 'Structural Steel',
-    image: '/assets/product-1.jpg',
-    standard: 'ASTM A36 / A572 / A992 / EN 10025',
-    sourcing: 'Global Mill Partnerships',
-    members: 'Wide-flange beams, built-up plate girders, channels, equal/unequal angles, plate and sheet steel',
-  },
-  {
-    id: 2,
-    title: 'Hollow & Tubular Sections',
-    image: '/assets/product-2.jpg',
-    standard: 'ASTM A500 / A1085 / EN 10219',
-    sourcing: 'Vetted Tube Mills',
-    members: 'Square (SHS), rectangular (RHS), circular (CHS) sections, pipe piles and H-piles',
-  },
-  {
-    id: 3,
-    title: 'Joists & Long-Span Systems',
-    image: '/assets/product-3.jpg',
-    standard: 'Steel Joist Institute (SJI) Specs',
-    sourcing: 'Specialized Fabricators',
-    members: 'Open-web steel joists (K-series, LH/DLH), joist girders, long-span roof/floor framing systems',
-  },
-  {
-    id: 4,
-    title: 'Specialty & Corrosion-Resistant',
-    image: '/assets/product-4.jpg',
-    standard: 'ASTM A240 / A588 (Corten) / Galvanized',
-    sourcing: 'Specialized Sourcing Network',
-    members: 'Stainless steel structural sections, weathering steel (Corten), galvanized and coated steel',
-  },
-];
+import { productsData } from '../data/productsData';
 
 const ProductsSection: React.FC = () => {
   const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
@@ -61,7 +27,7 @@ const ProductsSection: React.FC = () => {
 
           <div className="ps-header-content">
             <h2 className="ps-counter">
-              <AnimatedNumber value={9} /><span className="text-orange">+</span>
+              <AnimatedNumber value={21} /><span className="text-orange">+</span>
             </h2>
             <p className="ps-subtitle">
               Certified product categories delivered to job sites across industries and continents.
@@ -80,6 +46,7 @@ const ProductsSection: React.FC = () => {
             {/* Loop 1 */}
             {productsData.map((product) => (
               <div className="ps-card" key={`loop1-${product.id}`}>
+                <span className="product-category-pill">{product.category}</span>
                 <h3 className="ps-card-title">{product.title}</h3>
                 <div className="ps-card-image-wrap">
                   <img src={product.image} alt={product.title} />
@@ -94,11 +61,6 @@ const ProductsSection: React.FC = () => {
                   <div className="ps-spec-row">
                     <span className="ps-spec-label">Sourcing</span>
                     <span className="ps-spec-value">{product.sourcing}</span>
-                  </div>
-                  <div className="ps-divider"></div>
-                  <div className="ps-spec-row">
-                    <span className="ps-spec-label">Members</span>
-                    <span className="ps-spec-value">{product.members}</span>
                   </div>
                 </div>
               </div>
@@ -106,6 +68,7 @@ const ProductsSection: React.FC = () => {
             {/* Loop 2 */}
             {productsData.map((product) => (
               <div className="ps-card" key={`loop2-${product.id}`}>
+                <span className="product-category-pill">{product.category}</span>
                 <h3 className="ps-card-title">{product.title}</h3>
                 <div className="ps-card-image-wrap">
                   <img src={product.image} alt={product.title} />
@@ -120,11 +83,6 @@ const ProductsSection: React.FC = () => {
                   <div className="ps-spec-row">
                     <span className="ps-spec-label">Sourcing</span>
                     <span className="ps-spec-value">{product.sourcing}</span>
-                  </div>
-                  <div className="ps-divider"></div>
-                  <div className="ps-spec-row">
-                    <span className="ps-spec-label">Members</span>
-                    <span className="ps-spec-value">{product.members}</span>
                   </div>
                 </div>
               </div>
@@ -142,7 +100,7 @@ const ProductsSection: React.FC = () => {
               Download Brochure
               <img src="/assets/icon-download.svg" alt="Download" />
             </a>
-            
+
             <a href="/products" className="btn-orange-solid" onClick={(e) => navigateTo(e, '/products')}>
               <span className="btn-os-text">View all products</span>
               <span className="btn-os-icon">

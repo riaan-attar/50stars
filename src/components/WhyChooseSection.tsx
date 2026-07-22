@@ -34,7 +34,7 @@ const WhyChooseSection: React.FC = () => {
                 One supplier. Every material. <br className="hidden-mobile" />Mill to job site.
               </h2>
               <p className="wc-lead-text">
-                50 Stars isn't a broker. We're the procurement partner general contractors, EPCs, and subcontractors trust. We operate directly through our network of 20+ specialized partnering firms including Triple-S Steel, Leeco Steel, Schuff Steel, and others to get your structural sourcing, custom fabrication, and logistics done seamlessly and on time.
+                50 Stars isn't a broker. We're the procurement partner general contractors, EPCs, and subcontractors trust. We operate directly through our network of 20+ specialized partnering firms including Kobe Steel, Ltd., Kardemir, ThyssenKrupp Steel, and others to get your structural sourcing, custom fabrication, and logistics done seamlessly and on time.
               </p>
             </div>
             <div className="wc-intro-col-right">

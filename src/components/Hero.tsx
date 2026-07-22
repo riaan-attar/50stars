@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
             </div> */}
 
             <p className="hero-description">
-              We work directly through our trusted partnering firms including Triple-S Steel, Leeco Steel, and other industry leaders to get every structural beam, joist, and component sourced, fabricated, and delivered to your job site with certified quality and full compliance.
+              We work directly through our trusted partnering firms including Kobe Steel, Ltd., Kardemir, ThyssenKrupp Steel, and other industry leaders to get every structural beam, joist, and component sourced, fabricated, and delivered to your job site with certified quality and full compliance.
             </p>
 
             <button className="btn-explore" onClick={(e) => navigateTo(e, '/services')}>

@@ -6,47 +6,44 @@ const servicesData = [
     id: 1,
     icon: '/assets/service-icon-1.svg',
     image: '/assets/service-1.jpg',
-    title: 'Structural Steel & Materials Sourcing',
+    title: 'Light & Medium Fabrication',
     features: [
-      'Global mill sourcing across every major steel-producing region',
-      'Beams, joists, hollow sections, plate, angles, rebar, and specialty alloys',
-      'Multi-origin comparison for cost, grade, and lead time'
+      'Partner-fabricated components for structural, architectural, and equipment applications',
+      'Cutting, forming, welding, and finishing coordinated across a vetted shop network',
+      'Capacity scaling from single-piece prototypes to production runs'
     ]
   },
   {
     id: 2,
     icon: '/assets/service-icon-2.svg',
     image: '/assets/service-2.jpg',
-    title: 'Engineering & Procurement Advisory',
+    title: 'Reactor Internals',
     features: [
-      'BOM and takeoff review against project drawings and specs',
-      'Grade and section matching to ASTM/AISC/EN/regional codes',
-      'Value engineering: alternate sections or grades to reduce cost without compromising design intent',
-      'Split-sourcing strategy for long-lead or oversized members'
+      'Precision-fabricated internals sourced through certified pressure-vessel and process-equipment partners',
+      'Material traceability and code compliance (ASME, etc.) maintained through the partner network',
+      'Coordination for trays, baffles, supports, and other internals to project spec'
     ]
   },
   {
     id: 3,
     icon: '/assets/service-icon-3.svg',
     image: '/assets/service-3.jpg',
-    title: 'Quality Assurance & Certification',
+    title: 'Hardware & Fasteners',
     features: [
-      'Full mill test certificates (MTC) on every shipment',
-      'Chain-of-custody documentation',
-      'Third-party inspection coordination where required',
-      'Dimensional, coating, and grade verification before release'
+      'Structural bolts, anchors, and specialty fasteners sourced to project spec and grade',
+      'Bulk and just-in-time supply coordinated to construction schedule',
+      'Certified material and mill test documentation on request'
     ]
   },
   {
     id: 4,
     icon: '/assets/service-icon-4.svg',
     image: '/assets/service-4.jpg',
-    title: 'Global Logistics & Freight',
+    title: 'Structural Steel & Materials Sourcing',
     features: [
-      'Flat rack, breakbulk, container, and OOG (out-of-gauge) cargo coordination',
-      'Port-to-port and port-to-site trucking',
-      'Customs clearance and import documentation',
-      'Shipment tracking and delivery scheduling aligned to erection sequence'
+      'Global mill sourcing across every major steel-producing region',
+      'Grade and spec matching to project engineering requirements',
+      'Volume pricing coordinated across a vetted supplier network'
     ]
   }
 ];
